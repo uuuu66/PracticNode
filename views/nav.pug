@@ -1,0 +1,16 @@
+nav.nav &nbsp; 
+    
+    div.nave
+        ul
+            -for(var i=0; i<list.length;i++ )
+                -if(i<=3)
+                    li(class='index' onclick=`getIndex(this)` id=`${i}`) #{list[i]}
+                -else
+                    li(class='index' onclick=`goGit()` id=`${i}`) #{list[i]}
+div.jipsa 
+    style(display='block')
+    div(id='message') 방문해주셔서<br>감사합니다.
+ 
+    img(src='/jipsa.gif')    
+
+    
