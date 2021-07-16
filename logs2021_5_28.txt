@@ -1,0 +1,60 @@
+4_28_19_656:
+ 접속아이피:::ffff:192.168.0.1
+헤더:{"host":"39.115.162.208:30000","connection":"keep-alive","cache-control":"max-age=0","upgrade-insecure-requests":"1","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.77 Safari/537.36","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9","referer":"http://39.115.162.208:30000/lab","accept-encoding":"gzip, deflate","accept-language":"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7","if-none-match":"W/\"24b0-sNvHiEyduzgXyeSC2Bnz24XU2sY\""}
+url:"/?search=%EC%82%AC%EC%9D%B4%ED%8D%BC%EC%A6%88&condition=tag"
+바디:{}
+파라미터스:{}
+유저undefined
+
+
+
+4_29_52_130:
+ 접속아이피:::ffff:192.168.0.1
+헤더:{"host":"39.115.162.208:30000","connection":"keep-alive","upgrade-insecure-requests":"1","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.77 Safari/537.36","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9","referer":"http://39.115.162.208:30000/lab/?search=%EC%82%AC%EC%9D%B4%ED%8D%BC%EC%A6%88&condition=tag","accept-encoding":"gzip, deflate","accept-language":"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7","cookie":"connect.sid=s%3A-qJglMPn0A9gidLe8ww5A3X4ZFibo6yK.mv9L2J%2FLclLuUM4li9vSMXQsSkOubIFXUytpbAeWLO4","if-none-match":"W/\"24b0-sNvHiEyduzgXyeSC2Bnz24XU2sY\""}
+url:"/?search=%EC%82%AC%EC%9D%B4%ED%8D%BC%EC%A6%88&condition=tag"
+바디:{}
+파라미터스:{}
+유저{"id":6,"name":"민기쿤","email":"uuuu66@naver.com","password":"U2FsdGVkX1/k+cg4AgLqoxmj7Qy73lw9uiG9s6r62JI=","provider":null,"auth":1}
+
+
+
+4_30_40_584:
+ 접속아이피:::ffff:192.168.0.1
+헤더:{"host":"39.115.162.208:30000","connection":"keep-alive","cache-control":"max-age=0","upgrade-insecure-requests":"1","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.77 Safari/537.36","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9","referer":"http://39.115.162.208:30000/lab/?search=%EC%82%AC%EC%9D%B4%ED%8D%BC%EC%A6%88&condition=tag","accept-encoding":"gzip, deflate","accept-language":"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7","cookie":"connect.sid=s%3A-qJglMPn0A9gidLe8ww5A3X4ZFibo6yK.mv9L2J%2FLclLuUM4li9vSMXQsSkOubIFXUytpbAeWLO4","if-none-match":"W/\"2678-VMpqcLOBPlSvisoRz9npekElcoM\""}
+url:"/?search=%EC%82%AC%EC%9D%B4%ED%8D%BC%EC%A6%88&condition=tag"
+바디:{}
+파라미터스:{}
+유저{"id":6,"name":"민기쿤","email":"uuuu66@naver.com","password":"U2FsdGVkX1/k+cg4AgLqoxmj7Qy73lw9uiG9s6r62JI=","provider":null,"auth":1}
+
+
+
+4_30_48_167:
+ 접속아이피:::ffff:192.168.0.1
+헤더:{"host":"39.115.162.208:30000","connection":"keep-alive","upgrade-insecure-requests":"1","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.77 Safari/537.36","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9","referer":"http://39.115.162.208:30000/lab/?search=%EC%82%AC%EC%9D%B4%ED%8D%BC%EC%A6%88&condition=tag","accept-encoding":"gzip, deflate","accept-language":"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7","cookie":"connect.sid=s%3A-qJglMPn0A9gidLe8ww5A3X4ZFibo6yK.mv9L2J%2FLclLuUM4li9vSMXQsSkOubIFXUytpbAeWLO4"}
+url:"/?serach=%EC%82%AC%EC%9D%B4%ED%8D%BC%EC%A6%88%EC%8B%A4%ED%97%98&condition=category"
+바디:{}
+파라미터스:{}
+유저{"id":6,"name":"민기쿤","email":"uuuu66@naver.com","password":"U2FsdGVkX1/k+cg4AgLqoxmj7Qy73lw9uiG9s6r62JI=","provider":null,"auth":1}
+
+
+
+4_30_52_774:
+ 접속아이피:::ffff:192.168.0.1
+헤더:{"host":"39.115.162.208:30000","connection":"keep-alive","upgrade-insecure-requests":"1","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.77 Safari/537.36","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9","referer":"http://39.115.162.208:30000/lab/?serach=%EC%82%AC%EC%9D%B4%ED%8D%BC%EC%A6%88%EC%8B%A4%ED%97%98&condition=category","accept-encoding":"gzip, deflate","accept-language":"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7","cookie":"connect.sid=s%3A-qJglMPn0A9gidLe8ww5A3X4ZFibo6yK.mv9L2J%2FLclLuUM4li9vSMXQsSkOubIFXUytpbAeWLO4"}
+url:"/?serach=%EC%8B%AC%EC%8B%AC%ED%92%80%EC%9D%B4%EC%8B%A4%ED%97%98&condition=category"
+바디:{}
+파라미터스:{}
+유저{"id":6,"name":"민기쿤","email":"uuuu66@naver.com","password":"U2FsdGVkX1/k+cg4AgLqoxmj7Qy73lw9uiG9s6r62JI=","provider":null,"auth":1}
+
+
+
+4_30_59_173:
+ 접속아이피:::ffff:192.168.0.1
+헤더:{"host":"39.115.162.208:30000","connection":"keep-alive","upgrade-insecure-requests":"1","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.77 Safari/537.36","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9","referer":"http://39.115.162.208:30000/lab/?serach=%EC%8B%AC%EC%8B%AC%ED%92%80%EC%9D%B4%EC%8B%A4%ED%97%98&condition=category","accept-encoding":"gzip, deflate","accept-language":"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7","cookie":"connect.sid=s%3A-qJglMPn0A9gidLe8ww5A3X4ZFibo6yK.mv9L2J%2FLclLuUM4li9vSMXQsSkOubIFXUytpbAeWLO4"}
+url:"/?serach=%EA%B6%81%EA%B8%88%ED%95%9Cjs&condition=category"
+바디:{}
+파라미터스:{}
+유저{"id":6,"name":"민기쿤","email":"uuuu66@naver.com","password":"U2FsdGVkX1/k+cg4AgLqoxmj7Qy73lw9uiG9s6r62JI=","provider":null,"auth":1}
+
+
+
