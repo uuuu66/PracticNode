@@ -1,0 +1,93 @@
+0_16_24_818:
+ 접속아이피:::ffff:192.168.0.1
+url:"/favicon.ico"404 에러
+유저undefined
+
+
+
+0_16_26_977:
+ 접속아이피:::ffff:192.168.0.1
+url:"/chat/60dedad26f7b4f3248568cea"404 에러
+유저undefined
+
+
+
+0_25_31_416:
+ 접속아이피:::ffff:192.168.0.1
+url:"/post/getc"
+바디:"TypeError: Cannot read property 'Comments' of null\n    at C:\\Users\\leemi\\Documents\\PracticNode\\route\\post.js:283:41\n    at processTicksAndRejections (internal/process/task_queues.js:93:5)"
+유저undefined
+
+
+
+0_29_52_798:
+ 접속아이피:::ffff:192.168.0.1
+url:"/chat/60dedad26f7b4f3248568cea"404 에러
+유저undefined
+
+
+
+0_30_32_611:
+ 접속아이피:::ffff:192.168.0.1
+url:"/chat/60dedad26f7b4f3248568cea"404 에러
+유저undefined
+
+
+
+0_30_40_210:
+ 접속아이피:::ffff:192.168.0.1
+url:"/chat/60dedad26f7b4f3248568cea"404 에러
+유저undefined
+
+
+
+0_32_2_283:
+ 접속아이피:::ffff:192.168.0.1
+url:"/chat/60dedad26f7b4f3248568cea"404 에러
+유저undefined
+
+
+
+0_32_18_327:
+ 접속아이피:::ffff:192.168.0.1
+url:"/chat/60dedad26f7b4f3248568cea"404 에러
+유저undefined
+
+
+
+1_1_55_72:
+ 접속아이피:::ffff:192.168.0.1
+url:"/"
+바디:"Error: C:\\Users\\leemi\\Documents\\PracticNode\\views\\chat.pug:12:36\n    10|         #chatBody        \n    11|         #chatTail \n  > 12|             i(class=\"fas fa-times\");\n-------------------------------------------^\n    13|         script.\n    14|               const socket = io.connect('http://localhost:30000/room', {\n    15|                     path: '/socket.io',\n\nunexpected text \";\n   \"\n    at makeError (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-error\\index.js:34:13)\n    at Lexer.error (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-lexer\\index.js:62:15)\n    at Lexer.fail (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-lexer\\index.js:1629:10)\n    at Lexer.advance (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-lexer\\index.js:1694:12)\n    at Lexer.callLexerFunction (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-lexer\\index.js:1647:23)\n    at Lexer.getTokens (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-lexer\\index.js:1706:12)\n    at lex (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-lexer\\index.js:12:42)\n    at Object.lex (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug\\lib\\index.js:104:9)\n    at Function.loadString [as string] (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-load\\index.js:53:24)\n    at C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-load\\index.js:37:27\n    at walkAST (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-walk\\index.js:26:18)\n    at C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-walk\\index.js:112:20\n    at Array.reduce (<anonymous>)\n    at walkAndMergeNodes (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-walk\\index.js:111:18)\n    at walkAST (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-walk\\index.js:40:19)\n    at load (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-load\\index.js:13:10)\n    at Function.loadString [as string] (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-load\\index.js:55:10)\n    at C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-load\\index.js:37:27\n    at walkAST (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-walk\\index.js:26:18)\n    at C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-walk\\index.js:112:20\n    at Array.reduce (<anonymous>)\n    at walkAndMergeNodes (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-walk\\index.js:111:18)\n    at walkAST (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-walk\\index.js:40:19)\n    at load (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-load\\index.js:13:10)\n    at Function.loadString [as string] (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-load\\index.js:55:10)\n    at compileBody (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug\\lib\\index.js:82:18)\n    at Object.exports.compile (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug\\lib\\index.js:269:16)\n    at handleTemplateCache (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug\\lib\\index.js:242:25)"
+유저undefined
+
+
+
+12_53_57_141:
+ 접속아이피:::ffff:192.168.0.1
+url:"/favicon.ico"404 에러
+유저undefined
+
+
+
+14_33_43_854:
+ 접속아이피:::ffff:192.168.0.1
+url:"/chat/exit/"404 에러
+유저undefined
+
+
+
+14_33_44_240:
+ 접속아이피:::ffff:192.168.0.1
+url:"/chat/exit/imgs/?name=UFO-red.gif"404 에러
+유저undefined
+
+
+
+14_33_44_511:
+ 접속아이피:::ffff:192.168.0.1
+url:"/chat/exit/nav.gif"404 에러
+유저undefined
+
+
+

@@ -1,0 +1,40 @@
+20_38_21_506:
+ 접속아이피:::ffff:192.168.0.1
+url:"/lab/cyphersitem"
+바디:"Error: ENOENT: no such file or directory, open 'C:\\Users\\leemi\\Documents\\cyphersRecords\\itemLists_alicia.txt'"
+유저undefined
+
+
+
+20_39_11_486:
+ 접속아이피:::ffff:192.168.0.1
+url:"/lab/cyphersitem"
+바디:"TypeError: data.split is not a function\n    at C:\\Users\\leemi\\Documents\\PracticNode\\route\\laboratory.js:102:31\n    at FSReqCallback.readFileAfterClose [as oncomplete] (internal/fs/read_file_context.js:63:3)"
+유저undefined
+
+
+
+20_40_55_414:
+ 접속아이피:::ffff:192.168.0.1
+url:"/lab/cyphersitem"
+바디:"TypeError: data.split is not a function\n    at C:\\Users\\leemi\\Documents\\PracticNode\\route\\laboratory.js:103:31\n    at FSReqCallback.readFileAfterClose [as oncomplete] (internal/fs/read_file_context.js:63:3)"
+유저undefined
+
+
+
+20_41_26_789:
+ 접속아이피:::ffff:192.168.0.1
+url:"/lab/cyphersitem"
+바디:"TypeError: data.split is not a function\n    at C:\\Users\\leemi\\Documents\\PracticNode\\route\\laboratory.js:103:31\n    at FSReqCallback.readFileAfterClose [as oncomplete] (internal/fs/read_file_context.js:63:3)"
+유저undefined
+
+
+
+20_41_39_486:
+ 접속아이피:::ffff:192.168.0.1
+url:"/lab/cyphersitem"
+바디:"TypeError: data.split is not a function\n    at C:\\Users\\leemi\\Documents\\PracticNode\\route\\laboratory.js:103:31\n    at FSReqCallback.readFileAfterClose [as oncomplete] (internal/fs/read_file_context.js:63:3)"
+유저undefined
+
+
+

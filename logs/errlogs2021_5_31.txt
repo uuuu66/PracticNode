@@ -1,0 +1,8 @@
+1_32_59_984:
+ 접속아이피:::ffff:192.168.0.1
+url:"/post/getc"
+바디:"TypeError: Cannot read property 'Comments' of null\n    at C:\\Users\\leemi\\Documents\\PracticNode\\route\\post.js:283:41\n    at runMicrotasks (<anonymous>)\n    at processTicksAndRejections (internal/process/task_queues.js:93:5)"
+유저undefined
+
+
+

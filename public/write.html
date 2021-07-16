@@ -1,0 +1,413 @@
+
+<head>
+
+<style>
+.ck.ck-editor__editable_inline h1{
+  color:black;
+}
+div.ck.ck-editor__editable_inline{
+  color:black;
+  text-align:center;
+  height:800px;
+  
+}
+.ck.ck-editor__editable_inline[dir=ltr]{
+  text-align:center;
+}
+
+</style>
+
+</head>
+<h1>글 작성 신청서</h1>
+
+<div style="width:100%;" >
+
+  <div style="color:black; " name="content" id="editor" style="text-align:center;"></div>
+  <script>
+ 
+   ClassicEditor .create( document.querySelector( '#editor' ), {
+  
+				toolbar: {
+					items: [
+						'bold',
+						'italic',
+						'link',
+						'|',
+						'fontBackgroundColor',
+						'fontFamily',
+						'fontSize',
+						'fontColor',
+						'underline',
+						'strikethrough',
+						'|',
+						'imageUpload',
+						'blockQuote',
+						'insertTable',
+						'mediaEmbed',
+						'|',
+						'undo',
+						'redo',
+						'subscript',
+						'superscript',
+            'Underline',
+	          
+					]
+				},
+				language: 'ko',
+				image: {
+					toolbar: [
+						'imageTextAlternative',
+						'imageStyle:full',
+						'imageStyle:side', 
+					],
+          resizeUnit: 'px'
+				},
+				table: {
+					contentToolbar: [
+						'tableColumn',
+						'tableRow',
+						'mergeTableCells',
+						'tableCellProperties',
+						'tableProperties'
+					]
+				},
+       
+      extraPlugins:[ MyCustomUploadAdapterPlugin], 
+    } )
+    .then( editor => {
+      window.editor = editor;   
+    } )
+    .catch( error => {
+      console.error( 'Oops, something went wrong!' );
+      console.error( 'Please, report the following error on https://github.com/ckeditor/ckeditor5/issues with the build id and the error stack trace:' );
+      console.warn( 'Build id: zfqiumfe40vd-es3gm8k4nqbs' );
+      console.error( error );
+    } );
+    function submitData(){
+      const editorData = editor.getData();
+      const title=editor.getData().split("</h1>")[0].slice(4);
+      if(title.length>30)
+         return alert("제목이 너무길어요 : 30글자 이하 ")
+      if(editorData==""){
+      alert("내용이 없어요.");
+      }else if(title=="&nbsp;"){
+      alert("제목이 없어요.")
+      }
+      else{
+      
+      
+      var detailcategory=document.getElementById('detailtype');
+      detailcategory=detailcategory.value;
+        if(detailcategory.length>6){
+          return alert("세부주제는 6글자까지")
+        }
+        
+      
+        dbGo();
+        
+      }
+      // ...
+    }
+    async function dbGo(){
+      var story = editor.getData();
+      console.log(story);
+      var title=editor.getData().split("</h1>")[0].slice(4);
+      var category=document.getElementById('type');
+      category=category.options[category.selectedIndex].value;
+      var repair =document.getElementById('repair');
+      repair=repair.value;
+      var cstory=story.replace(/(<([^>]+)>)/ig,"");
+      var cstory=cstory.replace("&nbsp;","");
+      var detailcategory=document.getElementById('detailtype');
+      detailcategory=detailcategory.value.trim();
+      var res=await axios.post('/post/upload/story',{cstory,story,title,category,detailcategory,repair});
+     
+      if(res.data.message="성공"){
+        var url="http://39.115.162.208:30000/post";
+      window.open(new URL(url),'__self');
+      }else{
+        alert("무언가 잘못되엇나요? 주인장에게 물어보세요.")
+        var message=document.getElementById("message");
+        message.innerText=res.data.message;
+      }
+
+     // var res= await axios.post("post/upload/story",) 
+    }
+</script>
+</div>
+<div style="background-color: rgba(37, 13, 13, 0.5);width:100%;height:100px">
+<div id="ingam" style="height:100px;line-height:50px;width:50%;color:red;background-color:rgba(37, 13, 13, 0.5);background-color:rgba(37, 13, 13, 0.5);margin-right:10%; "><div style="width:70%;float:left;color:red;background-color:rgba(37, 13, 13, 0.5);font-size:15px">글 작성을 허함<br><span style="font-size:20px ;">주인장</span></div> <div style="width:29%;background-color:rgba(37, 13, 13, 0.5);float:left"><img src="imgs/?name=sign.png" ></div><br>
+
+
+
+</div >
+
+<div style="width:225px;float:right;" ><img src="imgs/?name=dosang.png"></div>
+</div>
+
+
+<div  style="float: left; color:white;width:100%;background-color:rgb(121, 90, 33) ; background-repeat:x y; border-radius:0 0 10 10;border:2px solid black;">
+  <ul style="margin-left:0; list-style: none; position:relative; width:100px;float: left;font-size:15px">
+   <li  >주제 <select id="type" style="color:black ;width:100%; background-color:rgb(219, 162, 122); ">
+    <option value='일상' style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;" >일상</option>
+    <option value='코딩'  style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">코딩</option>
+    <option value='공부'style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;" >공부</option>
+    <option value='생축' style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">생축</option>
+  </select></li>
+  <li >
+    세부주제
+    <input id="detailtype" type="text"style="color:black ;width:90%;height:90%;  background-color:rgb(219, 162, 122)">
+  </li>
+  
+  </ul>
+  <div style="width:70px;float:right;height:100px;line-height:50px;margin-right:10%;" >작성
+    <button id="submit"  onclick ="submitData()"><img src="imgs/?name=submit1.gif"  style="position:relative"></button>
+    </div>
+  </div>
+  <p id="message">    
+  </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--  
+   <head>
+    <style>
+     @font-face {
+  font-family: "NeoDunggeunmo";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.3/NeoDunggeunmo.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+        .banner{
+            height:35px;
+        }
+       
+    </style>
+   </head>
+   <div class='texteditor' style="position:relative">
+       <img src="/imgs/?name=submit.png" onmouseover="pc(this)" onmouseout="pc2(this)" id="submitbutton" style="border-radius:5 5 5 5 ; cursor:pointer; ">
+    <div class='banner' >
+        <ul style="border-radius:10px 10px 0px 0px">
+            <li><button id='bold'onclick="execComma(this)"><i class="fa fa-bold" aria-hidden="true"></i></button></li>
+            <li><button id='italic'onclick="execComma(this)"><i class="fa fa-italic" aria-hidden="true"></i></button></li>
+            <li><button id="strikethrough"onclick="execComma(this)"><i class="fa fa-strikethrough" aria-hidden="true"></i></button></li>
+            <li><button id='justifyLeft'onclick="execComma(this)"><i class="fa fa-align-left" aria-hidden="true"></i></button></li>
+            <li><button id='justifyRight'onclick="execComma(this)"><i class="fa fa-align-right" aria-hidden="true"></i></button></li>
+            <li><button id='justifyCenter'onclick="execComma(this)"><i class="fa fa-align-center" aria-hidden="true"></i></button></li>
+            <li><button id='superscript'onclick="execComma(this)"><i class="fa fa-superscript" aria-hidden="true"></i></button></li>
+            <li><button id='subscript'onclick="execComma(this)"><i class="fa fa-subscript" aria-hidden="true"></i></button></li>
+            
+    
+        </div>
+            <div class='banner'> 
+                <ul>
+                <li><button id='insertUnorderedList'onclick="execComma(this)"><i class="fa fa-list-ul" aria-hidden="true"></i></button></li>
+                <li><button id='insertOrderedList'onclick="execComma(this)"><i class="fa fa-list-ol" aria-hidden="true""></i></button></li>
+                <li><select id='fontfamily' onchange="fontfamilyChange(this)">
+                    <option value='Times New Roman'>Times New Roman</option>
+                    <option value='Helvetica'>Helvetica</option>
+                    <option value='Courier New'>Courier New</option>
+                    <option value='Monospace'>Monospace</option>
+                    <option value='Cursive'>Cursive</option>
+                    <option value="궁서" >궁서체</option>
+                    <option value="돋움" >돋움체</option>
+                    <option value="바탕" selected>바탕체</option>
+                </select></li>
+    
+    
+                <li><select id='fontsize' onchange="fontsizeChange(this)">
+                    <script>
+                        var ds =document.getElementById('fontsize');
+    
+                        for(var i=1;i<7;i++){
+                            if(i==3){
+                                var op=document.createElement('option');
+                        op.value=i;
+                        op.id=i;
+                        op.selected=true;
+                        op.innerText=i.toString();
+                        ds.appendChild(op);  
+                                continue;
+                            }
+                        var op=document.createElement('option');
+                        op.value=i;
+                        op.id=i;
+                        op.innerText=i.toString();
+                        ds.appendChild(op);  
+                        }
+                    </script>
+                </select></li>
+            </ul>
+    </div>
+
+       
+
+
+
+         
+        
+    <div class='banner' id="banner2">
+        <ul>   
+        <li >글자색<input type='color' id='fontcolor' title='글자색' onclick="forecolorChange(this)" onchange="forecolorChange(this)" value="#000000" > </li>
+            <li><button id='insertImage'onclick="execComma(this)"><i class="fa fa-file-image-o" aria-hidden="true"></i></button> </li>
+            <li><button id='createLink'onclick="linkChange()"> <i class="fa fa-link" aria-hidden="true"></i> </button> </li>
+            <li><button id='unlink'onclick="execComma(this)"><i class="fa fa-unlink" aria-hidden="true"></i></button> </li>
+            <li><button id='undo'onclick="execComma(this)"><i class="fa fa-undo" aria-hidden="true"></i></button></li>
+            <li><button id='redo' onclick="execComma(this)"><i class="fa fa-repeat" aria-hidden="true"></i></button></li>
+        </ul>
+    </div>
+    
+    <div class='holder' >
+        <iframe name='wysiwyg' onmouseover="editor()" id='wysiwyg' frameborder='0' style="background-color: white;border:white 1px solid;" ></iframe>
+    </div>
+</div>
+
+<script>
+
+
+ function editor(){
+        
+        wysiwyg.document.designMode = 'On';
+    
+       
+
+        arraysOfOptions = document.querySelectorAll('select#fontfamily > option');
+
+        for (var i = 0; i < arraysOfOptions.length; i++) {
+            
+            arraysOfOptions[i].style.fontFamily = arraysOfOptions[i].value;
+        
+        }
+        var i=document.getElementById("fontcolor");
+        forecolorChange(i);
+       
+       
+    }
+    function pc(obj){
+        obj.src="/imgs/?name=submit1.gif";
+    }
+    function pc2(obj){
+        obj.src="/imgs/?name=submit.png";
+    }
+    function execComma(obj){
+       let s= obj.getAttribute('id')
+       wysiwyg.document.execCommand(s.toString());
+    }
+    function bgcolorChange(obj){
+        wysiwyg.document.execCommand("backColor", false, obj.value);
+    }
+    function forecolorChange(obj){
+        wysiwyg.document.execCommand("foreColor", false,obj.value);
+    }
+    function linkChange(){
+                url = prompt('url 입력', 'www.');
+                wysiwyg.document.execCommand("createLink", false, url);
+        
+    }
+    function fontfamilyChange(obj){
+        wysiwyg.document.execCommand("fontName", false, obj.value);
+    }
+    function fontsizeChange(obj){
+        wysiwyg.document.execCommand("fontSize", false, obj.value);
+    }
+
+    function isOrIsAncestorOf(ancestor, descendant) {
+	var n = descendant;
+	while (n) {
+	  if (n === ancestor) {
+		return true;
+	  } else {
+		n = n.parentNode;
+	  }
+	}
+	return false;
+  }
+  
+  function nodeContainsSelection(node) {
+	var sel, range;
+	if (window.getSelection && (sel = window.getSelection()).rangeCount) {
+	  range = sel.getRangeAt(0);
+	  return isOrIsAncestorOf(node, range.commonAncestorContainer);
+	}
+	return false;
+  }
+  
+  function insertHTML() {
+	var sel, range;
+	if (window.getSelection && (sel = window.getSelection()).rangeCount) {
+	  range = sel.getRangeAt(0);
+	  var oldcontents=document.createTextNode(range.toString());
+	 range.deleteContents(); 
+	  range.collapse(true);
+	 
+	  var span = document.createElement("span");
+	  span.id = "myId";
+	  span.style.fontSize="12px";
+	  span.appendChild( oldcontents );
+	  range.insertNode(span);
+  
+	
+	  // Move the caret immediately after the inserted span
+	  range.setStartAfter(span);
+	  range.collapse(true);
+	 
+	  sel.removeAllRanges();
+	  sel.addRange(range);
+	}
+  }
+  function insertHTMLs() {
+	var sel, range;
+	if (window.getSelection && (sel = window.getSelection()).rangeCount) {
+	  range = sel.getRangeAt(0);
+	  var oldcontents=document.createTextNode(range.toString());
+	 range.deleteContents(); 
+	  range.collapse(true);
+	 
+	  var span = document.createElement("span");
+	  span.id = "myId";
+	  span.style.fontSize="16px";
+	  span.style.backgroundColor="red";
+	  span.appendChild( oldcontents );
+	  range.insertNode(span);
+  
+	
+	  // Move the caret immediately after the inserted span
+	  range.setStartAfter(span);
+	  range.collapse(true);
+	 
+	  sel.removeAllRanges();
+	  sel.addRange(range);
+	}
+  }
+  
+  window.onload = function() {
+	document.getElementById("inserter").onmousedown = function() {
+	  var editor = document.getElementById("editor");
+	  if (nodeContainsSelection(editor)) {
+		insertHTML();
+		return false;
+	  }
+	};
+	document.getElementById("inserter2").onmousedown=function(){
+		var editor=document.getElementById("editor");
+		if(nodeContainsSelection(editor)){
+			insertHTMLs();
+			return false;
+		}
+	}
+  };
+</script> -->

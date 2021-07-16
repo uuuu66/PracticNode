@@ -1,0 +1,42 @@
+
+<h2>이름 변경</h2>
+<p id="message" style="top:80%">
+      
+</p>
+<form id="loginform" action="/auth/rename" method="post">
+  <div class="input-group" id="ff" style="margin-left:30%;">변경할 이름
+    <br>
+      
+    
+      <input id="name" type="text" name="name" width="200px" required >
+      <button id="login" type="submit" class="lbtn" style="color:white;background-color:rgba(0,0,0,0);margin-bottom: 50px;">변경</button>
+  </div>
+ 
+</form>
+<script>
+document.getElementById('loginform').addEventListener('submit',async(e)=>{
+e.preventDefault();
+name=e.target.name.value;
+if(name.length>8){
+  document.getElementById('message').innerText="8글자 초과입니다."
+}else{
+try{
+  var res= await axios.post('/auth/rename',{name});
+  if(res.data.message==undefined){
+    location.reload();
+  }else{
+    document.getElementById('message').innerText=res.data.message;
+  }
+
+  
+
+}catch(err){
+  console.log(err);
+}
+}
+
+});
+
+
+
+</script>

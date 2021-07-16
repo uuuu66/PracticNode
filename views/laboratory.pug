@@ -1,0 +1,135 @@
+extends layout
+block content
+    body(id="bodyL" style="" )
+            div(class="body" style="margin-left:0%;border:2px white solid;margin-bottom:20px;color:white;background-color: rgba(37, 13, 13, 0.7);")
+                details(style="")
+                    summary(style="cursor:pointer;border:0;padding-top:5px;border:white solid 1px; ") 검색
+                
+                    details(style="padding-bottom:20px") 
+                        summary(style="margin-top:20px;cursor:pointer;border:0;")  주제로 찾기
+                        div(style="margin-top:5px;font-size:15px;")  많은 건 크게  <br> 
+                        | 적은 건  작게<br>궁금한 주제 클릭
+                        hr
+                        div(style="display:flex;flex-wrap:wrap-reverse;justify-content:center;width:100%;text-align:center") 
+                            -for(var i=0;i<ld.count.length;i++)
+                                div(class="detaildiv" onclick=`clickCategory("${ld.count[i].category}")`  style=` cursor:pointer; margin:5px 5px 5px 5px; width:${(30*(ld.count[i].count/ld.count.length))}%;background-color:white;`)
+                                    span(  style=`color:black;font-size:15px;`) _#{ld.count[i].category}[#{ld.count[i].count}] 
+                    hr
+                    details(style="margin-bottom:20px;") 
+                        summary(style="margin-top:0px;cursor:pointer;border:0; ") 그냥 검색하기
+                        div(style="margin-top:5px;margin-bottom:5px;font-size:15px;") 검색어로 찾고자 하는 포스트를 검색합니다.
+                        hr
+                        div(style="width:100%;display:flex;flex-wrap:no-wrap;justify-content:center;")
+                            input#search(type="text" style="animation:inputanim infinite 3s;border: 1px solid skyblue; color: skyblue; padding: 5px;margin-top:20px;margin-left:10px;margin-right:10px; float:left;width:50%" )
+                            select(id="searchtype" style="border: 1px solid skyblue; background-color: rgba(0,0,0,0); color: skyblue; padding: 5px;float:left;margin-top:20px;")
+                                option(value="title" selected) 제목
+                                option(value="tag") 태그
+                            button(id="searchbtn" onclick="searchLab()" style="margin-top:20px;float:left;margin-left:10px;border: 1px solid skyblue; background-color: rgba(0,0,0,0); color: skyblue; padding: 5px;") 검색
+                            div#messagees(style="animation:messageanim infinite 2s")
+
+                    
+             
+            div.body(style="margin-left:0; background-color:white;width:100%;height:100%;color:black") 실험실입니다. 
+                br 
+                | 연구중인 것들이 올라갑니다.
+                -if(user)
+                    -if(user.auth==1)
+                        hr
+                        |  올리기
+                        br
+                        |카테고리
+                        input(id="category" type="text" name="titleofLab",width="500px" height="30px")
+                        br
+                        |제목
+                        input(id="title" type="text" name="titleofLab",width="500px" height="30px")
+                        br
+                        |html
+                        input(id="html" type="file" name="titleofLab",width="500px" height="30px")
+                        br
+                        |태그
+                        input(id="tag" type="text" name="titleofLab",width="500px" height="30px")
+                        br
+                        button(onclick="postLabStory()" style=" background-color:white;color:black;width:500px" ) 보내기
+                        h2(id="res")
+                
+                hr
+                span(onclick="goLab()" style="cursor:pointer") 실험 목록들
+                i(class="fas fa-vial")
+                -if(plist.length>0)
+                    -for(var i=0;i<plist.length;i++)
+                        hr
+                        i(class="fas fa-flask")
+                        span.lab(onclcik=`clickCategory("${plist[i].category}")`) [#{plist[i].category}]
+                        span.lab(onclick=`getLabStory("${plist[i].html}")`) #{plist[i].title}
+                        br
+                        i(class="fas fa-tag" style="font-size:10px;")
+                        |   
+                        -for(var j=0;j<tags[i].length;j++)
+                            
+                            span.lab(onclick=`clickTag("${tags[i][j]}")` style="font-size:12px;color:gray;") #{tags[i][j]} 
+                        
+                -else
+                    hr 
+                    |실험목록이 없습니다.
+            section.section(style=" ;width:100%;background-image:none;;height:100%;color:black")
+                div#content(style="background-color:gray;color:black")
+
+    script.
+       async function getLabStory(plisthtml){
+         
+             $(document).ready(function(){
+                $("#content").load("http://39.115.162.208:30000/"+plisthtml,()=>{
+                    console.log(plisthtml);
+                });
+             });
+               const Y=document.querySelector('#content').offsetTop;
+                window.setTimeout(function(){;window.scrollTo({top:Y,left:0,behavior:'smooth'});},100);
+        }
+         async function postLabStory(){
+             var category=document.getElementById("category").value;
+             var title=document.getElementById("title").value;
+             var Inputh=document.getElementById("html");
+             var html=Inputh.files[0].name;
+             var tag=document.getElementById("tag").value;
+             var result=document.getElementById("res");
+          var res=   await axios.post('/lab/postLab',{title,tag,category,html});
+             if(res.data.message=="y"){
+                 return result.innerText="등록완료";
+             }
+             else{
+                 return result.innerText="등록실패";
+             }
+        }
+        function searchLab(){
+            
+                var category=document.getElementById("searchtype");
+                var condition=category.options[category.selectedIndex].value;
+                var data=document.getElementById('search');
+                
+                var msg= document.getElementById('messagees');
+                if(data.value==""||data.value==null){
+                msg.innerText="검색내용이 없습니다."
+                
+                }
+                else{
+                    var urls='http://39.115.162.208:30000/lab/?search='+data.value+"&condition="+condition;
+                window.open(new URL(urls),'__self');
+                }
+           
+        }
+        function clickTag(Tag){
+            Tag=Tag.substring(1);
+            var urls='http://39.115.162.208:30000/lab/?search='+Tag+"&condition=tag";
+                window.open(new URL(urls),'__self');
+        }
+        function clickCategory(Category){
+            var urls='http://39.115.162.208:30000/lab/?serach='+Category+"&condition=category";
+                window.open(new URL(urls),'__self');
+        }
+    
+
+   
+                    
+        
+            
+            

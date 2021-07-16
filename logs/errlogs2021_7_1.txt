@@ -1,0 +1,387 @@
+19_28_41_375:
+ 접속아이피:::ffff:192.168.0.1
+url:"/favicon.ico"404 에러
+유저undefined
+
+
+
+19_29_39_618:
+ 접속아이피:::ffff:192.168.0.1
+url:"/post/getc"
+바디:"TypeError: Cannot read property 'Comments' of null\n    at C:\\Users\\leemi\\Documents\\PracticNode\\route\\post.js:283:41\n    at processTicksAndRejections (internal/process/task_queues.js:93:5)"
+유저undefined
+
+
+
+19_30_11_394:
+ 접속아이피:::ffff:192.168.0.1
+url:"/post/addc"
+바디:undefined
+유저undefined
+
+
+
+19_35_23_27:
+ 접속아이피:::ffff:192.168.0.1
+url:"/"
+바디:"Error: C:\\Users\\leemi\\Documents\\PracticNode\\views\\chat.pug:4:1\n    2| \r\n    3| extends layout\r\n  > 4|     block chat\r\n-------^\n    5|     .chatContainer\r\n    6|         .chatHead \r\n    7|             form.chatMenu zz\r\n\nunexpected token \"indent\"\n    at makeError (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-error\\index.js:34:13)\n    at Parser.error (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-parser\\index.js:56:15)\n    at Parser.parseExpr (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-parser\\index.js:280:14)\n    at Parser.parse (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-parser\\index.js:115:25)\n    at parse (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-parser\\index.js:12:20)\n    at Object.parse (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug\\lib\\index.js:137:11)\n    at Function.loadString [as string] (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-load\\index.js:54:21)\n    at C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-load\\index.js:37:27\n    at walkAST (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-walk\\index.js:26:18)\n    at C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-walk\\index.js:112:20\n    at Array.reduce (<anonymous>)\n    at walkAndMergeNodes (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-walk\\index.js:111:18)\n    at walkAST (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-walk\\index.js:40:19)\n    at load (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-load\\index.js:13:10)\n    at Function.loadString [as string] (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-load\\index.js:55:10)\n    at C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-load\\index.js:37:27\n    at walkAST (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-walk\\index.js:26:18)\n    at C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-walk\\index.js:112:20\n    at Array.reduce (<anonymous>)\n    at walkAndMergeNodes (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-walk\\index.js:111:18)\n    at walkAST (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-walk\\index.js:40:19)\n    at load (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-load\\index.js:13:10)\n    at Function.loadString [as string] (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-load\\index.js:55:10)\n    at compileBody (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug\\lib\\index.js:82:18)\n    at Object.exports.compile (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug\\lib\\index.js:269:16)\n    at handleTemplateCache (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug\\lib\\index.js:242:25)\n    at Object.exports.renderFile (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug\\lib\\index.js:454:10)\n    at Object.exports.renderFile (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug\\lib\\index.js:444:21)"
+유저{"id":1,"name":"주인장","email":"1652279023","password":"1652279023","provider":"kakao","auth":1}
+
+
+
+19_36_7_293:
+ 접속아이피:::ffff:192.168.0.1
+url:"/"
+바디:"Error: C:\\Users\\leemi\\Documents\\PracticNode\\views\\chat.pug:4:1\n    2| \r\n    3| extends layout\r\n  > 4|     block chat\r\n-------^\n    5|     .chatContainer\r\n    6|         .chatHead \r\n    7|             form.chatMenu zz\r\n\nunexpected token \"indent\"\n    at makeError (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-error\\index.js:34:13)\n    at Parser.error (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-parser\\index.js:56:15)\n    at Parser.parseExpr (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-parser\\index.js:280:14)\n    at Parser.parse (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-parser\\index.js:115:25)\n    at parse (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-parser\\index.js:12:20)\n    at Object.parse (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug\\lib\\index.js:137:11)\n    at Function.loadString [as string] (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-load\\index.js:54:21)\n    at C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-load\\index.js:37:27\n    at walkAST (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-walk\\index.js:26:18)\n    at C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-walk\\index.js:112:20\n    at Array.reduce (<anonymous>)\n    at walkAndMergeNodes (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-walk\\index.js:111:18)\n    at walkAST (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-walk\\index.js:40:19)\n    at load (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-load\\index.js:13:10)\n    at Function.loadString [as string] (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-load\\index.js:55:10)\n    at C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-load\\index.js:37:27\n    at walkAST (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-walk\\index.js:26:18)\n    at C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-walk\\index.js:112:20\n    at Array.reduce (<anonymous>)\n    at walkAndMergeNodes (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-walk\\index.js:111:18)\n    at walkAST (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-walk\\index.js:40:19)\n    at load (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-load\\index.js:13:10)\n    at Function.loadString [as string] (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-load\\index.js:55:10)\n    at compileBody (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug\\lib\\index.js:82:18)\n    at Object.exports.compile (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug\\lib\\index.js:269:16)\n    at handleTemplateCache (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug\\lib\\index.js:242:25)\n    at Object.exports.renderFile (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug\\lib\\index.js:454:10)\n    at Object.exports.renderFile (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug\\lib\\index.js:444:21)"
+유저{"id":1,"name":"주인장","email":"1652279023","password":"1652279023","provider":"kakao","auth":1}
+
+
+
+19_36_9_599:
+ 접속아이피:::ffff:192.168.0.1
+url:"/"
+바디:"Error: C:\\Users\\leemi\\Documents\\PracticNode\\views\\chat.pug:4:1\n    2| \r\n    3| extends layout\r\n  > 4|     block chat\r\n-------^\n    5|     .chatContainer\r\n    6|         .chatHead \r\n    7|             form.chatMenu zz\r\n\nunexpected token \"indent\"\n    at makeError (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-error\\index.js:34:13)\n    at Parser.error (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-parser\\index.js:56:15)\n    at Parser.parseExpr (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-parser\\index.js:280:14)\n    at Parser.parse (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-parser\\index.js:115:25)\n    at parse (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-parser\\index.js:12:20)\n    at Object.parse (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug\\lib\\index.js:137:11)\n    at Function.loadString [as string] (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-load\\index.js:54:21)\n    at C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-load\\index.js:37:27\n    at walkAST (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-walk\\index.js:26:18)\n    at C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-walk\\index.js:112:20\n    at Array.reduce (<anonymous>)\n    at walkAndMergeNodes (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-walk\\index.js:111:18)\n    at walkAST (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-walk\\index.js:40:19)\n    at load (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-load\\index.js:13:10)\n    at Function.loadString [as string] (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-load\\index.js:55:10)\n    at C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-load\\index.js:37:27\n    at walkAST (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-walk\\index.js:26:18)\n    at C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-walk\\index.js:112:20\n    at Array.reduce (<anonymous>)\n    at walkAndMergeNodes (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-walk\\index.js:111:18)\n    at walkAST (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-walk\\index.js:40:19)\n    at load (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-load\\index.js:13:10)\n    at Function.loadString [as string] (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-load\\index.js:55:10)\n    at compileBody (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug\\lib\\index.js:82:18)\n    at Object.exports.compile (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug\\lib\\index.js:269:16)\n    at handleTemplateCache (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug\\lib\\index.js:242:25)\n    at Object.exports.renderFile (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug\\lib\\index.js:454:10)\n    at Object.exports.renderFile (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug\\lib\\index.js:444:21)"
+유저{"id":1,"name":"주인장","email":"1652279023","password":"1652279023","provider":"kakao","auth":1}
+
+
+
+19_36_10_164:
+ 접속아이피:::ffff:192.168.0.1
+url:"/"
+바디:"Error: C:\\Users\\leemi\\Documents\\PracticNode\\views\\chat.pug:4:1\n    2| \r\n    3| extends layout\r\n  > 4|     block chat\r\n-------^\n    5|     .chatContainer\r\n    6|         .chatHead \r\n    7|             form.chatMenu zz\r\n\nunexpected token \"indent\"\n    at makeError (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-error\\index.js:34:13)\n    at Parser.error (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-parser\\index.js:56:15)\n    at Parser.parseExpr (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-parser\\index.js:280:14)\n    at Parser.parse (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-parser\\index.js:115:25)\n    at parse (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-parser\\index.js:12:20)\n    at Object.parse (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug\\lib\\index.js:137:11)\n    at Function.loadString [as string] (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-load\\index.js:54:21)\n    at C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-load\\index.js:37:27\n    at walkAST (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-walk\\index.js:26:18)\n    at C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-walk\\index.js:112:20\n    at Array.reduce (<anonymous>)\n    at walkAndMergeNodes (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-walk\\index.js:111:18)\n    at walkAST (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-walk\\index.js:40:19)\n    at load (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-load\\index.js:13:10)\n    at Function.loadString [as string] (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-load\\index.js:55:10)\n    at C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-load\\index.js:37:27\n    at walkAST (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-walk\\index.js:26:18)\n    at C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-walk\\index.js:112:20\n    at Array.reduce (<anonymous>)\n    at walkAndMergeNodes (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-walk\\index.js:111:18)\n    at walkAST (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-walk\\index.js:40:19)\n    at load (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-load\\index.js:13:10)\n    at Function.loadString [as string] (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-load\\index.js:55:10)\n    at compileBody (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug\\lib\\index.js:82:18)\n    at Object.exports.compile (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug\\lib\\index.js:269:16)\n    at handleTemplateCache (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug\\lib\\index.js:242:25)\n    at Object.exports.renderFile (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug\\lib\\index.js:454:10)\n    at Object.exports.renderFile (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug\\lib\\index.js:444:21)"
+유저{"id":1,"name":"주인장","email":"1652279023","password":"1652279023","provider":"kakao","auth":1}
+
+
+
+19_36_10_476:
+ 접속아이피:::ffff:192.168.0.1
+url:"/"
+바디:"Error: C:\\Users\\leemi\\Documents\\PracticNode\\views\\chat.pug:4:1\n    2| \r\n    3| extends layout\r\n  > 4|     block chat\r\n-------^\n    5|     .chatContainer\r\n    6|         .chatHead \r\n    7|             form.chatMenu zz\r\n\nunexpected token \"indent\"\n    at makeError (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-error\\index.js:34:13)\n    at Parser.error (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-parser\\index.js:56:15)\n    at Parser.parseExpr (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-parser\\index.js:280:14)\n    at Parser.parse (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-parser\\index.js:115:25)\n    at parse (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-parser\\index.js:12:20)\n    at Object.parse (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug\\lib\\index.js:137:11)\n    at Function.loadString [as string] (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-load\\index.js:54:21)\n    at C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-load\\index.js:37:27\n    at walkAST (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-walk\\index.js:26:18)\n    at C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-walk\\index.js:112:20\n    at Array.reduce (<anonymous>)\n    at walkAndMergeNodes (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-walk\\index.js:111:18)\n    at walkAST (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-walk\\index.js:40:19)\n    at load (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-load\\index.js:13:10)\n    at Function.loadString [as string] (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-load\\index.js:55:10)\n    at C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-load\\index.js:37:27\n    at walkAST (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-walk\\index.js:26:18)\n    at C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-walk\\index.js:112:20\n    at Array.reduce (<anonymous>)\n    at walkAndMergeNodes (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-walk\\index.js:111:18)\n    at walkAST (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-walk\\index.js:40:19)\n    at load (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-load\\index.js:13:10)\n    at Function.loadString [as string] (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-load\\index.js:55:10)\n    at compileBody (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug\\lib\\index.js:82:18)\n    at Object.exports.compile (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug\\lib\\index.js:269:16)\n    at handleTemplateCache (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug\\lib\\index.js:242:25)\n    at Object.exports.renderFile (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug\\lib\\index.js:454:10)\n    at Object.exports.renderFile (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug\\lib\\index.js:444:21)"
+유저{"id":1,"name":"주인장","email":"1652279023","password":"1652279023","provider":"kakao","auth":1}
+
+
+
+19_37_2_955:
+ 접속아이피:::ffff:192.168.0.1
+url:"/socket.io/socket.io.js"404 에러
+유저{"id":1,"name":"주인장","email":"1652279023","password":"1652279023","provider":"kakao","auth":1}
+
+
+
+19_40_0_77:
+ 접속아이피:::ffff:192.168.0.1
+url:"/socket.io/socket.io.js"404 에러
+유저{"id":1,"name":"주인장","email":"1652279023","password":"1652279023","provider":"kakao","auth":1}
+
+
+
+19_42_18_689:
+ 접속아이피:::ffff:192.168.0.1
+url:"/socket.io/socket.io.js"404 에러
+유저{"id":1,"name":"주인장","email":"1652279023","password":"1652279023","provider":"kakao","auth":1}
+
+
+
+19_42_19_643:
+ 접속아이피:::ffff:192.168.0.1
+url:"/socket.io/socket.io.js"404 에러
+유저{"id":1,"name":"주인장","email":"1652279023","password":"1652279023","provider":"kakao","auth":1}
+
+
+
+19_42_19_721:
+ 접속아이피:::ffff:192.168.0.1
+url:"/socket.io/socket.io.js"404 에러
+유저{"id":1,"name":"주인장","email":"1652279023","password":"1652279023","provider":"kakao","auth":1}
+
+
+
+19_59_40_699:
+ 접속아이피:::ffff:192.168.0.1
+url:"/"
+바디:"Error: C:\\Users\\leemi\\Documents\\PracticNode\\views\\chat.pug:4:1\n    2| \r\n    3| \r\n  > 4|     .chatContainer\r\n-------^\n    5|         .chatHead \r\n    6|             form.chatMenu zz\r\n    7|         .chatBody        \r\n\nunexpected token \"indent\"\n    at makeError (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-error\\index.js:34:13)\n    at Parser.error (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-parser\\index.js:56:15)\n    at Parser.parseExpr (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-parser\\index.js:280:14)\n    at Parser.parse (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-parser\\index.js:115:25)\n    at parse (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-parser\\index.js:12:20)\n    at Object.parse (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug\\lib\\index.js:137:11)\n    at Function.loadString [as string] (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-load\\index.js:54:21)\n    at C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-load\\index.js:37:27\n    at walkAST (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-walk\\index.js:26:18)\n    at C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-walk\\index.js:112:20\n    at Array.reduce (<anonymous>)\n    at walkAndMergeNodes (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-walk\\index.js:111:18)\n    at walkAST (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-walk\\index.js:40:19)\n    at load (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-load\\index.js:13:10)\n    at Function.loadString [as string] (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-load\\index.js:55:10)\n    at C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-load\\index.js:37:27\n    at walkAST (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-walk\\index.js:26:18)\n    at C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-walk\\index.js:112:20\n    at Array.reduce (<anonymous>)\n    at walkAndMergeNodes (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-walk\\index.js:111:18)\n    at walkAST (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-walk\\index.js:40:19)\n    at load (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-load\\index.js:13:10)\n    at Function.loadString [as string] (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-load\\index.js:55:10)\n    at compileBody (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug\\lib\\index.js:82:18)\n    at Object.exports.compile (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug\\lib\\index.js:269:16)\n    at handleTemplateCache (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug\\lib\\index.js:242:25)\n    at Object.exports.renderFile (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug\\lib\\index.js:454:10)\n    at Object.exports.renderFile (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug\\lib\\index.js:444:21)"
+유저undefined
+
+
+
+20_2_9_747:
+ 접속아이피:::ffff:192.168.0.1
+url:"/"
+바디:"Error: C:\\Users\\leemi\\Documents\\PracticNode\\views\\chat.pug:4:1\n    2| \r\n    3| \r\n  > 4|     .chatContainer\r\n-------^\n    5|         .chatHead \r\n    6|             form.chatMenu zz\r\n    7|         .chatBody        \r\n\nunexpected token \"indent\"\n    at makeError (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-error\\index.js:34:13)\n    at Parser.error (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-parser\\index.js:56:15)\n    at Parser.parseExpr (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-parser\\index.js:280:14)\n    at Parser.parse (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-parser\\index.js:115:25)\n    at parse (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-parser\\index.js:12:20)\n    at Object.parse (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug\\lib\\index.js:137:11)\n    at Function.loadString [as string] (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-load\\index.js:54:21)\n    at C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-load\\index.js:37:27\n    at walkAST (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-walk\\index.js:26:18)\n    at C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-walk\\index.js:112:20\n    at Array.reduce (<anonymous>)\n    at walkAndMergeNodes (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-walk\\index.js:111:18)\n    at walkAST (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-walk\\index.js:40:19)\n    at load (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-load\\index.js:13:10)\n    at Function.loadString [as string] (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-load\\index.js:55:10)\n    at C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-load\\index.js:37:27\n    at walkAST (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-walk\\index.js:26:18)\n    at C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-walk\\index.js:112:20\n    at Array.reduce (<anonymous>)\n    at walkAndMergeNodes (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-walk\\index.js:111:18)\n    at walkAST (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-walk\\index.js:40:19)\n    at load (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-load\\index.js:13:10)\n    at Function.loadString [as string] (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-load\\index.js:55:10)\n    at compileBody (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug\\lib\\index.js:82:18)\n    at Object.exports.compile (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug\\lib\\index.js:269:16)\n    at handleTemplateCache (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug\\lib\\index.js:242:25)\n    at Object.exports.renderFile (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug\\lib\\index.js:454:10)\n    at Object.exports.renderFile (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug\\lib\\index.js:444:21)"
+유저undefined
+
+
+
+20_2_28_359:
+ 접속아이피:::1
+url:"/chatRoom/?EIO=4&transport=polling&t=NfXk_xq"404 에러
+유저undefined
+
+
+
+20_2_30_122:
+ 접속아이피:::1
+url:"/chatRoom/?EIO=4&transport=polling&t=NfXl0NX"404 에러
+유저undefined
+
+
+
+20_2_31_317:
+ 접속아이피:::1
+url:"/chatRoom/?EIO=4&transport=polling&t=NfXl0gC"404 에러
+유저undefined
+
+
+
+20_2_34_784:
+ 접속아이피:::1
+url:"/chatRoom/?EIO=4&transport=polling&t=NfXl1WP"404 에러
+유저undefined
+
+
+
+20_2_39_825:
+ 접속아이피:::1
+url:"/chatRoom/?EIO=4&transport=polling&t=NfXl2l7"404 에러
+유저undefined
+
+
+
+20_2_44_885:
+ 접속아이피:::1
+url:"/chatRoom/?EIO=4&transport=polling&t=NfXl3-9"404 에러
+유저undefined
+
+
+
+20_2_49_929:
+ 접속아이피:::1
+url:"/chatRoom/?EIO=4&transport=polling&t=NfXl5C-"404 에러
+유저undefined
+
+
+
+20_53_34_856:
+ 접속아이피:::1
+url:"/room/?EIO=4&transport=polling&t=NfXwibx"404 에러
+유저undefined
+
+
+
+20_53_36_466:
+ 접속아이피:::1
+url:"/room/?EIO=4&transport=polling&t=NfXwi_9"404 에러
+유저undefined
+
+
+
+20_53_37_702:
+ 접속아이피:::1
+url:"/room/?EIO=4&transport=polling&t=NfXwjIS"404 에러
+유저undefined
+
+
+
+20_53_40_529:
+ 접속아이피:::1
+url:"/room/?EIO=4&transport=polling&t=NfXwj-d"404 에러
+유저undefined
+
+
+
+20_53_45_602:
+ 접속아이피:::1
+url:"/room/?EIO=4&transport=polling&t=NfXwlDw"404 에러
+유저undefined
+
+
+
+20_54_36_343:
+ 접속아이피:::1
+url:"/room/?EIO=4&transport=polling&t=NfXwxce"404 에러
+유저undefined
+
+
+
+20_54_37_472:
+ 접속아이피:::1
+url:"/room/?EIO=4&transport=polling&t=NfXwxuN"404 에러
+유저undefined
+
+
+
+20_54_40_455:
+ 접속아이피:::1
+url:"/room/?EIO=4&transport=polling&t=NfXwycw"404 에러
+유저undefined
+
+
+
+20_54_43_635:
+ 접속아이피:::1
+url:"/room/?EIO=4&transport=polling&t=NfXwzOg"404 에러
+유저undefined
+
+
+
+20_54_48_666:
+ 접속아이피:::1
+url:"/room/?EIO=4&transport=polling&t=NfXw-dH"404 에러
+유저undefined
+
+
+
+20_54_53_707:
+ 접속아이피:::1
+url:"/room/?EIO=4&transport=polling&t=NfXw_rz"404 에러
+유저undefined
+
+
+
+20_54_59_104:
+ 접속아이피:::1
+url:"/room/?EIO=4&transport=polling&t=NfXx1AN"404 에러
+유저undefined
+
+
+
+20_55_5_105:
+ 접속아이피:::1
+url:"/room/?EIO=4&transport=polling&t=NfXx2d-"404 에러
+유저undefined
+
+
+
+20_55_11_93:
+ 접속아이피:::1
+url:"/room/?EIO=4&transport=polling&t=NfXx45j"404 에러
+유저undefined
+
+
+
+20_55_17_97:
+ 접속아이피:::1
+url:"/room/?EIO=4&transport=polling&t=NfXx5ZW"404 에러
+유저undefined
+
+
+
+20_55_23_102:
+ 접속아이피:::1
+url:"/room/?EIO=4&transport=polling&t=NfXx71M"404 에러
+유저undefined
+
+
+
+20_55_29_95:
+ 접속아이피:::1
+url:"/room/?EIO=4&transport=polling&t=NfXx8U_"404 에러
+유저undefined
+
+
+
+20_55_35_98:
+ 접속아이피:::1
+url:"/room/?EIO=4&transport=polling&t=NfXx9ym"404 에러
+유저undefined
+
+
+
+20_55_41_93:
+ 접속아이피:::1
+url:"/room/?EIO=4&transport=polling&t=NfXxBQU"404 에러
+유저undefined
+
+
+
+20_55_47_91:
+ 접속아이피:::1
+url:"/room/?EIO=4&transport=polling&t=NfXxCuB"404 에러
+유저undefined
+
+
+
+20_55_53_105:
+ 접속아이피:::1
+url:"/room/?EIO=4&transport=polling&t=NfXxEM8"404 에러
+유저undefined
+
+
+
+20_55_59_102:
+ 접속아이피:::1
+url:"/room/?EIO=4&transport=polling&t=NfXxFpt"404 에러
+유저undefined
+
+
+
+20_56_5_99:
+ 접속아이피:::1
+url:"/room/?EIO=4&transport=polling&t=NfXxHHZ"404 에러
+유저undefined
+
+
+
+20_56_11_94:
+ 접속아이피:::1
+url:"/room/?EIO=4&transport=polling&t=NfXxIlF"404 에러
+유저undefined
+
+
+
+20_56_17_98:
+ 접속아이피:::1
+url:"/room/?EIO=4&transport=polling&t=NfXxKD2"404 에러
+유저undefined
+
+
+
+20_56_23_104:
+ 접속아이피:::1
+url:"/room/?EIO=4&transport=polling&t=NfXxLgu"404 에러
+유저undefined
+
+
+
+20_56_29_92:
+ 접속아이피:::1
+url:"/room/?EIO=4&transport=polling&t=NfXxN8T"404 에러
+유저undefined
+
+
+
+20_56_35_93:
+ 접속아이피:::1
+url:"/room/?EIO=4&transport=polling&t=NfXxOcD"404 에러
+유저undefined
+
+
+
+20_56_41_98:
+ 접속아이피:::1
+url:"/room/?EIO=4&transport=polling&t=NfXxQ43"404 에러
+유저undefined
+
+
+
+20_56_47_103:
+ 접속아이피:::1
+url:"/room/?EIO=4&transport=polling&t=NfXxRXt"404 에러
+유저undefined
+
+
+
+20_56_53_93:
+ 접속아이피:::1
+url:"/room/?EIO=4&transport=polling&t=NfXxS_S"404 에러
+유저undefined
+
+
+
+20_56_59_93:
+ 접속아이피:::1
+url:"/room/?EIO=4&transport=polling&t=NfXxUTC"404 에러
+유저undefined
+
+
+

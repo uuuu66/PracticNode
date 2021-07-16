@@ -1,0 +1,106 @@
+
+  
+
+
+  
+
+
+<h2>로그인</h2>
+<p id="message">    
+</p>
+<form id="loginform" action="/auth/login" method="post"  >
+  <div class="input-groups"><h4>이메일</h4>
+      
+    
+      
+     
+      <input id="email"class="li" type="email" name="email" required >
+  </div>
+    <div id='lpassword' class="input-groups"><h4>비밀번호</h4>
+   
+
+      <input id="password" class="li" type="password" name="password"  autocomplete='on' required>
+    
+    </div>
+    
+    <br>
+    <div class="button-group" >로그인
+        <button id="login" type="submit" class="lbtn" style="background-image:url(/logIn.png);background-size:cover;padding:18px 18px 18px 18px;"></button>
+        <br>
+</form>
+
+    <br>  
+    <br>다른 방법으로 로그인
+    <br><br>
+
+    </div>
+   <div id="snsbtn">
+    
+      <form action="/auth/login/kakao" method="post">카톡
+       <button id="kakao" class="btn" style="background-image:url(/kakao.png);background-size:cover;padding:18px 18px 18px 18px;"></button>
+      </form>
+
+      <form action="/auth/login/github" method="post">깃헙
+        <button id="github"  class="btn"style="background-image:url(/github.png);background-size:cover;padding:18px 18px 18px 18px;"></button>
+      </form>
+    </div>
+    
+
+    <script>
+      document.getElementById('loginform').addEventListener('submit',async(e)=>{
+      e.preventDefault();
+      const email=e.target.email.value;
+      const password=e.target.password.value;
+    
+      try{
+          var res = await axios.post('/auth/login',{email,password});
+         
+          if(res.data.login!='yes')
+            {
+              document.getElementById('message').innerText=res.data.login;
+             
+              // window.open(window.location.href,'__self');
+            }
+           else{
+              goBack();
+            }
+            if(res.data.login=='당신 어떻게 여기 들어온거요? 로그인 되어있는데..?'){
+              document.getElementById('message').innerText=res.data.login; 
+
+              setTimeout(goBack(),5000);
+              
+            }
+    
+      }catch(err){
+    
+        document.getElementById('message').innerText="서버오류가 생겼어요. 다시 시도해주세요.";
+      }
+      });
+     
+      function goBack(){ window.open(window.location.href,'_self',{});}
+    
+    
+      document.getElementById('kakao').addEventListener('submit',async(e)=>{
+       
+        try{
+
+         res= await axios.post('/auth/login/kakao');
+        
+        }catch(Err){
+          document.getElementById('message').innerText="서버오류가 생겼어요. 다시 시도해주세요.";
+        }
+
+
+      });
+      document.getElementById('github').addEventListener('submit',async(e)=>{
+        try{
+          res= await axios.post('/auth/login/github',);
+          
+        }catch(Err){
+          document.getElementById('message').innerText="서버오류가 생겼어요. 다시 시도해주세요.";
+        }
+
+
+      });
+      
+    </script>

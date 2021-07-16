@@ -1,0 +1,138 @@
+extends layout
+
+block content
+    
+
+    body(id="postb" style="color:white;"  )
+      section#section(onload="scrollp()"  style="background-image:none;color:white;min-height:1080px;z-index:1;position:static" )
+        p#msg
+        div(class="body" style="border:2px white solid;margin-bottom:20px;color:white;background-color: rgba(37, 13, 13, 0.7);")
+            details
+              summary(style="cursor:pointer;border:0;padding-top:5px;border:white solid 1px; ") 검색
+             
+              details(style="padding-bottom:20px") 
+                summary(style="margin-top:20px;cursor:pointer;border:0;") 세부 주제로 찾기
+                div(style="margin-top:5px;font-size:15px;")  많은 건 크게  <br> 
+                  | 적은 건  작게<br>궁금한 주제 클릭
+                hr
+                h4 일상[#{ilcount}]
+                div(style="display:flex;flex-wrap:wrap-reverse;justify-content:center;width:100%;text-align:center") 
+                  -for(var i=0;i<ild.count.length;i++)
+                    div(class="detaildiv" onclick=`getDetail("일상","${ild.count[i].detailcategory}")`  style=` cursor:pointer; margin:5px 5px 5px 5px; width:${(100*(ild.count[i].count/ild.count.length))}%;background-color:${colorcode[i%7]}` )
+                      span(  style=`color:black;font-size:${10+Math.floor(30*(ild.count[i].count/ild.count.length))}px;`) _#{ild.count[i].detailcategory}[#{ild.count[i].count}] 
+                h4 코딩[#{cocount}]
+                div(style="display:flex;flex-wrap:wrap-reverse;justify-content:center;width:100%;text-align:center") 
+                  -for(var i=0;i<cod.count.length;i++)
+                    div(class="detaildiv" onclick=`getDetail("코딩","${cod.count[i].detailcategory}")`  style=` cursor:pointer; margin:5px 5px 5px 5px; width:${(100*(cod.count[i].count/cod.count.length))}%;background-color:${colorcode[i%7]}` )
+                      span(  style=`color:black;font-size:${10+Math.floor(30*(cod.count[i].count/cod.count.length))}px;`) _#{cod.count[i].detailcategory}[#{cod.count[i].count}] 
+                h4 공부[#{gongcount}]
+                div(style="display:flex;flex-wrap:wrap-reverse;justify-content:center;width:100%;text-align:center") 
+                  -for(var i=0;i<gongd.count.length;i++)
+                    div(class="detaildiv" onclick=`getDetail("공부","${gongd.count[i].detailcategory}")`  style=` cursor:pointer; margin:5px 5px 5px 5px; width:${(100*(gongd.count[i].count/gongd.count.length))}%;background-color:${colorcode[i%7]}` )
+                      span(  style=`color:black;font-size:${10+Math.floor(30*(gongd.count[i].count/gongd.count.length))}px;`) _#{gongd.count[i].detailcategory}[#{gongd.count[i].count}] 
+                h4 생축[#{gicount}]
+                div(style="display:flex;flex-wrap:wrap-reverse;justify-content:center;width:100%;text-align:center") 
+                  -for(var i=0;i<gid.count.length;i++)
+                    div(class="detaildiv" onclick=`getDetail("기타","${gid.count[i].detailcategory}")`  style=` cursor:pointer; margin:5px 5px 5px 5px; width:${(100*(gid.count[i].count/gid.count.length))}%;background-color:${colorcode[i%7]}` )
+                      span(  style=`color:black;font-size:${10+Math.floor(30*(gid.count[i].count/gid.count.length))}px;`) _#{gid.count[i].detailcategory}[#{gid.count[i].count}] 
+              details(style="margin-bottom:20px;") 
+                summary(style="margin-top:0px;cursor:pointer;border:0; ") 그냥 검색하기
+                div(style="margin-top:5px;margin-bottom:5px;font-size:15px;") 검색어로 찾고자 하는 포스트를 검색합니다.
+                hr
+                div(style="width:100%;display:flex;flex-wrap:no-wrap;justify-content:center;")
+                  input#search(type="text" style="animation:inputanim infinite 3s;border: 1px solid skyblue; color: skyblue; padding: 5px;margin-top:20px;margin-left:10px;margin-right:10px; float:left;width:50%" )
+                  select(id="searchtype" style="border: 1px solid skyblue; background-color: rgba(0,0,0,0); color: skyblue; padding: 5px;float:left;margin-top:20px;")
+                    option(value="title" selected) 제목
+                    option(value="author") 작성자
+                    option(value="story") 내용
+                    option(value="titleAndstory") 제목+내용 
+                  button(id="searchbtn" onclick="search()" style="margin-top:20px;float:left;margin-left:10px;border: 1px solid skyblue; background-color: rgba(0,0,0,0); color: skyblue; padding: 5px;") 검색
+                div#messagees(style="animation:messageanim infinite 2s")
+
+              
+                
+        div(class="body"  style="border:2px white solid;margin-bottom:200px;color:white;background-color: rgba(37, 13, 13, 0.7);")
+            h1(style="border:0;user-select:none;") Posts
+            div(style="text-align:right;margin-left:0;width:100%")
+              -if(user) 
+                button(style="color:white;margin-right:5px;" method='button' onclick='getWrite()') 글쓰기
+              -else
+                button(style="color:white;margin-right:5px;" method='button' onclick='requestLogin()') 글쓰기
+            -if(plist.length>0)
+              ul(id="plist-ul" style="background-color: rgba(37, 13, 13, 0.5); padding-inline-start: 0px;")
+                hr
+                -for(var i=0;i<plist.length;i++)     
+                  div(style="margin-left:0; display:inline-block;width:100%;float:left")
+                    div.tp(style="margin-left:5px;float:left;text-align:left;user-select:none;") 
+                     span( onclick=`getDetail("${plist[i].category}","${plist[i].detailcategory}")` class='post' style="color:gray;") [#{plist[i].category}_#{plist[i].detailcategory}]
+                     span( onclick=`getAuthor("${plist[i].author}")` class='post') [#{plist[i].author}]
+                  
+                     small( onclick= `getStory(${plist[i].id},"${plist[i].author}","${plist[i].posts_id}","${userid}")` style="border-bottom:1px gray solid;") #{plist[i].title}
+                    div.date(style="font-size:8px;margin-left:0;")  #{plist[i].created_at}
+                    div.viewcount(id=`${plist[i].id}/view` style="font-size:8px;margin-left:3px;color:yellow") [#{plist[i].views}]
+                  hr
+              div(style="user-select:none;width:100%;margin-left:0;background-color: rgba(37, 13, 13, 0.7);") 
+               
+                -if(row>=1)
+                    span.next(onclick=`getNext(${row},1)`) <     
+                      
+                -if(count>10)
+                  -for(var i=row*10;i<parseInt(row)*10+10;i++) 
+                      -if(i<count)
+                        -if(i==idx-1)
+                          span.select(onclick=`getIdx(this)` style="user-select:none;background-color:white;color:black" id=`${idx}`) #{i+1}
+                          span  
+                        -else
+                          -if(i==parseInt(row)*10+5)
+                            br     
+                          span.post(onclick=`getIdx(this)` id=`${idx}`) #{i+1}
+                          span  
+                  -if(row<count/10-1)        
+                    span.next(onclick=`getNext(${row},0)`) > 
+                    br      
+                -else
+                  -for(var i=0;i<count;i++) 
+                    span.post(onclick=`getIdx(this)`) #{i+1}
+                    span  
+            -else
+              hr
+              div(style="padding-bottom:40px;animation-name: messageanim;animation-duration: 2s;animation-iteration-count: infinite; ") 게시물이 없습니다.
+        input(type="hidden" id="repair" value="no")         
+        div(class="body" id='body' style="background-color: rgba(37, 13, 13, 0.5);")
+        div( class="body" id='content' style=";background-color: rgba(37, 13, 13, 0.8);")
+        div(class="body" id='btncollection'  style=";background-color: rgba(37, 13, 13, 0.5);text-align:center")
+     
+        div( class="body" id='comment' style="display:none;position:relative;background-color: rgba(37, 13, 13, 0.8);")
+         
+          div(class="body" style="margin-left:0;" id='commentcontents')
+      
+        div( class="body" id="commentform" style="display:none;margin-top:20px; background-color: rgba(37, 13, 13, 0.8);")  
+         
+       
+          div(id="frog3"  class="frogs" onclick="cancleBabyc(this)")  댓굴 쓰기
+          div(class="body" id="deletethis" style="width:inherit;margin-left:0;padding-top:10px;background-color: rgba(37, 13, 13, 0.5);z-index:1100") 
+            div(style="width:inherit;margin-left:0;background-color:rgba(0,0,0,0.6);z-index:1000;position:relative" id="commentwritediv") <#{name}>
+              div( style="float:top;text-align:center;") 
+                textarea( onfocus="reset()"  rows="3" id="ct" style="width:80% ;resize:none;overflow-y:scroll ") 
+              div(style="margin-left:0;height:inherit;z-index:3000") 
+                span(id='length')
+                div(style="margin-left:0;color:wheat;font-size:15px;background-color: rgba(37, 13, 13, 0.5);") 작성하기  
+                button(type="button" style="color:white; background-color:rgba(0,0,0,0);border:0; margin-bottom:200px" onclick=`addComment(this,"${name}","${userid}")` bc="0" id="cbtn" sid="2") 
+                  img(src="/imgs/?name=frogbtn.gif" ) 
+          
+          script(type="text/javascript").
+           function reset(){
+              document.getElementById('ct').innerText = '';
+           }
+      
+            $("#ct").on("propertychange change keyup paste input", function(){
+                    if($(this).val().length>80){
+                      $('#length').css({color:"red"});
+                    }else{
+                        $('#length').css({color:"white"});
+                    }
+                    $('#length').text($(this).val().length+"/80");
+                   
+              });
+             
+            

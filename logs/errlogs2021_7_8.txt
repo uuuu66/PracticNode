@@ -1,0 +1,480 @@
+0_0_45_459:
+ 접속아이피:::ffff:192.168.0.1
+url:"/auth/logout"
+바디:"TypeError: Cannot read property 'name' of undefined\n    at C:\\Users\\leemi\\Documents\\PracticNode\\route\\auth.js:180:63\n    at Layer.handle [as handle_request] (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\express\\lib\\router\\route.js:137:13)\n    at exports.isLoggedIn (C:\\Users\\leemi\\Documents\\PracticNode\\route\\middlewares.js:4:9)\n    at Layer.handle [as handle_request] (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\express\\lib\\router\\route.js:137:13)\n    at Route.dispatch (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\express\\lib\\router\\route.js:112:3)\n    at Layer.handle [as handle_request] (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\express\\lib\\router\\index.js:281:22\n    at Function.process_params (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\express\\lib\\router\\index.js:335:12)\n    at next (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\express\\lib\\router\\index.js:275:10)\n    at Function.handle (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\express\\lib\\router\\index.js:174:3)\n    at router (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\express\\lib\\router\\index.js:47:12)\n    at Layer.handle [as handle_request] (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at trim_prefix (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\express\\lib\\router\\index.js:317:13)\n    at C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\express\\lib\\router\\index.js:284:7\n    at Function.process_params (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\express\\lib\\router\\index.js:335:12)\n    at next (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\express\\lib\\router\\index.js:275:10)\n    at C:\\Users\\leemi\\Documents\\PracticNode\\logs\\logs.js:23:28\n    at C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\graceful-fs\\graceful-fs.js:61:14\n    at FSReqCallback.oncomplete (fs.js:171:23)"
+유저undefined
+
+
+
+0_1_46_651:
+ 접속아이피:::ffff:192.168.0.1
+url:"/favicon.ico"404 에러
+유저undefined
+
+
+
+0_5_54_967:
+ 접속아이피:::ffff:192.168.0.1
+url:"/favicon.ico"404 에러
+유저undefined
+
+
+
+0_6_32_819:
+ 접속아이피:::ffff:192.168.0.1
+url:"/favicon.ico"404 에러
+유저undefined
+
+
+
+0_48_40_115:
+ 접속아이피:::ffff:192.168.0.1
+url:"/favicon.ico"404 에러
+유저undefined
+
+
+
+0_50_53_412:
+ 접속아이피:::ffff:192.168.0.1
+url:"/favicon.ico"404 에러
+유저undefined
+
+
+
+0_51_19_774:
+ 접속아이피:::ffff:192.168.0.1
+url:"/favicon.ico"404 에러
+유저undefined
+
+
+
+0_51_51_431:
+ 접속아이피:::ffff:192.168.0.1
+url:"/favicon.ico"404 에러
+유저undefined
+
+
+
+0_56_1_535:
+ 접속아이피:::ffff:192.168.0.1
+url:"/favicon.ico"404 에러
+유저undefined
+
+
+
+0_59_2_773:
+ 접속아이피:::ffff:192.168.0.1
+url:"/favicon.ico"404 에러
+유저undefined
+
+
+
+1_4_56_312:
+ 접속아이피:::ffff:192.168.0.1
+url:"/favicon.ico"404 에러
+유저undefined
+
+
+
+1_8_50_873:
+ 접속아이피:::ffff:192.168.0.1
+url:"/favicon.ico"404 에러
+유저undefined
+
+
+
+1_15_53_725:
+ 접속아이피:::ffff:192.168.0.1
+url:"/favicon.ico"404 에러
+유저undefined
+
+
+
+15_10_47_237:
+ 접속아이피:::ffff:192.168.0.1
+url:"/favicon.ico"404 에러
+유저undefined
+
+
+
+18_4_7_781:
+ 접속아이피:::ffff:192.168.0.1
+url:"/favicon.ico"404 에러
+유저undefined
+
+
+
+18_5_7_450:
+ 접속아이피:::ffff:192.168.0.1
+url:"/favicon.ico"404 에러
+유저undefined
+
+
+
+19_19_43_292:
+ 접속아이피:::ffff:192.168.0.1
+url:"/post"
+바디:"Error: C:\\Users\\leemi\\Documents\\PracticNode\\views\\post.pug:7:42\n    5| \r\n    6|     body(id=\"postb\" style=\"color:white;\"  )\r\n  > 7|       section#section(onload=\"scrollp()\" id=\"postsection\" style=\"background-image:none;color:white;min-height:1080px;z-index:1100\" )\r\n------------------------------------------------^\n    8|         p#msg\r\n    9|         div#content(class=\"body\" style=\"border:2px white solid;margin-bottom:20px;color:white;background-color: rgba(37, 13, 13, 0.7);\")\r\n    10|             details\r\n\nDuplicate attribute \"id\" is not allowed.\n    at makeError (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-error\\index.js:34:13)\n    at Parser.error (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-parser\\index.js:56:15)\n    at Parser.attrs (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-parser\\index.js:1278:16)\n    at Parser.tag (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-parser\\index.js:1172:45)\n    at Parser.parseTag (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-parser\\index.js:1126:17)\n    at Parser.parseExpr (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-parser\\index.js:222:21)\n    at Parser.block (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-parser\\index.js:1073:25)\n    at Parser.tag (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-parser\\index.js:1261:24)\n    at Parser.parseTag (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-parser\\index.js:1126:17)\n    at Parser.parseExpr (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-parser\\index.js:222:21)\n    at Parser.block (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-parser\\index.js:1073:25)\n    at Parser.parseBlock (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-parser\\index.js:843:16)\n    at Parser.parseExpr (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-parser\\index.js:226:21)\n    at Parser.parse (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-parser\\index.js:115:25)\n    at parse (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-parser\\index.js:12:20)\n    at Object.parse (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug\\lib\\index.js:137:11)\n    at Function.loadString [as string] (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-load\\index.js:54:21)\n    at compileBody (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug\\lib\\index.js:82:18)\n    at Object.exports.compile (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug\\lib\\index.js:269:16)\n    at handleTemplateCache (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug\\lib\\index.js:242:25)\n    at Object.exports.renderFile (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug\\lib\\index.js:454:10)\n    at Object.exports.renderFile (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug\\lib\\index.js:444:21)\n    at View.exports.__express [as engine] (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug\\lib\\index.js:493:11)\n    at View.render (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\express\\lib\\view.js:135:8)\n    at tryRender (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\express\\lib\\application.js:640:10)\n    at Function.render (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\express\\lib\\application.js:592:3)\n    at ServerResponse.render (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\express\\lib\\response.js:1012:7)\n    at C:\\Users\\leemi\\Documents\\PracticNode\\route\\post.js:908:17"
+유저{"id":1,"name":"이민기의이민기","email":"1652279023","password":"1652279023","provider":"kakao","auth":1}
+
+
+
+19_20_18_768:
+ 접속아이피:::ffff:192.168.0.1
+url:"/post/getc"
+바디:"TypeError: Cannot read property 'Comments' of null\n    at C:\\Users\\leemi\\Documents\\PracticNode\\route\\post.js:275:40\n    at processTicksAndRejections (internal/process/task_queues.js:93:5)"
+유저{"id":1,"name":"이민기의이민기","email":"1652279023","password":"1652279023","provider":"kakao","auth":1}
+
+
+
+19_20_28_290:
+ 접속아이피:::ffff:192.168.0.1
+url:"/post/getc"
+바디:"TypeError: Cannot read property 'Comments' of null\n    at C:\\Users\\leemi\\Documents\\PracticNode\\route\\post.js:275:40\n    at processTicksAndRejections (internal/process/task_queues.js:93:5)"
+유저{"id":1,"name":"이민기의이민기","email":"1652279023","password":"1652279023","provider":"kakao","auth":1}
+
+
+
+19_20_32_985:
+ 접속아이피:::ffff:192.168.0.1
+url:"/post/getc"
+바디:"TypeError: Cannot read property 'Comments' of null\n    at C:\\Users\\leemi\\Documents\\PracticNode\\route\\post.js:275:40\n    at processTicksAndRejections (internal/process/task_queues.js:93:5)"
+유저{"id":1,"name":"이민기의이민기","email":"1652279023","password":"1652279023","provider":"kakao","auth":1}
+
+
+
+19_22_16_176:
+ 접속아이피:::ffff:192.168.0.1
+url:"/post/getc"
+바디:"TypeError: Cannot read property 'Comments' of null\n    at C:\\Users\\leemi\\Documents\\PracticNode\\route\\post.js:283:41\n    at processTicksAndRejections (internal/process/task_queues.js:93:5)"
+유저undefined
+
+
+
+19_22_16_985:
+ 접속아이피:::ffff:192.168.0.1
+url:"/post/getc"
+바디:"TypeError: Cannot read property 'Comments' of null\n    at C:\\Users\\leemi\\Documents\\PracticNode\\route\\post.js:283:41\n    at processTicksAndRejections (internal/process/task_queues.js:93:5)"
+유저undefined
+
+
+
+19_22_26_138:
+ 접속아이피:::ffff:192.168.0.1
+url:"/post/getc"
+바디:"TypeError: Cannot read property 'Comments' of null\n    at C:\\Users\\leemi\\Documents\\PracticNode\\route\\post.js:283:41\n    at processTicksAndRejections (internal/process/task_queues.js:93:5)"
+유저undefined
+
+
+
+19_24_7_20:
+ 접속아이피:::ffff:192.168.0.1
+url:"/post/getc"
+바디:"TypeError: Cannot read property 'Comments' of null\n    at C:\\Users\\leemi\\Documents\\PracticNode\\route\\post.js:283:41\n    at processTicksAndRejections (internal/process/task_queues.js:93:5)"
+유저undefined
+
+
+
+19_24_7_944:
+ 접속아이피:::ffff:192.168.0.1
+url:"/post/getc"
+바디:"TypeError: Cannot read property 'Comments' of null\n    at C:\\Users\\leemi\\Documents\\PracticNode\\route\\post.js:283:41\n    at processTicksAndRejections (internal/process/task_queues.js:93:5)"
+유저undefined
+
+
+
+19_25_32_668:
+ 접속아이피:::ffff:192.168.0.1
+url:"/post/getc"
+바디:"TypeError: Cannot read property 'Comments' of null\n    at C:\\Users\\leemi\\Documents\\PracticNode\\route\\post.js:283:41\n    at processTicksAndRejections (internal/process/task_queues.js:93:5)"
+유저undefined
+
+
+
+19_25_33_377:
+ 접속아이피:::ffff:192.168.0.1
+url:"/post/getc"
+바디:"TypeError: Cannot read property 'Comments' of null\n    at C:\\Users\\leemi\\Documents\\PracticNode\\route\\post.js:283:41\n    at processTicksAndRejections (internal/process/task_queues.js:93:5)"
+유저undefined
+
+
+
+19_25_33_983:
+ 접속아이피:::ffff:192.168.0.1
+url:"/post/getc"
+바디:"TypeError: Cannot read property 'Comments' of null\n    at C:\\Users\\leemi\\Documents\\PracticNode\\route\\post.js:283:41\n    at processTicksAndRejections (internal/process/task_queues.js:93:5)"
+유저undefined
+
+
+
+19_25_34_254:
+ 접속아이피:::ffff:192.168.0.1
+url:"/post/getc"
+바디:"TypeError: Cannot read property 'Comments' of null\n    at C:\\Users\\leemi\\Documents\\PracticNode\\route\\post.js:283:41\n    at processTicksAndRejections (internal/process/task_queues.js:93:5)"
+유저undefined
+
+
+
+19_26_24_7:
+ 접속아이피:::ffff:192.168.0.1
+url:"/post/getc"
+바디:"TypeError: Cannot read property 'Comments' of null\n    at C:\\Users\\leemi\\Documents\\PracticNode\\route\\post.js:283:41\n    at processTicksAndRejections (internal/process/task_queues.js:93:5)"
+유저undefined
+
+
+
+19_26_24_660:
+ 접속아이피:::ffff:192.168.0.1
+url:"/post/getc"
+바디:"TypeError: Cannot read property 'Comments' of null\n    at C:\\Users\\leemi\\Documents\\PracticNode\\route\\post.js:283:41\n    at processTicksAndRejections (internal/process/task_queues.js:93:5)"
+유저undefined
+
+
+
+19_26_25_533:
+ 접속아이피:::ffff:192.168.0.1
+url:"/post/getc"
+바디:"TypeError: Cannot read property 'Comments' of null\n    at C:\\Users\\leemi\\Documents\\PracticNode\\route\\post.js:283:41\n    at processTicksAndRejections (internal/process/task_queues.js:93:5)"
+유저undefined
+
+
+
+19_26_27_970:
+ 접속아이피:::ffff:192.168.0.1
+url:"/post/getc"
+바디:"TypeError: Cannot read property 'Comments' of null\n    at C:\\Users\\leemi\\Documents\\PracticNode\\route\\post.js:283:41\n    at processTicksAndRejections (internal/process/task_queues.js:93:5)"
+유저undefined
+
+
+
+19_27_28_278:
+ 접속아이피:::ffff:192.168.0.1
+url:"/post/getc"
+바디:"TypeError: Cannot read property 'Comments' of null\n    at C:\\Users\\leemi\\Documents\\PracticNode\\route\\post.js:283:41\n    at processTicksAndRejections (internal/process/task_queues.js:93:5)"
+유저undefined
+
+
+
+19_27_29_998:
+ 접속아이피:::ffff:192.168.0.1
+url:"/post/getc"
+바디:"TypeError: Cannot read property 'Comments' of null\n    at C:\\Users\\leemi\\Documents\\PracticNode\\route\\post.js:283:41\n    at processTicksAndRejections (internal/process/task_queues.js:93:5)"
+유저undefined
+
+
+
+19_27_43_847:
+ 접속아이피:::ffff:192.168.0.1
+url:"/post/getc"
+바디:"TypeError: Cannot read property 'Comments' of null\n    at C:\\Users\\leemi\\Documents\\PracticNode\\route\\post.js:283:41\n    at processTicksAndRejections (internal/process/task_queues.js:93:5)"
+유저undefined
+
+
+
+19_29_30_885:
+ 접속아이피:::ffff:192.168.0.1
+url:"/post/getc"
+바디:"TypeError: Cannot read property 'Comments' of null\n    at C:\\Users\\leemi\\Documents\\PracticNode\\route\\post.js:283:41\n    at processTicksAndRejections (internal/process/task_queues.js:93:5)"
+유저undefined
+
+
+
+19_29_33_124:
+ 접속아이피:::ffff:192.168.0.1
+url:"/post/getc"
+바디:"TypeError: Cannot read property 'Comments' of null\n    at C:\\Users\\leemi\\Documents\\PracticNode\\route\\post.js:283:41\n    at processTicksAndRejections (internal/process/task_queues.js:93:5)"
+유저undefined
+
+
+
+19_29_37_600:
+ 접속아이피:::ffff:192.168.0.1
+url:"/post/getc"
+바디:"TypeError: Cannot read property 'Comments' of null\n    at C:\\Users\\leemi\\Documents\\PracticNode\\route\\post.js:283:41\n    at processTicksAndRejections (internal/process/task_queues.js:93:5)"
+유저undefined
+
+
+
+19_29_52_371:
+ 접속아이피:::ffff:192.168.0.1
+url:"/post/getc"
+바디:"TypeError: Cannot read property 'Comments' of null\n    at C:\\Users\\leemi\\Documents\\PracticNode\\route\\post.js:283:41\n    at processTicksAndRejections (internal/process/task_queues.js:93:5)"
+유저undefined
+
+
+
+19_29_56_17:
+ 접속아이피:::ffff:192.168.0.1
+url:"/post/getc"
+바디:"TypeError: Cannot read property 'Comments' of null\n    at C:\\Users\\leemi\\Documents\\PracticNode\\route\\post.js:283:41\n    at processTicksAndRejections (internal/process/task_queues.js:93:5)"
+유저undefined
+
+
+
+22_34_46_249:
+ 접속아이피:::ffff:192.168.0.1
+url:"/villeage"404 에러
+유저{"id":1,"name":"이민기의이민기","email":"1652279023","password":"1652279023","provider":"kakao","auth":1}
+
+
+
+22_36_43_523:
+ 접속아이피:::ffff:192.168.0.1
+url:"/villeage"404 에러
+유저{"id":1,"name":"이민기의이민기","email":"1652279023","password":"1652279023","provider":"kakao","auth":1}
+
+
+
+22_36_43_598:
+ 접속아이피:::ffff:192.168.0.1
+url:"/villeage"404 에러
+유저{"id":1,"name":"이민기의이민기","email":"1652279023","password":"1652279023","provider":"kakao","auth":1}
+
+
+
+22_36_58_890:
+ 접속아이피:::ffff:192.168.0.1
+url:"/villeage"404 에러
+유저{"id":1,"name":"이민기의이민기","email":"1652279023","password":"1652279023","provider":"kakao","auth":1}
+
+
+
+22_36_58_950:
+ 접속아이피:::ffff:192.168.0.1
+url:"/villeage"404 에러
+유저{"id":1,"name":"이민기의이민기","email":"1652279023","password":"1652279023","provider":"kakao","auth":1}
+
+
+
+22_37_40_370:
+ 접속아이피:::ffff:192.168.0.1
+url:"/villeage"404 에러
+유저{"id":1,"name":"이민기의이민기","email":"1652279023","password":"1652279023","provider":"kakao","auth":1}
+
+
+
+22_37_40_410:
+ 접속아이피:::ffff:192.168.0.1
+url:"/villeage"404 에러
+유저{"id":1,"name":"이민기의이민기","email":"1652279023","password":"1652279023","provider":"kakao","auth":1}
+
+
+
+22_38_13_225:
+ 접속아이피:::ffff:192.168.0.1
+url:"/villeage"404 에러
+유저{"id":1,"name":"이민기의이민기","email":"1652279023","password":"1652279023","provider":"kakao","auth":1}
+
+
+
+22_38_13_275:
+ 접속아이피:::ffff:192.168.0.1
+url:"/villeage"404 에러
+유저{"id":1,"name":"이민기의이민기","email":"1652279023","password":"1652279023","provider":"kakao","auth":1}
+
+
+
+22_38_19_960:
+ 접속아이피:::ffff:192.168.0.1
+url:"/villeage"404 에러
+유저{"id":1,"name":"이민기의이민기","email":"1652279023","password":"1652279023","provider":"kakao","auth":1}
+
+
+
+22_38_19_992:
+ 접속아이피:::ffff:192.168.0.1
+url:"/villeage"404 에러
+유저{"id":1,"name":"이민기의이민기","email":"1652279023","password":"1652279023","provider":"kakao","auth":1}
+
+
+
+22_38_59_642:
+ 접속아이피:::ffff:192.168.0.1
+url:"/villeage"404 에러
+유저{"id":1,"name":"이민기의이민기","email":"1652279023","password":"1652279023","provider":"kakao","auth":1}
+
+
+
+22_38_59_678:
+ 접속아이피:::ffff:192.168.0.1
+url:"/villeage"404 에러
+유저{"id":1,"name":"이민기의이민기","email":"1652279023","password":"1652279023","provider":"kakao","auth":1}
+
+
+
+22_39_47_689:
+ 접속아이피:::ffff:192.168.0.1
+url:"/villeage"404 에러
+유저{"id":1,"name":"이민기의이민기","email":"1652279023","password":"1652279023","provider":"kakao","auth":1}
+
+
+
+22_50_17_430:
+ 접속아이피:::ffff:192.168.0.1
+url:"/favicon.ico"404 에러
+유저undefined
+
+
+
+23_9_37_905:
+ 접속아이피:::ffff:182.211.216.186
+url:"/favicon.ico"404 에러
+유저undefined
+
+
+
+23_11_29_52:
+ 접속아이피:::ffff:221.158.171.210
+url:"/favicon.ico"404 에러
+유저undefined
+
+
+
+23_33_23_434:
+ 접속아이피:::ffff:192.168.0.1
+url:"/post/getc"
+바디:"TypeError: Cannot read property 'Comments' of null\n    at C:\\Users\\leemi\\Documents\\PracticNode\\route\\post.js:283:41\n    at processTicksAndRejections (internal/process/task_queues.js:93:5)"
+유저undefined
+
+
+
+23_35_19_157:
+ 접속아이피:::ffff:192.168.0.1
+url:"/post/getc"
+바디:"TypeError: Cannot read property 'Comments' of null\n    at C:\\Users\\leemi\\Documents\\PracticNode\\route\\post.js:283:41\n    at processTicksAndRejections (internal/process/task_queues.js:93:5)"
+유저undefined
+
+
+
+23_38_0_235:
+ 접속아이피:::ffff:192.168.0.1
+url:"/post/getc"
+바디:"TypeError: Cannot read property 'Comments' of null\n    at C:\\Users\\leemi\\Documents\\PracticNode\\route\\post.js:283:41\n    at processTicksAndRejections (internal/process/task_queues.js:93:5)"
+유저undefined
+
+
+
+23_38_8_602:
+ 접속아이피:::ffff:192.168.0.1
+url:"/post/getc"
+바디:"TypeError: Cannot read property 'Comments' of null\n    at C:\\Users\\leemi\\Documents\\PracticNode\\route\\post.js:283:41\n    at processTicksAndRejections (internal/process/task_queues.js:93:5)"
+유저undefined
+
+
+
+23_43_7_10:
+ 접속아이피:::ffff:192.168.0.1
+url:"/post/getc"
+바디:"TypeError: Cannot read property 'Comments' of null\n    at C:\\Users\\leemi\\Documents\\PracticNode\\route\\post.js:283:41\n    at processTicksAndRejections (internal/process/task_queues.js:93:5)"
+유저undefined
+
+
+
+23_46_45_174:
+ 접속아이피:::ffff:192.168.0.1
+url:"/post/getc"
+바디:"TypeError: Cannot read property 'Comments' of null\n    at C:\\Users\\leemi\\Documents\\PracticNode\\route\\post.js:283:41\n    at processTicksAndRejections (internal/process/task_queues.js:93:5)"
+유저undefined
+
+
+

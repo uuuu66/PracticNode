@@ -1,0 +1,380 @@
+0_0_5_768:
+ 접속아이피:::ffff:192.168.0.1
+url:"/lab/movingdiv.html"404 에러
+유저{"id":1,"name":"이민기의이민기","email":"1652279023","password":"1652279023","provider":"kakao","auth":1}
+
+
+
+0_0_7_755:
+ 접속아이피:::ffff:192.168.0.1
+url:"/lab/movingdiv.html"404 에러
+유저{"id":1,"name":"이민기의이민기","email":"1652279023","password":"1652279023","provider":"kakao","auth":1}
+
+
+
+0_0_8_598:
+ 접속아이피:::ffff:192.168.0.1
+url:"/lab/movingdiv.html"404 에러
+유저{"id":1,"name":"이민기의이민기","email":"1652279023","password":"1652279023","provider":"kakao","auth":1}
+
+
+
+0_0_18_528:
+ 접속아이피:::ffff:192.168.0.1
+url:"/lab/movingdiv.html"404 에러
+유저{"id":1,"name":"이민기의이민기","email":"1652279023","password":"1652279023","provider":"kakao","auth":1}
+
+
+
+0_0_19_973:
+ 접속아이피:::ffff:192.168.0.1
+url:"/lab/movingdiv.html"404 에러
+유저{"id":1,"name":"이민기의이민기","email":"1652279023","password":"1652279023","provider":"kakao","auth":1}
+
+
+
+0_0_21_477:
+ 접속아이피:::ffff:192.168.0.1
+url:"/lab/movingdiv.html"404 에러
+유저{"id":1,"name":"이민기의이민기","email":"1652279023","password":"1652279023","provider":"kakao","auth":1}
+
+
+
+0_0_22_145:
+ 접속아이피:::ffff:192.168.0.1
+url:"/lab/movingdiv.html"404 에러
+유저{"id":1,"name":"이민기의이민기","email":"1652279023","password":"1652279023","provider":"kakao","auth":1}
+
+
+
+0_0_22_600:
+ 접속아이피:::ffff:192.168.0.1
+url:"/lab/movingdiv.html"404 에러
+유저{"id":1,"name":"이민기의이민기","email":"1652279023","password":"1652279023","provider":"kakao","auth":1}
+
+
+
+0_0_30_152:
+ 접속아이피:::ffff:192.168.0.1
+url:"/lab/movingdiv.html"404 에러
+유저undefined
+
+
+
+0_0_50_96:
+ 접속아이피:::ffff:192.168.0.1
+url:"/lab/mail.png"404 에러
+유저undefined
+
+
+
+0_0_53_646:
+ 접속아이피:::ffff:192.168.0.1
+url:"/lab/movingdiv.html"404 에러
+유저undefined
+
+
+
+0_3_8_918:
+ 접속아이피:::ffff:192.168.0.1
+url:"/lab/?search=%EC%9B%80%EC%A7%81%EC%9E%84&condition=tag"404 에러
+유저undefined
+
+
+
+0_3_22_466:
+ 접속아이피:::ffff:192.168.0.1
+url:"/lab/?search=%EC%9B%80%EC%A7%81%EC%9E%84&condition=tag"404 에러
+유저undefined
+
+
+
+0_3_38_502:
+ 접속아이피:::ffff:192.168.0.1
+url:"/lab/movingdiv.html"404 에러
+유저undefined
+
+
+
+0_4_37_946:
+ 접속아이피:::ffff:192.168.0.1
+url:"/lab/movingdiv.html"404 에러
+유저undefined
+
+
+
+0_4_39_630:
+ 접속아이피:::ffff:192.168.0.1
+url:"/lab/movingdiv.html"404 에러
+유저undefined
+
+
+
+0_4_40_395:
+ 접속아이피:::ffff:192.168.0.1
+url:"/lab/movingdiv.html"404 에러
+유저undefined
+
+
+
+0_4_41_390:
+ 접속아이피:::ffff:192.168.0.1
+url:"/lab/movingdiv.html"404 에러
+유저undefined
+
+
+
+0_4_46_290:
+ 접속아이피:::ffff:192.168.0.1
+url:"/lab/movingdiv.html"404 에러
+유저undefined
+
+
+
+0_4_54_211:
+ 접속아이피:::ffff:192.168.0.1
+url:"/post/getc"
+바디:"TypeError: Cannot read property 'Comments' of null\n    at C:\\Users\\leemi\\Documents\\PracticNode\\route\\post.js:283:41\n    at processTicksAndRejections (internal/process/task_queues.js:93:5)"
+유저undefined
+
+
+
+0_4_58_737:
+ 접속아이피:::ffff:192.168.0.1
+url:"/post/getc"
+바디:"TypeError: Cannot read property 'Comments' of null\n    at C:\\Users\\leemi\\Documents\\PracticNode\\route\\post.js:283:41\n    at processTicksAndRejections (internal/process/task_queues.js:93:5)"
+유저undefined
+
+
+
+0_5_1_290:
+ 접속아이피:::ffff:192.168.0.1
+url:"/post/getc"
+바디:"TypeError: Cannot read property 'Comments' of null\n    at C:\\Users\\leemi\\Documents\\PracticNode\\route\\post.js:283:41\n    at processTicksAndRejections (internal/process/task_queues.js:93:5)"
+유저undefined
+
+
+
+0_5_27_821:
+ 접속아이피:::ffff:192.168.0.1
+url:"/post/getc"
+바디:"TypeError: Cannot read property 'Comments' of null\n    at C:\\Users\\leemi\\Documents\\PracticNode\\route\\post.js:283:41\n    at processTicksAndRejections (internal/process/task_queues.js:93:5)"
+유저undefined
+
+
+
+0_5_51_882:
+ 접속아이피:::ffff:192.168.0.1
+url:"/post/getc"
+바디:"TypeError: Cannot read property 'Comments' of null\n    at C:\\Users\\leemi\\Documents\\PracticNode\\route\\post.js:283:41\n    at processTicksAndRejections (internal/process/task_queues.js:93:5)"
+유저undefined
+
+
+
+0_5_55_216:
+ 접속아이피:::ffff:192.168.0.1
+url:"/post/getc"
+바디:"TypeError: Cannot read property 'Comments' of null\n    at C:\\Users\\leemi\\Documents\\PracticNode\\route\\post.js:283:41\n    at processTicksAndRejections (internal/process/task_queues.js:93:5)"
+유저undefined
+
+
+
+0_6_2_957:
+ 접속아이피:::ffff:192.168.0.1
+url:"/post/getc"
+바디:"TypeError: Cannot read property 'Comments' of null\n    at C:\\Users\\leemi\\Documents\\PracticNode\\route\\post.js:283:41\n    at processTicksAndRejections (internal/process/task_queues.js:93:5)"
+유저undefined
+
+
+
+0_6_16_708:
+ 접속아이피:::ffff:192.168.0.1
+url:"/post/getc"
+바디:"TypeError: Cannot read property 'Comments' of null\n    at C:\\Users\\leemi\\Documents\\PracticNode\\route\\post.js:283:41\n    at processTicksAndRejections (internal/process/task_queues.js:93:5)"
+유저undefined
+
+
+
+0_7_1_439:
+ 접속아이피:::ffff:192.168.0.1
+url:"/post/getc"
+바디:"TypeError: Cannot read property 'Comments' of null\n    at C:\\Users\\leemi\\Documents\\PracticNode\\route\\post.js:283:41\n    at processTicksAndRejections (internal/process/task_queues.js:93:5)"
+유저undefined
+
+
+
+0_7_5_763:
+ 접속아이피:::ffff:192.168.0.1
+url:"/post/getc"
+바디:"TypeError: Cannot read property 'Comments' of null\n    at C:\\Users\\leemi\\Documents\\PracticNode\\route\\post.js:283:41\n    at processTicksAndRejections (internal/process/task_queues.js:93:5)"
+유저undefined
+
+
+
+0_7_8_451:
+ 접속아이피:::ffff:192.168.0.1
+url:"/post/1/?row=0&category=%EC%9D%BC%EC%83%81"404 에러
+유저undefined
+
+
+
+0_7_8_824:
+ 접속아이피:::ffff:192.168.0.1
+url:"/post/1/nav.gif"404 에러
+유저undefined
+
+
+
+0_11_30_634:
+ 접속아이피:::ffff:192.168.0.1
+url:"/lab/cyphers.html"404 에러
+유저undefined
+
+
+
+0_11_45_295:
+ 접속아이피:::ffff:192.168.0.1
+url:"/lab/cyphers.html"404 에러
+유저undefined
+
+
+
+0_13_50_590:
+ 접속아이피:::ffff:192.168.0.1
+url:"/lab/cyphers.html"404 에러
+유저undefined
+
+
+
+0_13_55_738:
+ 접속아이피:::ffff:192.168.0.1
+url:"/lab/cyphers.html"404 에러
+유저undefined
+
+
+
+0_15_8_845:
+ 접속아이피:::ffff:192.168.0.1
+url:"/lab/cyphers.html"
+바디:"ReferenceError: user is not defined\n    at C:\\Users\\leemi\\Documents\\PracticNode\\route\\laboratory.js:544:37\n    at Layer.handle [as handle_request] (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\express\\lib\\router\\route.js:137:13)\n    at Route.dispatch (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\express\\lib\\router\\route.js:112:3)\n    at Layer.handle [as handle_request] (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\express\\lib\\router\\index.js:281:22\n    at param (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\express\\lib\\router\\index.js:354:14)\n    at param (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\express\\lib\\router\\index.js:365:14)\n    at Function.process_params (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\express\\lib\\router\\index.js:410:3)\n    at next (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\express\\lib\\router\\index.js:275:10)\n    at Function.handle (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\express\\lib\\router\\index.js:174:3)\n    at router (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\express\\lib\\router\\index.js:47:12)\n    at Layer.handle [as handle_request] (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at trim_prefix (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\express\\lib\\router\\index.js:317:13)\n    at C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\express\\lib\\router\\index.js:284:7\n    at Function.process_params (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\express\\lib\\router\\index.js:335:12)\n    at next (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\express\\lib\\router\\index.js:275:10)\n    at C:\\Users\\leemi\\Documents\\PracticNode\\logs\\logs.js:23:28\n    at C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\graceful-fs\\graceful-fs.js:61:14\n    at FSReqCallback.oncomplete (fs.js:171:23)"
+유저undefined
+
+
+
+0_22_34_35:
+ 접속아이피:::ffff:192.168.0.1
+url:"/lab/cyphers.html"404 에러
+유저undefined
+
+
+
+0_24_48_110:
+ 접속아이피:::ffff:192.168.0.1
+url:"/lab/cyphers.html"404 에러
+유저undefined
+
+
+
+0_25_19_973:
+ 접속아이피:::ffff:192.168.0.1
+url:"/lab/movingdiv.html"404 에러
+유저undefined
+
+
+
+0_36_13_77:
+ 접속아이피:::ffff:192.168.0.1
+url:"/post/getc"
+바디:"TypeError: Cannot read property 'Comments' of null\n    at C:\\Users\\leemi\\Documents\\PracticNode\\route\\post.js:287:41\n    at processTicksAndRejections (internal/process/task_queues.js:93:5)"
+유저undefined
+
+
+
+0_36_18_613:
+ 접속아이피:::ffff:192.168.0.1
+url:"/post/getc"
+바디:"TypeError: Cannot read property 'Comments' of null\n    at C:\\Users\\leemi\\Documents\\PracticNode\\route\\post.js:287:41\n    at processTicksAndRejections (internal/process/task_queues.js:93:5)"
+유저undefined
+
+
+
+0_42_37_68:
+ 접속아이피:::ffff:192.168.0.1
+url:"/lab/romeConverter.html"404 에러
+유저undefined
+
+
+
+0_43_28_479:
+ 접속아이피:::ffff:192.168.0.1
+url:"/laboratory/romeConverter.html"404 에러
+유저undefined
+
+
+
+0_43_32_291:
+ 접속아이피:::ffff:192.168.0.1
+url:"/laboratory/numtomun.html"404 에러
+유저undefined
+
+
+
+0_43_38_202:
+ 접속아이피:::ffff:192.168.0.1
+url:"/laboratory/romeConverter.html"404 에러
+유저undefined
+
+
+
+0_44_39_306:
+ 접속아이피:::ffff:192.168.0.1
+url:"/lab/romeConverter.html"404 에러
+유저undefined
+
+
+
+0_45_51_655:
+ 접속아이피:::ffff:192.168.0.1
+url:"/lab/romeConverter.html"
+바디:"TypeError: C:\\Users\\leemi\\Documents\\PracticNode\\views\\laboratory.pug:14\n    12|                         hr\r\n    13|                         div(style=\"display:flex;flex-wrap:wrap-reverse;justify-content:center;width:100%;text-align:center\") \r\n  > 14|                             -for(var i=0;i<ld.count.length;i++)\r\n    15|                                 div(class=\"detaildiv\" onclick=`clickCategory(\"${ld.count[i].category}\")`  style=` cursor:pointer; margin:5px 5px 5px 5px; width:${(30*(ld.count[i].count/ld.count.length))}%;background-color:white;`)\r\n    16|                                     span(  style=`color:black;font-size:15px;`) _#{ld.count[i].category}[#{ld.count[i].count}] \r\n    17|                     hr\r\n\nCannot read property 'count' of undefined\n    at eval (eval at wrap (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-runtime\\wrap.js:6:10), <anonymous>:140:18)\n    at template (eval at wrap (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-runtime\\wrap.js:6:10), <anonymous>:3675:7)\n    at Object.exports.renderFile (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug\\lib\\index.js:454:38)\n    at Object.exports.renderFile (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug\\lib\\index.js:444:21)\n    at View.exports.__express [as engine] (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug\\lib\\index.js:493:11)\n    at View.render (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\express\\lib\\view.js:135:8)\n    at tryRender (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\express\\lib\\application.js:640:10)\n    at Function.render (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\express\\lib\\application.js:592:3)\n    at ServerResponse.render (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\express\\lib\\response.js:1012:7)\n    at C:\\Users\\leemi\\Documents\\PracticNode\\route\\laboratory.js:620:9\n    at Layer.handle [as handle_request] (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\express\\lib\\router\\route.js:137:13)\n    at Route.dispatch (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\express\\lib\\router\\route.js:112:3)\n    at Layer.handle [as handle_request] (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\express\\lib\\router\\index.js:281:22\n    at param (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\express\\lib\\router\\index.js:354:14)\n    at param (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\express\\lib\\router\\index.js:365:14)\n    at Function.process_params (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\express\\lib\\router\\index.js:410:3)\n    at next (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\express\\lib\\router\\index.js:275:10)\n    at Function.handle (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\express\\lib\\router\\index.js:174:3)\n    at router (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\express\\lib\\router\\index.js:47:12)\n    at Layer.handle [as handle_request] (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at trim_prefix (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\express\\lib\\router\\index.js:317:13)\n    at C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\express\\lib\\router\\index.js:284:7\n    at Function.process_params (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\express\\lib\\router\\index.js:335:12)\n    at next (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\express\\lib\\router\\index.js:275:10)\n    at C:\\Users\\leemi\\Documents\\PracticNode\\logs\\logs.js:23:28\n    at C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\graceful-fs\\graceful-fs.js:61:14"
+유저undefined
+
+
+
+0_45_56_176:
+ 접속아이피:::ffff:192.168.0.1
+url:"/lab/romeConverter.html"
+바디:"TypeError: C:\\Users\\leemi\\Documents\\PracticNode\\views\\laboratory.pug:14\n    12|                         hr\r\n    13|                         div(style=\"display:flex;flex-wrap:wrap-reverse;justify-content:center;width:100%;text-align:center\") \r\n  > 14|                             -for(var i=0;i<ld.count.length;i++)\r\n    15|                                 div(class=\"detaildiv\" onclick=`clickCategory(\"${ld.count[i].category}\")`  style=` cursor:pointer; margin:5px 5px 5px 5px; width:${(30*(ld.count[i].count/ld.count.length))}%;background-color:white;`)\r\n    16|                                     span(  style=`color:black;font-size:15px;`) _#{ld.count[i].category}[#{ld.count[i].count}] \r\n    17|                     hr\r\n\nCannot read property 'count' of undefined\n    at eval (eval at wrap (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-runtime\\wrap.js:6:10), <anonymous>:140:18)\n    at template (eval at wrap (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-runtime\\wrap.js:6:10), <anonymous>:3675:7)\n    at Object.exports.renderFile (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug\\lib\\index.js:454:38)\n    at Object.exports.renderFile (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug\\lib\\index.js:444:21)\n    at View.exports.__express [as engine] (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug\\lib\\index.js:493:11)\n    at View.render (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\express\\lib\\view.js:135:8)\n    at tryRender (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\express\\lib\\application.js:640:10)\n    at Function.render (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\express\\lib\\application.js:592:3)\n    at ServerResponse.render (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\express\\lib\\response.js:1012:7)\n    at C:\\Users\\leemi\\Documents\\PracticNode\\route\\laboratory.js:620:9\n    at Layer.handle [as handle_request] (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\express\\lib\\router\\route.js:137:13)\n    at Route.dispatch (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\express\\lib\\router\\route.js:112:3)\n    at Layer.handle [as handle_request] (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\express\\lib\\router\\index.js:281:22\n    at param (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\express\\lib\\router\\index.js:354:14)\n    at param (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\express\\lib\\router\\index.js:365:14)\n    at Function.process_params (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\express\\lib\\router\\index.js:410:3)\n    at next (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\express\\lib\\router\\index.js:275:10)\n    at Function.handle (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\express\\lib\\router\\index.js:174:3)\n    at router (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\express\\lib\\router\\index.js:47:12)\n    at Layer.handle [as handle_request] (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at trim_prefix (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\express\\lib\\router\\index.js:317:13)\n    at C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\express\\lib\\router\\index.js:284:7\n    at Function.process_params (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\express\\lib\\router\\index.js:335:12)\n    at next (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\express\\lib\\router\\index.js:275:10)\n    at C:\\Users\\leemi\\Documents\\PracticNode\\logs\\logs.js:23:28\n    at C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\graceful-fs\\graceful-fs.js:61:14"
+유저undefined
+
+
+
+0_46_8_483:
+ 접속아이피:::ffff:192.168.0.1
+url:"/lab/romeConverter.html"
+바디:"TypeError: C:\\Users\\leemi\\Documents\\PracticNode\\views\\laboratory.pug:14\n    12|                         hr\r\n    13|                         div(style=\"display:flex;flex-wrap:wrap-reverse;justify-content:center;width:100%;text-align:center\") \r\n  > 14|                             -for(var i=0;i<ld.count.length;i++)\r\n    15|                                 div(class=\"detaildiv\" onclick=`clickCategory(\"${ld.count[i].category}\")`  style=` cursor:pointer; margin:5px 5px 5px 5px; width:${(30*(ld.count[i].count/ld.count.length))}%;background-color:white;`)\r\n    16|                                     span(  style=`color:black;font-size:15px;`) _#{ld.count[i].category}[#{ld.count[i].count}] \r\n    17|                     hr\r\n\nCannot read property 'count' of undefined\n    at eval (eval at wrap (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-runtime\\wrap.js:6:10), <anonymous>:140:18)\n    at template (eval at wrap (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug-runtime\\wrap.js:6:10), <anonymous>:3675:7)\n    at Object.exports.renderFile (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug\\lib\\index.js:454:38)\n    at Object.exports.renderFile (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug\\lib\\index.js:444:21)\n    at View.exports.__express [as engine] (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug\\lib\\index.js:493:11)\n    at View.render (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\express\\lib\\view.js:135:8)\n    at tryRender (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\express\\lib\\application.js:640:10)\n    at Function.render (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\express\\lib\\application.js:592:3)\n    at ServerResponse.render (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\express\\lib\\response.js:1012:7)\n    at C:\\Users\\leemi\\Documents\\PracticNode\\route\\laboratory.js:620:9\n    at Layer.handle [as handle_request] (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\express\\lib\\router\\route.js:137:13)\n    at Route.dispatch (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\express\\lib\\router\\route.js:112:3)\n    at Layer.handle [as handle_request] (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\express\\lib\\router\\index.js:281:22\n    at param (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\express\\lib\\router\\index.js:354:14)\n    at param (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\express\\lib\\router\\index.js:365:14)\n    at Function.process_params (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\express\\lib\\router\\index.js:410:3)\n    at next (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\express\\lib\\router\\index.js:275:10)\n    at Function.handle (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\express\\lib\\router\\index.js:174:3)\n    at router (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\express\\lib\\router\\index.js:47:12)\n    at Layer.handle [as handle_request] (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at trim_prefix (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\express\\lib\\router\\index.js:317:13)\n    at C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\express\\lib\\router\\index.js:284:7\n    at Function.process_params (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\express\\lib\\router\\index.js:335:12)\n    at next (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\express\\lib\\router\\index.js:275:10)\n    at C:\\Users\\leemi\\Documents\\PracticNode\\logs\\logs.js:23:28\n    at C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\graceful-fs\\graceful-fs.js:61:14"
+유저undefined
+
+
+
+0_50_6_810:
+ 접속아이피:::ffff:192.168.0.1
+url:"/lab/romeConvert.js"404 에러
+유저undefined
+
+
+
+0_50_9_604:
+ 접속아이피:::ffff:192.168.0.1
+url:"/lab/romeConvert.js"404 에러
+유저undefined
+
+
+
+0_50_19_69:
+ 접속아이피:::ffff:192.168.0.1
+url:"/lab/cyphers.js"404 에러
+유저undefined
+
+
+

@@ -1,0 +1,297 @@
+
+extends ./layout.pug
+block content    
+    section#section 
+        div#content.body
+    script.
+         let player="whoisthis";
+         let isWalking=false;
+         let isbirthday=true;
+         let building=0;
+        const content=document.getElementsByClassName("header")[0];
+        const vill = io.connect('http://39.115.162.208:30000/villeage', {
+                 withCredentials: true,
+                    path: '/socket.io',
+                    transports: ['websocket'],
+                });
+         vill.on("removethis",(data)=>{
+                const usern=document.getElementById(data.user+":name");
+                const user=document.getElementById(data.user);
+                if(user){
+                    usern.remove();
+                    user.remove();
+                }
+            })
+            vill.on("confirm",(data)=>{
+                player=data.user.name;
+                console.log(player);
+            })
+            vill.on("charinit",(data)=>{
+                console.log(data);
+                vill.emit("confirm",{hi:"hi"});
+                for(const char of data.chars){
+                    if(document.getElementById(char.name)){
+                        continue;
+                    }
+                    const character= document.createElement("img");
+                    const characterName=document.createElement("div");
+                    characterName.classList.add("charName");
+                    characterName.setAttribute("id",char.name+":name");
+                    characterName.textContent=char.name;
+                    characterName.style.position="absolute";
+                    characterName.style.display="";
+
+                    character.classList.add("char")
+                    character.setAttribute("id",char.name);
+                    character.setAttribute("src",`imgs/?name=/walk/${char.c}walk${1}.png`);
+                    character.style.top=char.pos[1]+"px";
+                    character.style.left=char.pos[0]+"px";
+                     characterName.style.top=char.pos[1]+"px";
+                    character.style.width=70+"px";
+                    character.style.height=137+"px";
+                    character.style.display="";
+                    character.style.position="absolute";
+                   
+                     characterName.style.left=char.pos[0]+5+"px";
+                    
+                     content.appendChild(characterName);
+                    content.appendChild(character);
+                }
+            });
+            vill.on("move",(data)=>{
+               moveChar(data);
+            });
+            window.onkeydown=(e)=>{         
+                sendMove(e);
+            }
+            function getPosition(ele){
+                const res= [1*ele.style.left.split("px")[0],1*ele.style.top.split("px")[0]]
+                return res;
+            } 
+            function sendMove(e){
+                const h=50;
+               const f=660;
+               const l=160;
+               const r=750;
+                switch(e.key){
+                  
+                    case "ArrowUp":
+                        e.preventDefault();
+                      if(!isWalking){
+                          
+                    
+                          return vill.emit("move",{e:e.key,header:h,footer:f,left:l,right:r});
+                            break;
+                      }
+                    case "ArrowDown":
+                        e.preventDefault();
+                          if(!isWalking){
+                        //-   window.scroll({
+                        //-     top: document.documentElement.scrollTop+40,
+                        //-     left: 0,
+                        //-     behavior: 'smooth'
+                        //-     });
+                  
+                             return vill.emit("move",{e:e.key,header:h,footer:f,left:l,right:r}); 
+                               break;
+                    }
+                    case "ArrowLeft":
+                        e.preventDefault();
+                          if(!isWalking)
+                     return vill.emit("move",{e:e.key,header:h,footer:f,left:l,right:r});
+                       break;
+                   
+                    case "ArrowRight":
+                        e.preventDefault();
+                          if(!isWalking)
+                            return vill.emit("move",{e:e.key,header:h,footer:f,left:l,right:r});
+                              break;
+                    case "c":
+                       // e.preventDefault();
+                          if(!isWalking)
+                            return vill.emit("move",{e:e.key,header:h,footer:f,left:l,right:r});
+                            break;
+                    case "v":
+                          if(!isWalking)
+                            switch(building){
+                                case 0:
+                                break;
+                                case 1:
+                                return window.open("http://39.115.162.208:30000","_self");
+                                case 2:
+                                return window.open("http://39.115.162.208:30000/lab","_self");
+                                case 3:
+                                return window.open("http://39.115.162.208:30000/post","_self");
+                                case 4:
+                                return window.open("http://39.115.162.208:30000/dot","_self");
+                                case 5:
+                                return window.open("http://39.115.162.208:30000/pub","_self");
+                            }
+                            
+                        break;
+                    case f :
+                        if(!isWalking)
+                             return vill.emit("move",{e:e.key,header:h,footer:f,left:l,right:r});
+                            break;
+                }
+                 e.stopPropagation();
+            }
+            const water=new Audio("/elgar.mp3");
+           
+            water.addEventListener('ended', function() { 
+                this.currentTime = 0;
+                this.play();
+            }, false);
+        //-    function boardCheck(x,y){
+        //-         const treeBoard=new Audio("/Knock.mp3");
+        //-           const boards=[[ 740, 340 ],[ 780, 340 ],[ 740,340], [ 700, 340 ],
+        //-                 [ 660, 340 ],
+        //-                 [ 620, 340 ],
+        //-                 [ 620, 300 ],
+        //-                 [ 620, 260 ],
+        //-                 [ 580, 260 ],
+        //-                 [ 540, 260 ],
+        //-                 [ 500, 260 ],
+        //-                 [ 460, 260 ],
+        //-                 [ 420, 260 ],
+        //-                 [ 380, 260 ],
+        //-                 [ 340, 260 ],
+        //-                 [ 300, 260 ],
+        //-                 [ 260, 260 ],
+        //-                 [ 220, 260 ]];
+        //-         const pos=[x,y];
+        //-         for(const board of boards){
+        //-             console.log(board,pos);
+        //-             if(pos==board){
+        //-                 treeBoard.play();
+        //-             }
+        //-         }
+        //-    }
+            function congratulation(){
+                 
+                const charInterval=setInterval(function(){
+                    window.onkeydown =(e)=>{
+                            e.preventDefault();
+                     }
+                    if(i==1){
+                         
+                        isWalking=false;
+                        clearInterval(charInterval);
+                         window.onkeydown =(e)=>{
+                
+                                sendMove(e)
+                     }
+                   
+                    }
+                    
+                    name.setAttribute("src",`imgs/?name=/walk/${c}walk${i}.png`);
+                    i--;    
+                   
+                    },
+                        aniSpeed);     
+            }
+
+            function moveChar(data){
+                    
+                    const character=document.getElementById(data.name);
+                    const characterName=document.getElementById(data.name+":name");
+                    const aniSpeed=70;
+                    if(data.e=="c"){
+                        return character.setAttribute("src",`imgs/?name=/walk/${data.c}walk${1}.png`);
+                    }
+                    moveAnim(character,aniSpeed,data.c);
+                    
+                    setTimeout(function(){
+                        character.style.top=data.y+"px";
+                        character.style.left=data.x+"px";
+                        characterName.style.top=data.y+"px";
+                    characterName.style.left=data.x+5+"px";
+                     
+                    },aniSpeed*3);
+                    
+                    if(player==data.name){
+                        //boardCheck(data.x,data.y);
+                        //- if(data.x==420||data.x==460){
+                        //-     water.play();
+                        //- }
+                        //- else{
+                        //-     water.pause();
+                        //- }
+                        if(data.y==500){
+                               window.scroll({
+                        top: 500,
+                        left: 0,
+                        behavior: 'smooth'
+                        });
+                        }
+                        if(data.y==300){
+                            window.scroll({
+                        top: 0,
+                        left: 0,
+                        behavior: 'smooth'
+                        });
+                        }
+                        if(isbirthday==false){
+                            if(data.x==780&&data.y==340){
+                                building=1;
+                                characterName.textContent="V-홈으로 돌아가기 "
+                            }else if(data.x>=500&&data.x<=540&&data.y==260){
+                                building=4;
+                                characterName.textContent="V-갤러리로 들어가기 "    
+                            }else if(data.x>=180&&data.x<=220&&data.y==540){
+                                building=3;
+                                characterName.textContent="V-포스트로 들어가기 "    
+                            }else if(data.x>=500&&data.x<=540&&data.y<=580&&data.y>=540){
+                                building=2;
+                                characterName.textContent="V-실험실로 들어가기 "    
+                            }
+                            else{
+                                building=0;
+                                characterName.textContent=data.name;
+                            }
+                        }else{
+                            if(data.x==420&&data.y==20||data.x==460&&data.y==20||data.x==500&&data.y==20){
+                                building=1;
+                                characterName.textContent="V-홈으로 돌아가기 "
+                            }else if(data.x>=660&&data.x<=700&&data.y==20){
+                             
+                                //water.pause();
+                                 characterName.textContent="생일축하하니까...."
+                            }
+                             else{
+                                    water.play();
+                                building=0;
+                                characterName.textContent=data.name;
+                            }
+                        }
+                    }
+                  
+                   
+                    
+            }
+            function moveAnim(name,aniSpeed,c){
+               
+                isWalking=true;
+                let i=3;
+               
+                const charInterval=setInterval(function(){
+                    window.onkeydown =(e)=>{
+                            e.preventDefault();
+                     }
+                    if(i==1){
+                         
+                        isWalking=false;
+                        clearInterval(charInterval);
+                         window.onkeydown =(e)=>{
+                
+                                sendMove(e)
+                     }
+
+                    }
+                    
+                    name.setAttribute("src",`imgs/?name=/walk/${c}walk${i}.png`);
+                    i--;    
+                   
+                    },
+                        aniSpeed);     
+            }

@@ -1,0 +1,93 @@
+<h2>m-log 회원가입</h2>
+<p>SNS로 로그인하면 회원가입 없이 로그인할 수 있어요.<span style="cursor:pointer;color:blue" onclick="requestLogin()">바로가기</span>  </p>
+<p id='message'></p>
+<div class="timeline" id='timeline' >
+    <form id="join-form" action="/auth/join" method="post" style="text-align: left; " width=100%>
+      <div style="font-size:12px;color:white; text-align:left;width:110px;border:gray solid 1px;"id='emails'>이메일로 계정찾음</div>
+      <div class="input-group"style="margin-left:20%;text-align:left;">
+        <label for="join-email">&nbsp;이메일&nbsp;&nbsp;     </label>
+        <input id="join-email" type="email" name="email" width= '200px' required></div>
+        <br><div style="font-size:12px;color:white;text-align:left;width:110px;border:gray solid 1px;"id="names"width="200px">8글자제한 중복불가</div>
+      <div class="input-group" style="text-align: left;margin-left:20%;">
+        <label for="join-nick">&nbsp;닉네임&nbsp;&nbsp;    </label>
+        <input id="join-nick" type="text" name="name" width= '200px' required></div>
+        <br> <div style="font-size:12px;color:white;text-align:left;width:80px;border:gray solid 1px;"id="passwords"width="200px">1~12글자 이내</div>
+      <div class="input-group"style="text-align: left;margin-left:20%;">
+        <label for="join-password">&nbsp;비밀번호</label>
+        <input id="join-password" type="password" name="password" width= '200px' required>
+      
+      </div>
+      <br>
+      <button id="join-btn" type="submit" class="btn" style=" color:white">회원가입</button>
+    </form>
+  </div>
+ 
+  <script>
+
+
+document.getElementById('join-form').addEventListener('submit',async(e)=>{
+  e.preventDefault();
+  const email=e.target.email.value;
+  const name= e.target.name.value;
+  const password=e.target.password.value;
+  
+  $('#join-email').focus(function()
+  {
+    document.getElementById('emails').innerText="이메일로 계정찾음";
+    document.getElementById('emails').style.color='white';
+  })
+  $('#join-nick').focus(function()
+  {
+    document.getElementById('names').innerText="형식자유 중복불가";
+    document.getElementById('names').style.color='white';
+  })
+
+  $('#join-password').focus(function(){
+    document.getElementById('passwords').innerText="1~12글자 이내";
+    document.getElementById('passwords').style.color='white';
+  })
+   if(password.length>12&&name.length>8){
+  
+    document.getElementById('names').innerText="8글자 초과입니다.";
+    document.getElementById('passwords').innerText="12글자 초과입니다.";
+    document.getElementById('names').style.color='red';
+    document.getElementById('passwords').style.color='red';
+  }else if(name.length>8){
+    document.getElementById('names').innerText="8글자 초과입니다.";
+    document.getElementById('names').style.color='red';
+  } 
+  else{
+  if(password.length>12)
+  {
+    document.getElementById('passwords').style.color='red';
+   document.getElementById('passwords').innerText="12글자 초과입니다.";
+  }else{
+  try{
+    var res= await axios.post('/auth/join',{email,name,password});
+    if(res.data.emessage!=undefined){
+    
+    document.getElementById('emails').style.color='red';
+    document.getElementById('emails').innerText=res.data.emessage;
+    }
+    if(res.data.nmessage!=undefined){
+      document.getElementById('names').style.color='red';
+    document.getElementById('names').innerText=res.data.nmessage;
+    }
+    if(res.data.message=="COMPLETED"){
+
+      document.getElementById('timeline').innerHTML=res.data.message+"<br>"+email+'<br>로그인 화면으로 이동합니다...';
+
+     
+      setTimeout(function(){$(document).ready(function(){
+     $("#content").load('/login.html');
+    });},3000)
+    }
+  }catch(err){
+
+    document.getElementById('message').innerText="서버오류가 생겼어요. 다시 시도해주세요.";
+  }
+  }
+}
+});
+  </script>
+

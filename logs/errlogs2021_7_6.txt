@@ -1,0 +1,14 @@
+17_2_40_267:
+ 접속아이피:::ffff:192.168.0.1
+url:"/favicon.ico"404 에러
+유저undefined
+
+
+
+21_42_26_353:
+ 접속아이피:::ffff:220.94.250.204
+url:"/favicon.ico"404 에러
+유저undefined
+
+
+

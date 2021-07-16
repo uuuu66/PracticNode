@@ -1,0 +1,26 @@
+<h2>m-log 비밀번호 찾기</h2>
+<div style=" font-size:15px;"><span style="color:red">이메일</span> 모르면 못찾아요~!<br> 그러게 자주 쓰는 이메일 쓰지 그랬어요 바부 ㅋ </div>
+<br><div style=" position:relative;" id="message">
+
+</div><br>
+<form id="findform" action="/auth/find" method="post" >
+    <div class="input" style="text-align:center;">
+      <label for="email">이메일</label>
+      <input id="email" type="email" name="email" required >
+      <button style="  background-color: rgba(0, 0, 0, 0);display:absoulte ;top:40px" height='30px' width='30px' id="find" type="submit" class="lbtn"><img src='./mail.png'height='30px' width='30px' alt="검색"></button>
+    </div>
+   
+    <br>
+
+    <br>
+    
+<script>
+document.getElementById('findform').addEventListener('submit',async function(e){
+    e.preventDefault();
+    const email=e.target.email.value;
+    try{
+       var res= await axios.post("/auth/find",{email});
+       document.getElementById('message').innerText=res.data.message;
+    }catch(err){document.getElementById('message').innerText="서버오류가 생겼어요. 다시 시도해주세요."}
+});
+</script>

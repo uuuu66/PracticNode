@@ -1,0 +1,1171 @@
+@font-face {
+  font-family: "NeoDunggeunmo";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.3/NeoDunggeunmo.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+div.timeline {
+  width: 700px;
+}
+
+.texteditor {
+  margin-left: 0;
+  padding: 0px;
+  height: 600px;
+  width: 100%;
+}
+#chatContainer {
+  background-color: rgba(0, 0, 0, 0);
+
+  width: 400px;
+  height: 700px;
+  position: fixed;
+  top: 10%;
+  left: 30%;
+}
+#chatDiv {
+  background-color: rgb(51, 49, 49);
+  width: 400px;
+  height: 700px;
+  border-radius: 1% 1% 1% 1%;
+  border: black 1px solid;
+}
+.roomInfo {
+  border: rgb(172, 231, 233) 1px solid;
+  background-color: white;
+  position: relative;
+  margin-left: 0;
+  width: 100%;
+  height: 65px;
+  cursor: pointer;
+}
+.roomRecentChat {
+  float: top;
+  width: 100%;
+}
+.roomDetail {
+  height: max-content;
+  width: 80%;
+  /* margin-top: 2px; */
+  float: right;
+}
+.roomName {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 13px;
+  color: black;
+  text-align: left;
+  width: 65%;
+
+  float: left;
+}
+.roomDate {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 8px;
+  color: gray;
+  margin-right: 20px;
+  margin-top: 2px;
+  float: right;
+  width: 100px;
+  text-align: left;
+  transition: color 2s;
+}
+#chatBody {
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 86%;
+  margin-top: 5px;
+  margin-left: 9px;
+  width: 380px;
+  border: 2px solid black;
+  background-color: white;
+}
+::-webkit-scrollbar {
+  /* 스크롤바 전체 영역 */
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  /* 스크롤이 움직이는 영역  */
+  background-color: #f9f9f9;
+}
+::-webkit-scrollbar-thumb {
+  /*  스크롤  */
+  background-color: gold;
+  border-radius: 30px;
+}
+::-webkit-scrollbar-button:start:decrement,
+::-webkit-scrollbar-button:end:increment {
+  /*  스크롤의 화살표가 포함된 영역   */
+  display: block;
+  height: 8px;
+  background-color: whitesmoke;
+}
+::-webkit-scrollbar-corner {
+  /*  상하+좌우 스크롤이 만나는 공간   */
+  background-color: red;
+}
+#chatTail {
+  height: 50px;
+}
+#chatHead {
+  background-color: rgb(51, 49, 49);
+}
+.imoticon {
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  border: 1px solid black;
+}
+#imoticonView {
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  border: 1px solid black;
+  z-index: 10;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-color: whitesmoke;
+}
+#chatMenuText {
+  font-size: 8px;
+  animation: messageanim infinite 3s;
+}
+
+.imoticonChat {
+  width: 70px;
+  height: 70px;
+
+  border: 1px solid black;
+
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-color: whitesmoke;
+}
+#imoDiv {
+  width: 270px;
+  position: absolute;
+  z-index: 9;
+  background-color: rgb(149, 224, 231);
+  border-radius: 5%;
+  border: 2px solid rgb(91, 124, 128);
+}
+#chatContent {
+  height: 80%;
+  overflow-y: scroll;
+  background-color: rgb(153, 223, 250);
+}
+#chatInputDiv {
+  height: 20px;
+  width: 340px;
+  background-color: rgb(153, 223, 250);
+
+  float: left;
+}
+.charName {
+  background-color: black;
+  color: white;
+  font-size: 8px;
+  display: none;
+  width: 10em;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  text-align: center;
+  position: absolute;
+  z-index: 5;
+}
+img.char {
+  z-index: 4;
+  display: none;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  position: absolute;
+}
+img.tree {
+  z-index: 3;
+  display: none;
+  position: absolute;
+  width: 300px;
+  height: 300px;
+}
+img.building {
+  z-index: 3;
+  display: none;
+  position: absolute;
+  width: 300px;
+  height: 300px;
+}
+#chatUserList {
+  width: 100%;
+  overflow-x: scroll;
+  background-color: rgb(153, 223, 250);
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 10px;
+  position: abolute;
+  z-index: 6;
+}
+#chatWidget {
+  height: 73px;
+  background-color: rgb(250, 204, 250);
+  overflow-x: scroll;
+}
+.widgetBtn {
+  border-radius: 20%;
+  width: 40px;
+  height: 40px;
+  color: black;
+  border: radius 20%;
+  border: gray solid 2px;
+  cursor: pointer;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 5px;
+  float: left;
+  text-align: center;
+  display: table;
+  background-size: cover;
+  margin: 5px;
+}
+.widgetBtn p {
+  display: table-cell;
+  color: white;
+}
+#sendbtn {
+  height: 30px;
+  width: 30px;
+  background-color: yellow;
+  font-size: 15px;
+
+  float: left;
+}
+#sendbtn:hover {
+  animation: sendbtnanim infinite 3s;
+}
+@keyframes sendbtnanim {
+  0% {
+    color: black;
+  }
+  25% {
+    color: skyblue;
+  }
+  50% {
+    color: red;
+  }
+  75% {
+    color: skyblue;
+  }
+  100% {
+    color: black;
+  }
+}
+.userDiv {
+  border-radius: 20%;
+  width: 40px;
+  height: 40px;
+  color: black;
+  border: radius 20%;
+  border: black solid 1px;
+  margin: 5px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 5px;
+  float: left;
+  text-align: center;
+  display: table;
+}
+.userDiv p {
+  display: table-cell;
+  vertical-align: middle;
+}
+.chatText {
+  color: black;
+  background-color: yellow;
+  border-radius: 5%;
+  border: 1px solid black;
+  margin: 2px;
+  max-width: 300px;
+  width: fit-content;
+  height: fit-content;
+  word-break: break-all;
+  text-align: left;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 13px;
+}
+#chatInput {
+  width: 100%;
+  background-color: rgb(153, 223, 250);
+  color: black;
+
+  float: left;
+}
+
+svg#roomMakeBtn {
+  animation: roomMakeBtnAnim infinite 1s;
+}
+@keyframes roomMakeBtnAnim {
+  0% {
+    color: white;
+  }
+  50% {
+    color: rgb(168, 238, 243);
+  }
+  100% {
+    color: white;
+  }
+}
+.roomImg {
+  border-radius: 30% 30% 30% 30%;
+  border: black solid 1px;
+  top: 5%;
+  width: 45px;
+  height: 45px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 10px;
+  float: left;
+  background-image: url(./cat.gif);
+  background-size: cover;
+}
+small {
+  font-size: 16px;
+}
+h3 {
+  color: rgb(165, 240, 162);
+}
+div#ingam {
+  float: right;
+}
+div.viewcount {
+  text-align: right;
+  float: right;
+}
+div.texteditor img {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+}
+p.p {
+  font-family: "NeoDunggeunmo";
+  width: 70%; /* 정렬하려는 요소의 넓이를 반드시 지정 */
+  margin-left: 0%;
+
+  color: white;
+  text-align: center;
+}
+div#content {
+  text-align: center;
+}
+div.button {
+  color: black;
+  font-size: 25px;
+  height: 30px;
+  width: 100%;
+
+  border: black solid 1px;
+  background-color: rgb(194, 214, 207);
+  position: relative;
+}
+form#loginform {
+  text-align: right;
+}
+h2 {
+  right: 30px;
+  position: relative;
+}
+div#ff {
+  margin-left: 20%;
+}
+img {
+  z-index: 1;
+}
+img#logini {
+  z-index: 1;
+  right: 30px;
+  margin-left: 10%;
+  position: relative;
+  border: black solid 1px;
+  background-color: wheat;
+}
+img#logini:hover {
+  background-color: pink;
+}
+div.button:hover {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+div.timeline {
+  margin-left: 0;
+}
+input.login {
+  width: 30px;
+  height: 30px;
+
+  margin-top: 10px;
+  border: none;
+}
+button {
+  background-color: black;
+  color: white;
+  vertical-align: center;
+}
+
+div.loginform {
+  margin-left: -20%;
+  text-align: center;
+}
+div.input-group {
+  text-align: center;
+}
+div.button-group {
+  text-align: center;
+}
+/* div#message {
+  color: black;
+  margin-left: 0%;
+  background-color: white;
+  border: solid black 2px;
+} */
+p.p img {
+  margin-left: 10%;
+  margin-right: 0%;
+  width: 80%;
+  object-fit: contain;
+}
+div#phone {
+  display: none;
+}
+h1 {
+  font-family: "NeoDunggeunmo";
+  color: white;
+
+  /* 정렬하려는 요소의 넓이를 반드시 지정 */
+  margin-left: 0;
+  /* 정렬하려는 요소의 넓이를 반드시 지정 */
+  margin-right: 0;
+  border: solid white 1px;
+  text-align: center;
+}
+button.btn {
+  position: relative;
+  left: 90px;
+  font-family: "NeoDunggeunmo";
+  text-align: center;
+}
+div {
+  font-family: "NeoDunggeunmo";
+  z-index: 3;
+  color: white;
+  /* 정렬하려는 요소의 넓이를 반드시 지정 */
+  margin-left: 0%;
+  margin-right: 0;
+  text-align: center;
+  font-size: 23px;
+}
+
+div.list {
+  margin-left: 0;
+}
+header img {
+  z-index: 2;
+}
+div.list ul {
+  list-style: none;
+
+  vertical-align: center;
+}
+div.list ul li {
+  text-align: left;
+  margin-left: 30%;
+}
+div div.list ul li:before {
+  content: "→";
+  display: inline-block;
+  vertical-align: center;
+}
+div.post {
+  margin-left: 0;
+  width: 99.3%;
+  font-size: 20px;
+  border: white solid 1px;
+}
+div#message {
+  color: red;
+  animation-name: messageanim;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+@keyframes messageanim {
+  0% {
+    color: white;
+  }
+  50% {
+    color: pink;
+  }
+  100% {
+    color: red;
+  }
+}
+div.ufo {
+  position: absolute;
+  width: 130px;
+  height: 60px;
+  background-size: 50%;
+  animation-name: ufoanim;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+  background-image: url("./UFO.gif");
+  background-repeat: no-repeat;
+}
+div.timeline {
+  margin-left: 20%;
+}
+@keyframes ufoanim {
+  0% {
+    top: 0%;
+    left: 10%;
+  }
+  10% {
+    top: 20%;
+    left: 40%;
+  }
+  15% {
+    top: 40%;
+    left: 20%;
+  }
+  32% {
+    top: 50%;
+    left: 50%;
+  }
+  40% {
+    top: 30%;
+    left: 20%;
+  }
+
+  55% {
+    top: 50%;
+    left: 50%;
+  }
+  60% {
+    top: 40%;
+    left: 20%;
+  }
+  70% {
+    top: 10%;
+    left: 00%;
+  }
+  84% {
+    top: 0%;
+    left: 6%;
+  }
+  90% {
+    top: 10%;
+    left: 60%;
+  }
+  100% {
+    top: 0%;
+    left: 10%;
+  }
+}
+
+button#kakao.btn {
+  left: 0;
+}
+button#github.btn {
+  left: 0;
+}
+body {
+  background-image: url(./tile.png);
+  background-color: rgb(53, 145, 106);
+  background-image: url("./tile.png");
+  background-repeat: repeat;
+  background-size: cover;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+img {
+  z-index: 1;
+}
+header.header img {
+  height: 500px;
+  object-fit: cover;
+}
+span#introduceSpan {
+  display: none;
+}
+#section {
+  width: 100%;
+  height: 72%;
+  float: top;
+  font-size: 40px;
+  background-image: url(./tile.png);
+  background-repeat: no-repeat;
+
+  background-size: cover;
+  padding-bottom: 50px;
+}
+
+.footer {
+  width: 100%;
+  bottom: 0;
+  position: relative;
+  height: 0%;
+  margin-bottom: -120px;
+}
+.footer img {
+  height: 200px;
+  object-fit: cover;
+}
+div.jipsa {
+  font-family: "NeoDunggeunmo";
+  width: 100%;
+
+  position: fixed;
+
+  bottom: 0px;
+  opacity: 1;
+}
+div.jipsa img {
+  visibility: hidden;
+  display: none;
+}
+
+div.jipsa div#messages,
+#profile {
+  width: 100%;
+  top: 0;
+  font-size: 20px;
+
+  position: relative;
+  color: black;
+
+  background-color: white;
+  border: solid black 2px;
+}
+div#cufo {
+  opacity: 1;
+  position: fixed;
+  width: 400px;
+  height: 60px;
+  font-size: 15px;
+  text-align: left;
+  padding-bottom: 5px;
+  background-size: 50% cover;
+  animation-name: cufoanim;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+  background-image: url("./UFO-red.gif");
+  background-repeat: no-repeat;
+}
+h2 {
+  margin-left: 50px;
+}
+h2:before {
+  content: "♪";
+}
+input.li {
+  width: 300px;
+}
+div#sun {
+  opacity: 1;
+  position: fixed;
+  width: 150%;
+  height: 150px;
+  font-size: 15px;
+  text-align: left;
+  padding-bottom: 5px;
+  background-size: contain;
+  top: 0;
+  left: -20%;
+  background-image: url("./sun.gif");
+  background-repeat: repeat-x;
+}
+@keyframes cufoanim {
+  0% {
+    top: 0%;
+    left: 10%;
+  }
+  10% {
+    top: 20%;
+    left: 40%;
+  }
+  15% {
+    top: 40%;
+    left: 20%;
+  }
+  32% {
+    top: 10%;
+    left: 50%;
+  }
+  40% {
+    top: 30%;
+    left: 20%;
+  }
+
+  55% {
+    top: 10%;
+    left: 50%;
+  }
+  60% {
+    top: 5%;
+    left: 20%;
+  }
+  70% {
+    top: 10%;
+    left: 00%;
+  }
+  84% {
+    top: 0%;
+    left: 6%;
+  }
+  90% {
+    top: 20%;
+    left: 60%;
+  }
+  100% {
+    top: 0%;
+    left: 10%;
+  }
+}
+button#join-btn {
+  margin-left: 50px;
+}
+div#container {
+  width: 3000px;
+  height: 3000px;
+  background-color: rgba(231, 222, 222, 0.5);
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  display: none;
+  position: fixed;
+}
+div.navec {
+  display: none;
+}
+div.jipsac {
+  display: none;
+}
+.nav div.nave {
+  font-family: "NeoDunggeunmo";
+  display: none;
+  width: 100%;
+  top: 0;
+  height: 224px;
+  position: fixed;
+
+  opacity: 1;
+}
+
+.nav div.nave ul {
+  list-style: none;
+  width: 100%;
+  height: 50%;
+  margin-top: 10px;
+  vertical-align: center;
+
+  right: 0px;
+  bottom: 140px;
+  position: fixed;
+}
+
+.nav div.nave ul li {
+  line-height: 20px;
+  font-weight: bold;
+  height: 20px;
+  color: rgb(111, 247, 235);
+  font-family: "NeoDunggeunmo";
+  background-color: rgba(255, 254, 218, 0.53);
+  width: 100%;
+  font-size: 15px;
+  vertical-align: center;
+  animation: textcoloranim infinite 10s;
+}
+li#category {
+  font-weight: bold;
+  color: rgb(248, 244, 244);
+  font-family: "NeoDunggeunmo";
+  animation: 0;
+  padding: 2px 15px 2px 0px;
+  padding-bottom: 10px;
+  margin-right: 30%;
+  border-bottom: 1px solid #efefef;
+  font-size: 30px;
+  background-color: rgb(0, 0, 0);
+}
+figure {
+  max-width: inherit;
+}
+img {
+  max-width: 100%;
+
+  height: inherit;
+}
+div.tp {
+  width: 100%;
+  float: top;
+}
+div.date {
+  width: 100%;
+  text-align: right;
+  float: right;
+}
+span#frog1 {
+  animation: froganim infinite 1s;
+  animation-delay: 10s;
+}
+span#frog2 {
+  animation: froganim infinite 1s;
+  animation-delay: 11s;
+}
+span#frog3 {
+  animation: froganim infinite 1s;
+  animation-delay: 12s;
+}
+span#frog4 {
+  animation: froganim infinite 1s;
+  animation-delay: 11s;
+}
+span#frog5 {
+  animation: froganim infinite 1s;
+  animation-delay: 10s;
+}
+@keyframes froganim {
+  0% {
+    font-size: 20px;
+    color: white;
+  }
+  25% {
+    font-size: 25px;
+    color: greenyellow;
+  }
+  50% {
+    font-size: 20px;
+    color: white;
+  }
+  75% {
+    font-size: 25px;
+    color: greenyellow;
+  }
+  100% {
+    font-size: 20px;
+    color: white;
+  }
+}
+@keyframes stextcoloranim {
+  0% {
+    color: rgb(248, 18, 18);
+  }
+  25% {
+    color: gray;
+  }
+  50% {
+    color: red;
+  }
+  75% {
+    color: gray;
+  }
+  90% {
+    color: red;
+  }
+  100% {
+    color: red;
+  }
+}
+details summary {
+  animation: stextcoloranim infinite 3s;
+  transition: animation 0s;
+}
+div.detaildiv {
+  min-width: 140px;
+}
+details[open] summary {
+  animation: none;
+  border: none;
+  background-color: black;
+}
+div.detaildiv {
+  border-radius: 60% 40% / 40% 30%;
+  transition: border-radius 1s;
+}
+div.detaildiv:hover {
+  border-radius: 0;
+  animation: deanim 1 1s;
+  animation-fill-mode: backwards;
+}
+@keyframes deanim {
+  15% {
+    transform: translateX(2px);
+  }
+  25% {
+    transform: translateX(-4px);
+  }
+  35% {
+    transform: translateX(2px);
+  }
+  100% {
+  }
+}
+span.post {
+  font-size: 16px;
+}
+div.tag {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+li#home {
+  line-height: 30px;
+  font-weight: bold;
+  color: rgb(247, 245, 245);
+  font-family: "NeoDunggeunmo";
+  cursor: pointer;
+  padding: 2px 15px 2px 0px;
+  animation: 0;
+  padding-bottom: 5px;
+  margin-bottom: 2px;
+  margin-right: 30%;
+  background-color: rgb(0, 0, 0);
+  border-bottom: 1px solid #efefef;
+  font-size: 28px;
+}
+li#abc {
+  line-height: 10px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  font-family: "NeoDunggeunmo";
+  cursor: auto;
+  padding: 2px 15px 2px 0px;
+  margin-bottom: 2px;
+  margin-right: 30%;
+  border-bottom: rgba(0, 0, 0, 0) solid 0px;
+  animation: 0;
+  font-size: 10px;
+  background-color: rgb(0, 0, 0);
+}
+li#abc :after {
+  content: "-";
+}
+li#abc :before {
+  content: "-";
+}
+@keyframes textcoloranim {
+  0% {
+    font-size: 25px;
+    color: black;
+  }
+  25% {
+    font-size: 20px;
+    color: gray;
+  }
+  50% {
+    font-size: 25px;
+    color: black;
+  }
+  75% {
+    font-size: 20px;
+    color: gray;
+  }
+  90% {
+    font-size: 25px;
+    color: black;
+  }
+  100% {
+    font-size: 25px;
+    color: black;
+  }
+}
+.nav div.nave ul li:before {
+  content: "▷";
+  display: inline-block;
+  vertical-align: left;
+  padding: 0px 5px 1px 0px;
+}
+.nav div.nave ul li:after {
+  content: "◁";
+  display: inline-block;
+  vertical-align: left;
+}
+.nav div.nave ul li#abc:after {
+  content: "-";
+  display: inline-block;
+  vertical-align: left;
+}
+.nav div.nave ul li#abc:before {
+  content: "-";
+  display: inline-block;
+  vertical-align: left;
+  padding: 0px 5px 1px 0px;
+}
+.nav div.nave ul li#category:after {
+  content: "-";
+  display: inline-block;
+  vertical-align: left;
+}
+.nav div.nave ul li#category:before {
+  content: "-";
+  display: inline-block;
+  vertical-align: left;
+  padding: 0px 5px 1px 0px;
+}
+.nav div.nave ul li#home:after {
+  display: inline-block;
+  content: "<";
+  animation: textcoloranim infinite 4s;
+  vertical-align: left;
+}
+.nav div.nave ul li#home:before {
+  content: ">";
+  animation: textcoloranim infinite 4s;
+  display: inline-block;
+  vertical-align: left;
+  padding: 0px 5px 1px 0px;
+}
+div.plist {
+  text-align: left;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+li#plist-li {
+  margin-left: 15%;
+  text-align: left;
+  list-style: none;
+  margin-right: 4%;
+}
+small {
+  font-size: 16px;
+}
+small:hover {
+  background-color: white;
+  color: black;
+}
+body#postb {
+  background-image: url(MoonForest.gif);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+span.next:hover {
+  color: black;
+  cursor: pointer;
+  animation: textcoloranim infinite 3s;
+}
+span.post:hover {
+  background-color: white;
+  color: black;
+  cursor: pointer;
+}
+span.input {
+  font-style: normal;
+}
+.texteditor {
+  margin-left: 0;
+  padding: 0px;
+  height: 600px;
+  width: 100%;
+}
+
+.banner {
+  margin-left: 0;
+  width: 100%;
+}
+.banner ul li {
+  font-size: 2px;
+  color: gray;
+  margin-left: 10px;
+}
+.banner ul {
+  margin-left: 0;
+  background: #dfe4dc;
+  width: 100%;
+  text-align: center;
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+  display: flex;
+}
+
+.banner ul li button {
+  margin-left: 0;
+  color: black !important;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 15px 10px;
+  cursor: pointer;
+}
+
+.banner ul li input {
+  margin-left: 0;
+  width: 20px;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 10px;
+}
+
+.banner ul li select {
+  margin-left: 0;
+  border: none;
+  outline: none;
+  margin: 10px;
+  width: 60px;
+}
+
+.holder iframe {
+  width: 100%;
+  height: 100%;
+  background: #edebee;
+}
+
+.holder {
+  margin-left: 0;
+  width: 100%;
+  height: 100%;
+}
+#banner2 {
+  margin-left: 0;
+}
+#banner2 ul li {
+  margin-left: 10px;
+  font-size: 2px;
+  color: gray;
+}
+#banner2 ul {
+  margin-left: 0;
+  background: #dfe4dc;
+  width: 100%;
+  text-align: center;
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+  display: flex;
+}
+
+#banner2 ul li button {
+  margin-left: 0;
+  color: black !important;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 15px 10px;
+  cursor: pointer;
+}
+
+#banner2 ul li input {
+  margin-left: 0;
+  width: 20px;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 10px;
+}
+
+#banner2 ul li select {
+  margin-left: 0;
+  border: none;
+
+  outline: none;
+  margin: 10px;
+  width: 40px;
+}

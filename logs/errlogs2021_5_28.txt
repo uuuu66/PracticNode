@@ -1,0 +1,128 @@
+10_16_52_39:
+ 접속아이피:::ffff:192.168.0.1
+url:"/auth/find"
+바디:"Error: Invalid login: 535-5.7.8 Username and Password not accepted. Learn more at\n535 5.7.8  https://support.google.com/mail/?p=BadCredentials y76sm2765335pfb.74 - gsmtp\n    at SMTPConnection._formatError (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\nodemailer\\lib\\smtp-connection\\index.js:774:19)\n    at SMTPConnection._actionAUTHComplete (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\nodemailer\\lib\\smtp-connection\\index.js:1513:34)\n    at SMTPConnection.<anonymous> (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\nodemailer\\lib\\smtp-connection\\index.js:540:26)\n    at SMTPConnection._processResponse (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\nodemailer\\lib\\smtp-connection\\index.js:932:20)\n    at SMTPConnection._onData (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\nodemailer\\lib\\smtp-connection\\index.js:739:14)\n    at TLSSocket.SMTPConnection._onSocketData (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\nodemailer\\lib\\smtp-connection\\index.js:189:44)\n    at TLSSocket.emit (events.js:315:20)\n    at addChunk (_stream_readable.js:309:12)\n    at readableAddChunk (_stream_readable.js:284:9)\n    at TLSSocket.Readable.push (_stream_readable.js:223:10)\n    at TLSWrap.onStreamRead (internal/stream_base_commons.js:188:23)"
+유저undefined
+
+
+
+10_18_34_564:
+ 접속아이피:::ffff:192.168.0.1
+url:"/auth/find"
+바디:"Error: Invalid login: 535-5.7.8 Username and Password not accepted. Learn more at\n535 5.7.8  https://support.google.com/mail/?p=BadCredentials t17sm2766005pji.9 - gsmtp\n    at SMTPConnection._formatError (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\nodemailer\\lib\\smtp-connection\\index.js:774:19)\n    at SMTPConnection._actionAUTHComplete (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\nodemailer\\lib\\smtp-connection\\index.js:1513:34)\n    at SMTPConnection.<anonymous> (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\nodemailer\\lib\\smtp-connection\\index.js:540:26)\n    at SMTPConnection._processResponse (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\nodemailer\\lib\\smtp-connection\\index.js:932:20)\n    at SMTPConnection._onData (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\nodemailer\\lib\\smtp-connection\\index.js:739:14)\n    at TLSSocket.SMTPConnection._onSocketData (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\nodemailer\\lib\\smtp-connection\\index.js:189:44)\n    at TLSSocket.emit (events.js:315:20)\n    at addChunk (_stream_readable.js:309:12)\n    at readableAddChunk (_stream_readable.js:284:9)\n    at TLSSocket.Readable.push (_stream_readable.js:223:10)\n    at TLSWrap.onStreamRead (internal/stream_base_commons.js:188:23)"
+유저undefined
+
+
+
+10_18_37_535:
+ 접속아이피:::ffff:192.168.0.1
+url:"/post/getc"
+바디:undefined
+유저undefined
+
+
+
+10_20_13_126:
+ 접속아이피:::ffff:192.168.0.1
+url:"/post/s"
+바디:"Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client\n    at ServerResponse.setHeader (_http_outgoing.js:558:11)\n    at ServerResponse.header (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\express\\lib\\response.js:771:10)\n    at ServerResponse.send (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\express\\lib\\response.js:170:12)\n    at done (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\express\\lib\\response.js:1008:10)\n    at Object.exports.renderFile (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug\\lib\\index.js:448:12)\n    at View.exports.__express [as engine] (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug\\lib\\index.js:493:11)\n    at View.render (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\express\\lib\\view.js:135:8)\n    at tryRender (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\express\\lib\\application.js:640:10)\n    at Function.render (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\express\\lib\\application.js:592:3)\n    at ServerResponse.render (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\express\\lib\\response.js:1012:7)\n    at C:\\Users\\leemi\\Documents\\PracticNode\\route\\post.js:619:12\n    at processTicksAndRejections (internal/process/task_queues.js:93:5)"
+유저undefined
+
+
+
+10_20_14_196:
+ 접속아이피:::ffff:192.168.0.1
+url:"/post/nav.gif"
+바디:"Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client\n    at ServerResponse.setHeader (_http_outgoing.js:558:11)\n    at ServerResponse.header (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\express\\lib\\response.js:771:10)\n    at ServerResponse.send (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\express\\lib\\response.js:170:12)\n    at done (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\express\\lib\\response.js:1008:10)\n    at Object.exports.renderFile (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug\\lib\\index.js:448:12)\n    at View.exports.__express [as engine] (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\pug\\lib\\index.js:493:11)\n    at View.render (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\express\\lib\\view.js:135:8)\n    at tryRender (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\express\\lib\\application.js:640:10)\n    at Function.render (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\express\\lib\\application.js:592:3)\n    at ServerResponse.render (C:\\Users\\leemi\\Documents\\PracticNode\\node_modules\\express\\lib\\response.js:1012:7)\n    at C:\\Users\\leemi\\Documents\\PracticNode\\route\\post.js:619:12\n    at processTicksAndRejections (internal/process/task_queues.js:93:5)"
+유저undefined
+
+
+
+10_40_3_748:
+ 접속아이피:::ffff:192.168.0.1
+url:"/post/getc"
+바디:undefined
+유저{"id":6,"name":"민기쿤","email":"uuuu66@naver.com","password":"U2FsdGVkX1/k+cg4AgLqoxmj7Qy73lw9uiG9s6r62JI=","provider":null,"auth":1}
+
+
+
+10_55_25_455:
+ 접속아이피:::ffff:192.168.0.1
+url:"/post/getc"
+바디:"TypeError: Cannot read property 'Comments' of null\n    at C:\\Users\\leemi\\Documents\\PracticNode\\route\\post.js:280:41\n    at processTicksAndRejections (internal/process/task_queues.js:93:5)"
+유저undefined
+
+
+
+10_56_35_910:
+ 접속아이피:::ffff:192.168.0.1
+url:"/post/getc"
+바디:"TypeError: Cannot set property 'Comment' of null\n    at C:\\Users\\leemi\\Documents\\PracticNode\\route\\post.js:281:23\n    at processTicksAndRejections (internal/process/task_queues.js:93:5)"
+유저undefined
+
+
+
+10_56_57_732:
+ 접속아이피:::ffff:192.168.0.1
+url:"/post/getc"
+바디:"TypeError: Cannot set property 'Comments' of null\n    at C:\\Users\\leemi\\Documents\\PracticNode\\route\\post.js:281:24\n    at processTicksAndRejections (internal/process/task_queues.js:93:5)"
+유저undefined
+
+
+
+11_4_26_860:
+ 접속아이피:::ffff:192.168.0.1
+url:"/post/getc"
+바디:"TypeError: Cannot read property 'Comments' of null\n    at C:\\Users\\leemi\\Documents\\PracticNode\\route\\post.js:282:41\n    at processTicksAndRejections (internal/process/task_queues.js:93:5)"
+유저undefined
+
+
+
+11_6_21_172:
+ 접속아이피:::ffff:192.168.0.1
+url:"/post/getc"
+바디:"TypeError: Cannot read property 'Comments' of null\n    at C:\\Users\\leemi\\Documents\\PracticNode\\route\\post.js:282:41\n    at processTicksAndRejections (internal/process/task_queues.js:93:5)"
+유저undefined
+
+
+
+11_8_53_148:
+ 접속아이피:::ffff:192.168.0.1
+url:"/post/getc"
+바디:"TypeError: Cannot read property 'data' of null\n    at C:\\Users\\leemi\\Documents\\PracticNode\\route\\post.js:256:23\n    at processTicksAndRejections (internal/process/task_queues.js:93:5)"
+유저undefined
+
+
+
+11_9_33_252:
+ 접속아이피:::ffff:192.168.0.1
+url:"/post/getc"
+바디:"TypeError: Cannot read property 'Comments' of null\n    at C:\\Users\\leemi\\Documents\\PracticNode\\route\\post.js:256:23\n    at processTicksAndRejections (internal/process/task_queues.js:93:5)"
+유저undefined
+
+
+
+11_9_48_756:
+ 접속아이피:::ffff:192.168.0.1
+url:"/post/getc"
+바디:"TypeError: Cannot read property 'Comments' of null\n    at C:\\Users\\leemi\\Documents\\PracticNode\\route\\post.js:267:22\n    at processTicksAndRejections (internal/process/task_queues.js:93:5)"
+유저undefined
+
+
+
+11_10_18_677:
+ 접속아이피:::ffff:192.168.0.1
+url:"/post/getc"
+바디:"TypeError: Cannot read property 'Comments' of null\n    at C:\\Users\\leemi\\Documents\\PracticNode\\route\\post.js:267:29\n    at processTicksAndRejections (internal/process/task_queues.js:93:5)"
+유저undefined
+
+
+
+11_10_32_578:
+ 접속아이피:::ffff:192.168.0.1
+url:"/post/getc"
+바디:"TypeError: Cannot read property 'Comments' of null\n    at C:\\Users\\leemi\\Documents\\PracticNode\\route\\post.js:267:29\n    at processTicksAndRejections (internal/process/task_queues.js:93:5)"
+유저undefined
+
+
+

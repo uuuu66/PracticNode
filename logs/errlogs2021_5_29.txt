@@ -1,0 +1,16 @@
+13_7_28_483:
+ 접속아이피:::ffff:192.168.0.1
+url:"/lab/cyphersitem"
+바디:"TypeError [ERR_INVALID_ARG_TYPE]: The \"data\" argument must be of type string or an instance of Buffer, TypedArray, or DataView. Received an instance of Object\n    at Object.writeFile (fs.js:1436:5)\n    at C:\\Users\\leemi\\Documents\\PracticNode\\route\\laboratory.js:50:8\n    at processTicksAndRejections (internal/process/task_queues.js:93:5)"
+유저undefined
+
+
+
+13_9_12_964:
+ 접속아이피:::ffff:192.168.0.1
+url:"/lab/cyphersitem"
+바디:"TypeError [ERR_INVALID_ARG_TYPE]: The \"data\" argument must be of type string or an instance of Buffer, TypedArray, or DataView. Received an instance of Object\n    at Object.writeFile (fs.js:1436:5)\n    at C:\\Users\\leemi\\Documents\\PracticNode\\route\\laboratory.js:50:8\n    at processTicksAndRejections (internal/process/task_queues.js:93:5)"
+유저undefined
+
+
+

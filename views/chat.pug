@@ -1,0 +1,626 @@
+
+
+
+#chatContainer(style="display:none;z-index:5")
+    #chatDiv(style="display:''")
+        #chatHead(style="width:100%;float:top;border-bottom:1px black solid;color:white;height:60px;") 
+            div(style="float:left;margin-top:-1.5px;color:white;width:368px;text-align:center;cursor:move") minKi-o-talk 
+            i#closeChatBtn(class="fas fa-times"  style="cursor:pointer; color:white;border-left:1px solid black;height:30px;width:30px;float:left" onclick="closeChat()" )
+            
+        #chatBody
+         
+        #chatTail(style="display:flex;justify-content: space-around;")
+            //- div#roomMakeDiv(style="border-radius:100%; border:1px solid white; width:25px;height:25px;") 
+            i#roomMakeBtn(class="fas fa-plus" onclick="makeRoomAlarm()")
+        #chatAlarm(style="display:table;text-align:center; border:10px outset black;display:none;background-color:white; width:380px;height:150px;position:absolute;z-index:5; " )           
+            p(style="display: table-cell;vertical-align: middle;color:black;text-align:center") 
+                div(style="text-align:center") 
+                    span#chatAlarmText(style="color:black") 방을 만드시겠습니까?
+                br
+                div(style="text-align:center")
+                    span.chatAlarmName(style="color:black;") 이름
+                    input#roomName.chatAlarmName(type="text" style="width:200px;color:black;")
+                    br
+                    span.chatAlarmPwd(style="color:black;") 비번
+                    input#passWord.chatAlarmPwd(type="text" style="width:200px;color:black;")
+                    br
+                    button#chatConfirmBtn(style="background-color:white" onclick="makeRoom()") 만들기
+                    button#chatCancleBtn(style="background-color:white" onclick="alarmOut()") 닫기
+    script.
+        
+            const socket = io.connect('http://39.115.162.208:30000/room', {
+                 withCredentials: true,
+                    path: '/socket.io',
+                    transports: ['websocket'],
+                });
+               const chatBody=document.getElementById("chatBody");
+               socket.on('chat',function(data){
+                 socket.emit('chatconfirm',data);
+
+               })
+               socket.on('chatconfirm',function(data){
+                   console.log(data);
+                    meOrYou(data.data,data.chatUser.name);
+               })
+              
+            socket.on("roomInfo",function(data){
+                    console.log(data);
+                    loadRooms(data);          
+            });
+            socket.on("alarmdisconnect",async function(data){
+                console.log(data);
+                const removeDiv=document.getElementById("chat+<>??+"+data);
+                if(removeDiv)
+                return removeDiv.remove();
+             })
+            socket.on("introduceuser",async function(data){
+              
+                if(document.getElementById("chat+<>??+"+data))
+                    return 0;
+                const introduceUser =document.createElement('div');
+                const chatContent=document.getElementById("chatContent");
+               
+                const userList=document.getElementById("chatUserList");
+                const userDiv=document.createElement("div");
+                const userDivText=document.createElement("p")
+                                userDivText.textContent=data;
+                                userDiv.style.float="left";
+                                userDiv.appendChild(userDivText);
+                                userDiv.classList.add("userDiv");
+                                userList.appendChild(userDiv);
+                                userDiv.style.margin='5px';
+                                userDiv.setAttribute("id","chat+<>??+"+data);
+               
+                await socket.emit("entranceRoom",undefined);
+            })
+            socket.on("chatout",function(data){
+                console.log(data  +"chatOut");
+                const removeDiv=document.getElementById("chat+<>??+"+data);
+                console.log(removeDiv)
+                if(removeDiv)
+               return removeDiv.remove();
+            });
+            function alarmOut(){
+                  const chatAlarm=document.getElementById("chatAlarm");
+
+                  chatAlarm.style.display="none";
+            }
+            function makeRoomAlarm(){
+                const chatAlarm=document.getElementById("chatAlarm");
+                const chatBody=document.getElementById("chatBody");
+                chatAlarm.style.display="table";
+                const nameInput=document.getElementById("roomName");
+                const pwdInput=document.getElementById("passWord");
+                nameInput.style.display=""
+                pwdInput.style.display=""
+                chatAlarm.style.top='40%';
+                chatAlarm.style.left='0px';
+                nameInput.onclick=()=>{nameInput.focus(); };
+                pwdInput.onclick=()=>{pwdInput.focus();};
+
+            }
+            function formCheck(name,pwd){
+                if(name=="")
+                    return false 
+                return true
+            }
+            async function makeRoom(){
+                const nameInput=document.getElementById("roomName");
+                const pwdInput=document.getElementById("passWord");
+                const chatAlarmText=document.getElementById("chatAlarmText");
+                const chatAlarm=document.getElementById("chatAlarm");
+                const name=nameInput.value;
+                const pwd=pwdInput.value;
+                if(formCheck(name,pwd)){
+                    const res= await axios.post("/chat/make",{name:name,pwd:pwd});
+                    if(res.data.ok=="ok"){
+                        joinRoom(res.data.id);
+                        alarmOut();
+                    }else{
+                        rotateAnim(chatAlarm);
+                        chatAlarmText.textContent="방 생성 실패! 새로고침 해보세요.";
+                    }
+                }else{
+                    rotateAnim(chatAlarm);
+                    chatAlarmText.textContent="방 이름을 적어주세요.";
+                }
+            }
+            function loadRooms(data){
+                     while(chatBody.hasChildNodes()){
+                   chatBody.removeChild( chatBody.childNodes[0] );
+                 deleteImoticonDiv();
+                    
+                }
+               
+                for(let i=0;i<data.rooms.length;i++){
+                     
+                    const roomDetail=document.createElement('div');
+                    const roomInfo=document.createElement('div');
+                    const roomName= document.createElement('div');
+                    const roomImg=document.createElement('div');
+                    const roomDate=document.createElement('div');
+                        roomName.classList.add('roomName');
+                        roomImg.classList.add('roomImg');
+                        roomInfo.classList.add('roomInfo');
+                        roomDetail.classList.add('roomDetail');
+                        roomDate.classList.add('roomDate');
+                        roomInfo.setAttribute('id',data.rooms[i]._id);
+                    const textContent=data.rooms[i].title+"("+data.rooms[i].size+")";
+                        roomDate.textContent=chatDateConvert(data.rooms[i].recent);
+                        roomName.textContent=textContent;
+                        roomDetail.appendChild(roomName);
+                        roomDetail.appendChild(roomDate);
+                        roomInfo.appendChild(roomImg);      
+                        roomInfo.appendChild(roomDetail);
+                        roomInfo.onmouseover=()=>{
+                            roomInfo.style.backgroundColor="gray";
+                            roomDate.style.color="white"
+                        }
+                        roomInfo.onmouseout=()=>{
+                            roomInfo.style.backgroundColor="white"
+                            roomDate.style.color="gray"
+                        }
+                        roomInfo.onclick=async()=>{
+                            console.log(data.rooms[i].password);
+                            if(data.rooms[i].password==null||data.rooms[i].password==""){
+                                joinRoom(data.rooms[i]._id);
+                            }else {
+                                checkPwd(data.rooms[i].password,data.rooms[i]._id);      
+                            }
+                        }
+                    
+                   
+                    chatBody.appendChild(roomInfo);
+                }
+            }
+            async function joinRoom(id){
+                alarmOut();
+                const chatBody=document.getElementById("chatBody");
+                 socket.emit('entranceRoom',{roomId:id});
+                  const users=  await axios.post('/chat/userIntroduce',{id:id});
+                        console.log(users.data.users);
+                            chatBody.style.overflow="hidden";
+                            while(chatBody.hasChildNodes()){
+                                chatBody.removeChild( chatBody.childNodes[0] );
+                            }
+                            const target=document.getElementById("roomMakeBtn");
+                            target.animate([
+                                            {transform:"rotate(-45deg)"},
+                                            ], {duration:100,fill:'forwards'});
+                            target.onclick=async()=>{
+                               target.animate([
+                                            {transform:"rotate(0deg)"},
+                                            ], {duration:100,fill:'forwards'});
+                                const data=await exitRoom(id);
+                               target.onclick=()=>{makeRoomAlarm()};         
+                            };
+                            const chatInput=document.createElement('div');
+                            chatInput.setAttribute("id","chatInput");
+                            const input=document.createElement("textarea");
+                            const chatContent=document.createElement("div");
+                            const sendbtn=document.createElement("button");
+                            
+                            sendbtn.textContent="♥";
+                            chatContent.setAttribute('id','chatContent');
+                            chatBody.appendChild(chatContent);
+                            chatInput.appendChild(input);
+                            chatInput.appendChild(sendbtn);
+                            chatBody.appendChild(chatInput);
+                            input.setAttribute('id','chatInputDiv');
+                            sendbtn.setAttribute('id','sendbtn');
+                            sendbtn.onclick=()=>{sendChat(id)};
+                            input.onclick=()=>{
+                                    window.onkeydown=(e)=>{ isWalking=true; }
+                                input.style.height="30px";
+                                input.focus()};
+                            input.addEventListener("focusout",e=>{
+                                input.style.height="20px";
+                                window.onkeydown=(e)=>{ isWalking=false;sendMove(e)}
+                                //- const chatAlarm=document.getElementById("chatAlarm");
+
+                                //- chatAlarm.style.display="none";
+                            })
+                            input.addEventListener("keydown",e=>{
+                               if(e.key=="Enter"){
+                                   e.preventDefault();
+                                   sendChat(id);
+                               }
+                            })
+                           const res= await axios.post("/chat/join",{room:id});
+                           if(res.data.chat){
+                               const chats=res.data.chat;
+                               for(let i=0;i<chats.length;i++){
+                                   meOrYou(chats[i]);
+                               }
+                           }
+                           chatContent.onclick=()=>{
+                               deleteImoticonDiv();
+                           }
+                           const userList=document.createElement('details');
+                           userList.setAttribute('id',"chatUserList");
+                           const userListTitle=document.createElement('summary');
+                           userListTitle.textContent="참가자";
+                            userListTitle.style.textAlign="left";
+                           userListTitle.style.marginLeft="5px;"
+                           userListTitle.style.color="black";
+                           
+                           userList.appendChild(userListTitle)
+
+                           const hr=document.createElement('hr');
+                           userList.appendChild(hr);
+                           for(let i=0;i<users.data.users.length;i++){
+                                const userDiv=document.createElement("div");
+                                const userDivText=document.createElement("p")
+                                userDivText.textContent=users.data.users[i];
+                                userDiv.style.float="left";
+                                userDiv.appendChild(userDivText);
+                                userDiv.classList.add("userDiv");
+                                userList.appendChild(userDiv);
+                                userDiv.style.margin='5px';
+                                userDiv.setAttribute("id","chat+<>??+"+users.data.users);
+                           }
+                           chatBody.appendChild(userList);
+                           const chatWidget=document.createElement("div");
+                           chatWidget.setAttribute("id","chatWidget");
+                           const imoticonBtn1=document.createElement("div");
+                           imoticonBtn1.classList.add("widgetBtn");
+                           imoticonBtn1.setAttribute('id','widgetBtn');
+                           chatWidget.appendChild(imoticonBtn1);
+                           imoticonBtn1.style.backgroundColor="yellow";
+                           imoticonBtn1.style.backgroundImage="url('/imoti/jing/templates.png')"
+                           imoticonBtn1.onclick=()=>{
+                                deleteImoticonDiv(imoticonBtn1,id,"jing");    
+                           }
+                           const imoticonBtn2=document.createElement("div");
+                           imoticonBtn2.classList.add("widgetBtn");
+                           imoticonBtn2.setAttribute('id','widgetBtn');
+                           chatWidget.appendChild(imoticonBtn2);
+                           imoticonBtn2.style.backgroundColor="yellow";
+                           imoticonBtn2.style.backgroundImage="url('/imoti/cat/f0.gif')"
+                           imoticonBtn2.onclick=()=>{
+                                deleteImoticonDiv(imoticonBtn2,id,"cat");    
+                           }
+                           chatBody.appendChild(chatWidget);
+            }
+            function rotateAnim(ele){
+               return ele.animate([{transform:"rotate(10deg)"},{transfrom:"rotate(-10deg)"}],{duration:100,fill:"backwards"});
+            }
+            function checkPwd(pwd,id){
+               
+                const nameInput=document.getElementById("roomName");
+                const pwdInput=document.getElementById("passWord");
+                const chatAlarm=document.getElementById("chatAlarm");
+                const chatAlarmText=document.getElementById("chatAlarmText");
+                const chatConfirmBtn=document.getElementById("chatConfirmBtn");
+                const chatCancleBtn=document.getElementById("chatCancleBtn");
+                pwdInput.onclick=()=>{
+                     pwdInput.focus();
+                }
+                 chatAlarm.style.left='0px';
+                chatConfirmBtn.textContent="입장";
+                chatAlarm.style.display="table";
+                nameInput.style.display="none";
+                chatAlarmText.textContent="비밀번호를 입력하세요.";
+                
+                chatConfirmBtn.onclick=()=>{
+                    if(pwd!=pwdInput.value){
+                        rotateAnim(chatAlarm);
+                         chatAlarmText.textContent="비밀번호가 틀렸어요!"
+                        pwdInput.onclick=()=>{
+                            pwdInput.focus();
+                            chatAlarmText.textContent="비밀번호를 입력하세요.";
+                        }
+                        pwdInput.value="";
+                    }
+                    else{
+                        nameInput.value="";
+                        pwdInput.value="";
+                        nameInput.style.display="";
+                        chatAlarmText.textContent="방을 만드시겠습니까?";
+                        chatConfirmBtn.textContent="만들기";
+                        chatAlarm.style.display="none";
+                        chatConfirmBtn.onclick=()=>{
+                            makeRoom();
+                        }
+                        return joinRoom(id);
+                    }
+                }
+                chatCancleBtn.onclick=()=>{
+                        nameInput.value="";
+                        pwdInput.value="";
+                        nameInput.style.display="";
+                        chatAlarmText.textContent="방을 만드시겠습니까?";
+                        chatConfirmBtn.textContent="만들기";
+                        chatAlarm.style.display="none";
+                        chatConfirmBtn.onclick=()=>{
+                            makeRoom();
+                        }
+                        return alarmOut()
+                }
+            }
+            async function sendChat(roomId){
+                const input=document.getElementById("chatInputDiv");
+                const chat=input.value;
+                if(input.value=="")
+                   return rotateAnim(input);
+                input.setSelectionRange(0,0);
+                input.value="";
+                    
+                await axios.post('/chat/send',{chat:chat,roomId:roomId});
+            }
+            function meOrYou(chat,cuser){
+                    console.log(chat.gif);
+                const user=chat.user.split('-<>+?')[0];
+                  if(user=='입장하는사람소개하는사람'){
+                   return null;
+                }
+                const meOrYou=chat.user.split('-<>+?')[1];
+                const chatBody=document.getElementById("chatBody");
+                const chatContent=document.getElementById('chatContent');
+                const chatText=chat.chat;
+                const gif=chat.gif;
+                const createdAt=chat.createdAt;
+                const chatTextDiv=document.createElement("div");
+                const timeDiv=document.createElement("div");
+               
+                timeDiv.style.color='black';
+                timeDiv.textContent=chatDateConvert(createdAt);
+
+                chatTextDiv.textContent=chatText;
+                if(gif!="undefined/undefined"&&gif!=undefined){
+                    chatTextDiv.classList.add("imoticonChat");
+                    chatTextDiv.style.backgroundImage=`url('/imoti/${gif}')`;
+                    chatTextDiv.style.margin="5px";
+                }
+                
+                else{
+                     chatTextDiv.classList.add("chatText");
+                }
+
+                timeDiv.classList.add("roomDate");
+                timeDiv.style.color="rgb(153, 223, 250)";
+                
+                chatTextDiv.onmouseover=()=>{
+                   
+                   timeDiv.style.color="black";
+                }
+                chatTextDiv.onmouseout=()=>{
+                     timeDiv.style.color="rgb(153, 223, 250)";
+                }
+                if(cuser){
+                    if(cuser==user){
+                        chatContent.appendChild(chatTextDiv);
+                        chatTextDiv.style.float="right";
+                        timeDiv.style.float="right";
+                         
+                    }else{
+                         const userDiv=document.createElement("div");
+                        const userDivText=document.createElement("p")
+                        userDivText.textContent=user;
+                        userDiv.appendChild(userDivText);
+                        userDiv.setAttribute("class","userDiv");
+                        chatContent.appendChild(userDiv);
+                        chatContent.appendChild(chatTextDiv);
+                        if(gif==undefined||gif=="undefined/undefined");
+                        chatTextDiv.style.backgroundColor="white";
+                        chatTextDiv.style.float="left";
+                        timeDiv.style.float="left";
+                         
+                    }
+                }else{
+                    if(meOrYou==1){
+                        chatContent.appendChild(chatTextDiv);
+                        chatTextDiv.style.float="right";
+                        timeDiv.style.float="right";
+                  
+                
+                    }else{
+                        const userDiv=document.createElement("div");
+                        const userDivText=document.createElement("p")
+                        userDivText.textContent=user;
+                        userDiv.appendChild(userDivText);
+                        userDiv.setAttribute("class","userDiv");
+                        chatContent.appendChild(userDiv);
+                        chatContent.appendChild(chatTextDiv);
+                         if(gif==undefined||gif=="undefined/undefined");
+                        chatTextDiv.style.backgroundColor="white";
+                        chatTextDiv.style.float="left";
+                        timeDiv.style.float="left";        
+                    }
+                }
+              
+                chatContent.appendChild(timeDiv);
+                const spaceDiv=document.createElement("div");
+                spaceDiv.style.width="100%";
+                spaceDiv.style.float="left";
+                chatContent.appendChild(spaceDiv);
+                chatContent.scrollTo({top:chatTextDiv.offsetTop});
+               
+
+            }
+            async function getImoticons(btn,id,folder){
+                console.log(folder);
+                const res= await axios.post('/chat/imoticon',{folder:folder});
+                const imoticonDiv= document.createElement('div');
+                const chatDiv=document.getElementById("chatDiv");
+                imoticonDiv.setAttribute("id","imoDiv");
+                imoticonDiv.style.display="absolute";
+                const imos=res.data.imos;
+                console.log(res.data);
+                console.log(imos);
+                btn.onclick=()=>{
+                    deleteImoticonDiv(btn,id,folder);
+                }
+                if(imos=="err"){
+                    makeRoomAlarm();
+                    document.getElementById("roomName").display="none";
+                    document.getElementById("passWord").display="none";
+                   document.getElementById("chatAlarmText").textContent="이모티콘 불러오기가 실패햇어요.";
+                }else{
+                for(let i=0;i<imos.length;i++){
+                    const imoticonBtn=document.createElement("div");
+                    imoticonBtn.classList.add("widgetBtn");
+                    imoticonBtn.style.backgroundImage=`url('/imoti/${folder}/${imos[i]}')`
+                    imoticonBtn.setAttribute("name",imos[i]); 
+                    imoticonDiv.appendChild(imoticonBtn);    
+                    imoticonBtn.onclick=()=>{
+                        seeFirst(imos[i],folder);
+                    }
+                    imoticonBtn.ondblclick=()=>{
+                        sendImoticon(imos[i],id,folder);
+                    }
+                }
+                    imoticonDiv.style.left=btn.offsetLeft+"px";
+                    imoticonDiv.style.top=btn.offsetTop-180+"px";
+                chatDiv.appendChild(imoticonDiv);
+                }
+            }
+            function seeFirst(pic,folder){
+                if(document.getElementById('imoticonView')){
+                    document.getElementById('imoticonView').remove();
+                }
+                const imoticonDiv=document.getElementById("imoDiv");
+                const imo=document.createElement('div');
+                const chatContent=document.getElementById('chatContent');
+                imo.setAttribute("id","imoticonView");
+                imo.style.top=imoticonDiv.offsetTop-300+"px";
+              
+                    imo.style.left=150+"px";
+                    imo.style.backgroundImage=`url('/imoti/${folder}/${pic}')`
+                    imoticonDiv.appendChild(imo);
+                
+            }   
+            async function sendImoticon(pic,id,folder){
+                deleteImoticonDiv();
+                const res=await axios.post("/chat/send",{gif:pic,roomId:id,folder:folder});
+            }
+            function deleteImoticonDiv(btn,id,folder){
+               
+                const imoDiv=document.getElementById("imoDiv");
+                if(btn){
+                    btn.onclick=()=>{
+                        getImoticons(btn,id,folder);
+                    }
+                }else{
+                     if(imoDiv)
+                     return imoDiv.remove();
+                     else 
+                     return null;
+                }
+                
+                if(imoDiv)
+                    imoDiv.remove();
+                else{
+                    getImoticons(btn,id,folder);
+                }
+            }
+            async function exitRoom(roomId){
+               socket.emit("exitRoom",{roomId:roomId});
+                const res=await axios.post('/chat/exit',{roomId:roomId});
+                return loadRooms(res.data);
+            }
+            function closeChat(){
+                const chatContainer=document.getElementById("chatContainer");
+                chatContainer.style.display= 'none';
+               
+                socket.emit('rest');
+            }
+            function chatDateConvert(time){
+                
+                if(time=="없음")
+                return "---";
+                if(time=="방금 만듬")
+                return "방금 만듬";
+               const dSplit=time.split('-');
+               
+               let hours=dSplit[3];
+               let minutes=dSplit[4];
+               const seconds=dSplit[5];
+               const year=dSplit[0];
+               let month=dSplit[1];
+               let day=dSplit[2];
+               const now=new Date();
+               if(month.length==1){
+                   month = ''.concat('0',month);
+               }
+                if(day.length==1){
+                   day = ''.concat('0',day);
+               }
+               if(hours.length==1){
+                   hours = ''.concat('0',hours);
+               }
+               if(minutes.length==1){
+                   minutes = ''.concat('0',minutes);
+               }
+               const nMonth=now.getMonth()+1;
+               const nDay=now.getDate();
+               const nYear=now.getFullYear();
+               const nHours=now.getHours();
+               const nMinutes=now.getMinutes();
+               if (nDay-day==0)
+                return "오늘 "+hours+" : "+minutes;
+               else
+                return "-"+year+month+day+"- "+hours+" : "+minutes;
+            }
+            function dragParentElement(elmnt){
+                var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+                elmnt.onmousedown = dragMouseDown;
+                const parent=elmnt.parentNode.parentNode;
+                function dragMouseDown(e) 
+                { e = e || window.event;
+                    e.preventDefault(); 
+                    pos3 = e.clientX; 
+                    pos4 = e.clientY; 
+                    document.onmouseup = closeDragElement; 
+                    document.onmousemove = elementDrag; } 
+                function elementDrag(e)
+                { e = e || window.event;
+                    e.preventDefault();
+                        pos1 = pos3 - e.clientX;
+                        pos2 = pos4 - e.clientY;
+                    pos3 = e.clientX; 
+                    pos4 = e.clientY; 
+                    parent.style.top = (parent.offsetTop - pos2) + "px"; 
+                    parent.style.left = (parent.offsetLeft - pos1) + "px"; 
+                    
+                    } 
+                function closeDragElement()     
+                { document.onmouseup = null; 
+                 document.onmousemove = null;
+            
+            } 
+            
+            }
+            function dragElement(elmnt) { 
+                var x=document.getElementById('x');
+                var y=document.getElementById('y');
+                var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+                elmnt.onmousedown = dragMouseDown;
+                function dragMouseDown(e) 
+                { e = e || window.event;
+                    e.preventDefault(); 
+                    pos3 = e.clientX; 
+                    pos4 = e.clientY; 
+                    document.onmouseup = closeDragElement; 
+                    document.onmousemove = elementDrag; } 
+                function elementDrag(e)
+                { e = e || window.event;
+                    e.preventDefault();
+                        pos1 = pos3 - e.clientX;
+                        pos2 = pos4 - e.clientY;
+                    pos3 = e.clientX; 
+                    pos4 = e.clientY; 
+                    elmnt.style.top = (elmnt.offsetTop - pos2) + "px"; 
+                    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px"; 
+                    
+                    } 
+                function closeDragElement()     
+                { document.onmouseup = null; 
+                document.onmousemove = null;
+            
+            } 
+            
+            }
+             
+         dragParentElement(document.getElementById('chatHead'));
+         dragParentElement(document.getElementById('chatTail'))
