@@ -1,16 +1,169 @@
-nav.nav &nbsp; 
+-if(post!='post')
+    div#menubtn(onclick="mobileMenu()" style="position:fixed;width:110px;height:56px;left:0;top:0;background-image:url('/cat.gif');background-size:contain;background-repeat:no-repeat;") 
+-else
+    div#menubtn(onclick="mobileMenu()" style="position:fixed;width:60px;height:60px;left:0;top:0;background-image:url('/sun.gif');background-size:contain;background-repeat:no-repeat;")  
+nav.nav &nbsp;  
+    div#container
+        -if(post!='post')
+             div#cufo  &nbsp;#{name} 반가워!
+        -else
+            div#sun  
+                div(style="border:black solid 1px;background-color:black;top:0px;position:fixed" )     
+        div.nave#nav 
+            ul
+                li(style=("animation:none;background-color:black;color:white;height:30px;font-size:20px;vertical-align:middle;line-height:30px;")) 메뉴
+                -for(var i=0; i<list.length;i++ )
+                    -if(post!='post') 
+                        -if(i<=1)
+                            li(class='index' onclick=`getIndex(this)` id=`${i}`) #{list[i]}
+                        -else if(i==2)
+                            li(class='index' id=`${i}` onclick='goPost()') #{list[i]} 
+                        -else if(i==5)
+                            li(class='index' onclick=`goGit()` id=`${i}`) #{list[i]}
+                        -else if(i==3)
+                            li(class="index" onclick=`goDot()` id=`${i}`) #{list[i]}
+                        -else if(i==4)
+                            li(class="index" onclick=`goLab()` id=`${i}`) #{list[i]}
+                        -else
+                            li(class="index" onclick=`goError()` id=`${i}`) #{list[i]}
     
-    div.nave
-        ul
-            -for(var i=0; i<list.length;i++ )
-                -if(i<=3)
-                    li(class='index' onclick=`getIndex(this)` id=`${i}`) #{list[i]}
+                    -else
+                        -if(i==0)
+                            li(id="category"    onclick=`window.open("http://39.115.162.208:30000/post","_self")`) 전체보기(#{realcount})
+                      
+                        -else if(i==list.length-1)
+                            li(class='index' id="home"  onclick=`window.open("http://39.115.162.208:30000","_self")` ) Home
+                           
+                        -else if(i==1)
+                            li(class='index' style="text-align:center" onclick=`getCategory('${list[i]}')` id=`${list[i]}`) #{list[i]}(#{ilcount})
+                        -else if(i==2)
+                            li(class='index' style="text-align:center" onclick=`getCategory('${list[i]}')` id=`${list[i]}`) #{list[i]}(#{cocount})
+                        -else if(i==3)
+                            li(class='index' style="text-align:center" onclick=`getCategory('${list[i]}')` id=`${list[i]}`) #{list[i]}(#{gongcount})
+                        -else if(i==4)
+                            li(class='index' style="text-align:center" onclick=`getCategory('${list[i]}')` id=`${list[i]}`) #{list[i]}(#{gicount})
+                        
+                li#abc developed by minky
+        div.jipsa#jipsa
+            -if(name)
+                div(id='profile') #{name}
+                -if(post!='post')
+                    div(id='messages') #{name}님.<br> 방문해주셔서<br>감사합니다.
                 -else
-                    li(class='index' onclick=`goGit()` id=`${i}`) #{list[i]}
-div.jipsa 
-    style(display='block')
-    div(id='message') 방문해주셔서<br>감사합니다.
- 
-    img(src='/jipsa.gif')    
-
-    
+                    div(id='messages') 게시판입니다.
+            -else
+                -if(post!='post')
+                    div(id='messages') 방문해주셔서<br>감사합니다.
+                -else
+                    div(id='messages') 게시판입니다.
+            -if(post!='post')        
+                img(src='/jipsa.gif')
+            -else
+                img(src='/jipsa-p.gif')
+            -if(!user)     
+                div(class="button" id="login" onclick="requestLogin()" ) 로그인
+                div(class="button" id="sign" onclick="requestSign()") 회원가입
+                div(class="button" id="find" onclick="requestFind()") 비번찾기
+              
+            -else
+                div(class="button" id="logout" onclick="logOut()" ) 로그아웃
+                div(class="button" id="name" onclick="rename()") 이름변경
+            -if(user)
+                div(class="button" id="chatMenuBtn" onclick="openChat()") 채팅
+                    span#chatMenuText LIVE
+            -else
+                div(class="button" id="chatMenuBtn" onclick="requestLogin()") 채팅
+                    span#chatMenuText LIVE
+    div.navec#nav
+            ul
+                -for(var i=0; i<list.length;i++ )
+                    -if(post!='post') 
+                        -if(i<=1)
+                            li(class='index' onclick=`getIndex(this)` id=`${i}`) #{list[i]}
+                        -else if(i==2)
+                            li(class='index' id=`${i}` onclick='goPost()') #{list[i]} 
+                        -else if(i==5)
+                            li(class='index' onclick=`goGit()` id=`${i}`) #{list[i]}
+                        -else if(i==3)
+                            li(class="index" onclick=`goDot()` id=`${i}`) #{list[i]}
+                        -else if(i==4)
+                            li(class="index" onclick=`goLab()` id=`${i}`) #{list[i]}
+                        -else
+                            li(class="index" onclick=`goError()` id=`${i}`) #{list[i]}
+                    -else
+                        -if(i==0)
+                            li(id="category"  onclick=`window.open("http://39.115.162.208:30000/post","_self")`) 전체보기(#{realcount})
+                      
+                        -else if(i==list.length-1)
+                            li(class='index'  id="home" onclick=`window.open("http://39.115.162.208:30000","_self")` ) Home
+                           
+                        -else if(i==1)
+                            li(class='index' style="text-align:left" onclick=`getCategory('${list[i]}')` id=`${list[i]}`) #{list[i]}(#{ilcount})
+                        -else if(i==2)
+                            li(class='index' style="text-align:left" onclick=`getCategory('${list[i]}')` id=`${list[i]}`) #{list[i]}(#{cocount})
+                        -else if(i==3)
+                            li(class='index' style="text-align:left" onclick=`getCategory('${list[i]}')` id=`${list[i]}`) #{list[i]}(#{gongcount})
+                        -else if(i==4)
+                            li(class='index' style="text-align:left" onclick=`getCategory('${list[i]}')` id=`${list[i]}`) #{list[i]}(#{gicount})
+                        
+                            
+                li#abc developed by minky
+    div.jipsac#jipsa
+        -if(post!="villeage")
+            -if(name)
+                div(id='profile') #{name}
+                -if(post!='post')
+                    div(id='messages') #{name}님.<br> 방문해주셔서<br>감사합니다.
+                -else
+                    div(id='messages') 게시판입니다.
+            -else
+                -if(post!='post')
+                    div(id='messages') 방문해주셔서<br>감사합니다.
+                -else
+                    div(id='messages') 게시판입니다.
+            -if(post!='post')        
+                img(src='/jipsa.gif')
+            -else
+                img(src='/jipsa-p.gif')
+            -if(!user)     
+                div(class="button" id="login" onclick="requestLogin()" ) 로그인
+                div(class="button" id="sign" onclick="requestSign()") 회원가입
+                div(class="button" id="find" onclick="requestFind()") 비번찾기
+            -else
+                div(class="button" id="logout" onclick="logOut()" ) 로그아웃
+                div(class="button" id="name" onclick="rename()") 이름변경
+            -if(user)
+                div(class="button" id="chatMenuBtn" onclick="openChat()") 채팅
+                    span#chatMenuText LIVE
+            -else
+                div(class="button" id="chatMenuBtn" onclick="requestLogin()") 채팅
+                    span#chatMenuText LIVE
+    script.
+            window.onload=setTimeout(navAnim(),4000);
+            var nav=document.getElementsByClassName('navec');
+            nav[0].addEventListener('mouseout',function(e){ setTimeout(navAnim(),5000)});
+   
+            function navAnim(){
+                var nav=document.getElementsByClassName('navec');
+            nav[0].animate( [// keyframes
+                { transform: 'translateX(-20px)' }, 
+                { transform: 'translateX(-40px)' },
+                {transform:'translateX(-60px)'},
+             {transform: 'translateX(-220px)'}, 
+            ], { 
+                // timing options
+                duration: 4000,
+                iterations:  1,
+                fill:'forwards',
+            });
+            
+            }
+            function openChat(){
+                const chatContainer=document.getElementById("chatContainer");
+                chatContainer.style.display='';
+                const chatAlarm=document.getElementById("chatAlarm");
+                chatAlarm.style.display="none";
+            
+                socket.emit("hi");
+            }
+          

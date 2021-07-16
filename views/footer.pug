@@ -1,2 +1,17 @@
+
 footer.footer
-   img(src="/imgs/?name=footer.gif" width= '100%' )  
+   -if(post=='laboratory')
+      img#footer(src="/imgs/?name=footerL.png" height="180px" style="z-index:-1000;")
+   -else if(post=="villeage")
+      div#footer(src="" width= '100%'  style="z-index:-1000;background-color:black;position:absolute;top:0;width:100%height:100%")  
+   -else
+      img#footer(src="/imgs/?name=footer.png" width= '100%'  style="z-index:-1000;")  
+
+     
+
+
+
+
+
+
+        

@@ -4,8 +4,13 @@ const router =express.Router();
 const fs=require('fs');
 const path=require('path');
 
-console.log("index.js 호출됨");
-const ilist=['Home','WhoIsMinki','Posts', "Dot Arts", "GitHub"];
+
+
+const ilist=['Greeting','WhoIsMinki','Posts', "Dot Arts","Games", "GitHub"];
+
+ 
+ 
+
 router.route('/')
     .get((req,res)=>{console.log(req.query.index);
         fs.readdir(path.join(__dirname,"../public"),(err,list)=>{

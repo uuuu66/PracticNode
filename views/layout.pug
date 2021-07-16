@@ -1,9 +1,24 @@
+include ./header.pug       
 
-include ./header.pug
 
-section.section   
-        block content               
 
-include ./footer.pug   
+div#phone(style="overflow-x:scroll" width='100.78%')    
+        
+        
+        -if(post=='post')
+            img(src="/imgs/?name=pheader.gif"  width= '534px' height='359px' )
+        -else if(post=='laboratory')
+            a(href="http://39.115.162.208:30000/" target="_self")
+                img(src="/imgs/?name=laboratorybtn.gif" width= '100%' )
+        -else
+            a(href="http://39.115.162.208:30000/" target="_self")
+                img(src="/imgs/?name=doorP1.png" width= '100%' )
+        
+block content   
+block story
+block chat
+
+
+include ./chat.pug
 include ./nav.pug
- 
+include ./footer.pug     

@@ -5,28 +5,30 @@ module.exports=class User extends Sequelize.Model{
     static init(sequelize){
         return super.init({
             name: {
-                type: Sequelize.STRING(20),
+                type:Sequelize.STRING(40),
+                allowNull:false,
+                
+            }
+            ,
+            email:{
+                type: Sequelize.STRING(40),
                 allowNull: false,
-                unique: true,
+                unique:true,
               },
               password:{
                   type:Sequelize.STRING(100),
                   allowNull:true,
               },
-              email:{
-                type: Sequelize.STRING(40),
-                allowNull: false,
-                unique:true,
-              },
-              comment: {
-                type: Sequelize.TEXT,
-                allowNull: true,
-              },
-              posts:{
-                  type:Sequelize.INTEGER.UNSIGNED,
+              provider:{
+                  type:Sequelize.STRING(20),
                   allowNull:true,
-
+              },
+              auth:{
+                  type:Sequelize.INTEGER(1),
+                  defaultValue: 0,
+                  allowNull:true,
               }
+              
               
         },{
             sequelize,
@@ -41,8 +43,8 @@ module.exports=class User extends Sequelize.Model{
         });
     }
     static associate(db){
-        db.User.hasMany(db.Comment,{foreignKey:'commenter',sourceKey:'name'});
-        db.User.hasMany(db.Post,{foreignKey:'author',sourceKey:'name'});
+        db.User.hasMany(db.Comment,{foreignKey:'commenter_id',sourceKey:'id'});
+        db.User.hasMany(db.Post,{foreignKey:'posts_id',sourceKey:'id'});
     }
 
 };

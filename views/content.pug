@@ -1,4 +1,257 @@
 extends ./layout.pug
 
 block content    
-    div(id='content')
+    section#section 
+        div(id='content' class="body"  style="padding-top:50px;")
+            h1  형준 생일 이벤트
+            -if(recent)    
+                div(style=" animation: textcoloranim infinite 3s;") #{recent}
+                div(style="width:100%;padding-top:20px;padding-bottom:20px;")
+                span(id="introduceSpan") 방향키:이동,c:캐릭터 바꾸기
+                //img.building(id="lab" src="imgs/?name=/building/laboratory.png" style="display='none'" )
+            -else
+                h3 없음
+    script(type="text/javascript").
+                
+            //- window.onkeydown =(e)=>{
+             
+            //-     movechar(e);
+            //- }
+            let player="whoisthis";
+            const lab=document.createElement("img");
+            lab.style.top="200px";
+            lab.style.left="140px";
+            lab.classList.add("building");
+            lab.setAttribute("id","lab");
+            lab.setAttribute("src","imgs/?name=/building/congraturation.gif");
+            const labname=document.createElement("div");
+             labname.setAttribute("id","char.name"+":name");
+                    labname.textContent='V:형준 생일축하방으로 가기';
+                    labname.style.top=lab.style.top+"px";
+                    labname.style.left=lab.style.left+15+"px";
+            let isWalking=false;
+            let isPost=false;
+            const char = io.connect('http://39.115.162.208:30000/char', {
+                 withCredentials: true,
+                    path: '/socket.io',
+                    transports: ['websocket'],
+                });
+            const header=document.getElementById("header");
+            const content=document.getElementById("section")
+            content.appendChild(lab);
+            
+             for(let i=0;i<8;i++){
+                const tree=document.createElement('img');
+                if(i<4){
+                    tree.style.top=50+"px"
+                    tree.style.left=i*40+1100+"px";
+                }else {
+                    tree.style.top=370+"px"
+                    tree.style.left=(i-4)*40+200+"px";
+                    }
+              
+                    
+                
+                tree.style.zindex=4;
+                tree.setAttribute("src","imgs/?name=/building/tree1.png");
+                tree.style.width="30px";
+                tree.style.height="30px";
+                tree.classList.add("tree");
+                content.appendChild(tree);
+            }
+             for(let i=8;i>0;i--){
+                const tree=document.createElement('img');
+                if(i<4){
+                    tree.style.top=340+"px"
+                    tree.style.left=i*40+1200+"px";
+                }else {
+                    tree.style.top=0+"px"
+                    tree.style.left=(i-4)*40+10+"px";
+                    }
+              
+                    
+                
+                tree.style.zindex=4;
+                tree.setAttribute("src","imgs/?name=/building/tree2.png");
+                tree.style.width="30px";
+                tree.style.height="30px";
+                tree.classList.add("tree");
+                content.appendChild(tree);
+            }
+            const h=-160;
+            const f=200;
+            const l=0;
+            const r=1300;
+            char.on("removethis",(data)=>{
+                const usern=document.getElementById(data.user+":name");
+                const user=document.getElementById(data.user);
+                if(user){
+                    usern.remove();
+                    user.remove();
+                }
+              
+            })
+            char.on("confirm",(data)=>{
+                player=data.user.name;
+                console.log(player);
+            })
+            char.on("charinit",(data)=>{
+                  char.emit("confirm",{data:"d"});
+                for(const char of data.chars){
+                    if(document.getElementById(char.name)){
+                        continue;r
+                    }
+                    const character= document.createElement("img");
+                    const characterName=document.createElement("div");
+                    characterName.classList.add("charName");
+                    characterName.setAttribute("id",char.name+":name");
+                    characterName.textContent=char.name;
+                   
+                    character.classList.add("char")
+                    character.setAttribute("id",char.name);
+                    character.setAttribute("src",`imgs/?name=/walk/${char.c}walk${1}.png`);
+                    character.style.top=char.pos[1]+"px";
+                    character.style.left=char.pos[0]+"px";
+                     characterName.style.top=char.pos[1]+"px";
+                    
+                     characterName.style.left=char.pos[0]+15+"px";
+                     characterName.style.width=
+                     content.appendChild(characterName);
+                    content.appendChild(character);
+                }
+            });
+            char.on("move",(data)=>{
+               moveChar(data);
+            });
+            window.onkeydown=(e)=>{         
+                sendMove(e);
+            }
+            function getPosition(ele){
+                const res= [1*ele.style.left.split("px")[0],1*ele.style.top.split("px")[0]]
+                return res;
+            } 
+            function sendMove(e){
+                
+                switch(e.key){
+                    
+                    case "ArrowUp":
+                        e.preventDefault();
+                      if(!isWalking){
+                          
+                    
+                          return char.emit("move",{e:e.key,header:h,footer:f,left:l,right:r});
+                            break;
+                      }
+                    case "ArrowDown":
+                        e.preventDefault();
+                          if(!isWalking){
+                        //-   window.scroll({
+                        //-     top: document.documentElement.scrollTop+40,
+                        //-     left: 0,
+                        //-     behavior: 'smooth'
+                        //-     });
+                  
+                             return char.emit("move",{e:e.key,header:h,footer:f,left:l,right:r}); 
+                               break;
+                    }
+                    case "ArrowLeft":
+                        e.preventDefault();
+                          if(!isWalking)
+                            return char.emit("move",{e:e.key,header:h,footer:f,left:l,right:r});
+                       break;
+                   
+                    case "ArrowRight":
+                        e.preventDefault();
+                          if(!isWalking)
+                            return char.emit("move",{e:e.key,header:h,footer:f,left:l,right:r});
+                              break;
+                    case "c":
+                       // e.preventDefault();
+                          if(!isWalking)
+                            return char.emit("move",{e:e.key,header:h,footer:f,left:l,right:r});
+                            break;
+                    case "v":
+                          if(isPost&&!isWalking)
+                            return window.open("http://39.115.162.208:30000/villeage","_self");
+                        break;
+                }
+                 e.stopPropagation();
+            }
+            char.on("confirm",(data)=>{
+
+            });
+            function moveChar(data){
+                    
+                    const character=document.getElementById(data.name);
+                    const characterName=document.getElementById(data.name+":name");
+                    const aniSpeed=70;
+                    if(data.e=="c"){
+                        return character.setAttribute("src",`imgs/?name=/walk/${data.c}walk${1}.png`);
+                    }
+                    moveAnim(character,aniSpeed,data.c);
+            
+                    setTimeout(function(){
+                        character.style.top=data.y+"px";
+                        character.style.left=data.x+"px";
+                        characterName.style.top=data.y+"px";
+                    characterName.style.left=data.x+15+"px";
+                     
+                    },aniSpeed*3);
+                    const lab=document.getElementById("lab");
+                    const res=getPosition(lab);
+                   console.log(res,data.x,data.y);
+                   if(player==data.name){
+                    if(data.x>res[0]-100&&data.x<=res[0]+100&&data.y>res[1]-100&&data.y<=res[1]){
+                        
+                            isPost=true;
+                            characterName.textContent="V <post>들어가기"
+                       
+                    }else{
+                        isPost=false;
+                        characterName.textContent=data.name;
+                         if(data.y<=-160){
+                              window.scroll({
+                        top: 0,
+                        left: 0,
+                        behavior: 'smooth'
+                        });
+                  
+                         characterName.textContent="진짜 하늘 같지만 사실 벽에 그린 그림이다 "
+                        }else{
+                             window.scroll({
+                        top: 400,
+                        left: 0,
+                        behavior: 'smooth'
+                        });
+                        }
+                    }
+                   }
+            }
+            function moveAnim(name,aniSpeed,c){
+               
+                isWalking=true;
+                let i=3;
+               
+                const charInterval=setInterval(function(){
+                    window.onkeydown =(e)=>{
+                            e.preventDefault();
+                     }
+                    if(i==1){
+                         
+                        isWalking=false;
+                        clearInterval(charInterval);
+                         window.onkeydown =(e)=>{
+                
+                                sendMove(e)
+                     }
+
+                    }
+                    
+                    name.setAttribute("src",`imgs/?name=/walk/${c}walk${i}.png`);
+                    i--;    
+                   
+                    },
+                        aniSpeed);     
+            }
+
+

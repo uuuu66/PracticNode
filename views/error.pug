@@ -1,9 +1,82 @@
 
 
-include ./header.pug 
-p
- 
-    img(src='/imgs/?name=BADWord.gif' width="50%")
-p !에러!
-    div 찾는 페이지가 없어졌나봐요
+body(style="background-image:url('./nav.gif'); background-repeat:repeat;background-size:20% 20% auto; ")
+p(style="background-color:white;  font-family: 'NeoDunggeunmo'; font-size:40px") !에러!
+    div(style="background-color:white ;  font-family: 'NeoDunggeunmo'; font-size:60px") 에러내용: #{error}<br><br>
+        <span class='next' onclick='history.back()' style=' cursor: pointer; color:blue; font-size:40px;'>뒤로가기</span>  
+    div(width="100%" style="margin-left:0;text-align:center")
+     
+
+    <br>
+    div.ufo 
+        img(src="imgs/?name=UFO-red.gif")
+div   
+
+
+
+style.
+    div.ufo {
+    position: absolute;
+    width: 130px;
+    height: 60px;
+    position:fixed;
+    background-size: 50%;
+    animation-name: ufoanim;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    //- background-image: url("./UFO-red.gif");
+    background-repeat: no-repeat;
+    }
+
+    @keyframes ufoanim {
+    0% {
+        top: 0%;
+        left: 80%;
+    }
+    10% {
+        top: 20%;
+        left: 40%;
+    }
+    15% {
+        top: 40%;
+        left: 20%;
+    }
+    32% {
+        top: 60%;
+        left: 80%;
+    }
+    40% {
+        top: 30%;
+        left: 20%;
+    }
+
+    55% {
+        top: 50%;
+        left: 50%;
+    }
+    60% {
+        top: 40%;
+        left: 20%;
+    }
+    70% {
+        top: 80%;
+        left: 00%;
+    }
+    84% {
+        top: 0%;
+        left: 6%;
+    }
+    90% {
+        top: 10%;
+        left: 10%;
+    }
+    100% {
+        top: 0%;
+        left: 80%;
+    }
+    }
+
+
+
+
         
