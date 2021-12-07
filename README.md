@@ -34,4 +34,15 @@ socket.io로 온라인 게임처럼
 웹 화면안에서 이동하는 기능을 구현하였습니다.
 ![방향키](https://user-images.githubusercontent.com/64532732/145063802-d09c39e6-06f8-4744-93a4-9501c74cbab2.png)
 
+# 반응형 웹
+![image](https://user-images.githubusercontent.com/64532732/145064789-9efc01a0-e1ab-4320-b16a-22560f444863.png)
+미디어 쿼리로 css파일을 다르게 적용하여 태블릿,핸드폰,컴퓨터에서 각각 최적화된 화면이 나오도록 했습니다. 
+
+# view
+바닐라 js와 jquery 조금 을 사용해서 만들었습니다. 
+😥css naming 표준을 모르고 만들었어서 css naming이 뒤죽박죽인 점이 아쉽습니다 .
+
+# 배포
+AWS EC2에 프리티어 우분투 서버에 올렸으나 
+현재는 배포중단된 상태입니다. 
 
